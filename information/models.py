@@ -1,12 +1,19 @@
 from django.db import models
 from django.utils import timezone
 from django.urls import reverse
+import re
+from ckeditor.fields import RichTextField
+from django_ckeditor_5.fields import CKEditor5Field
 
+class Image(models.Model):
+    image = models.ImageField(max_length=3000, default='', blank=True, upload_to='carousel_images/')
 
+    def __str__(self):
+        return self.image.name if self.image else ''
 
 
 class Carousel(models.Model):
-	image = models.ImageField(upload_to='pics/%y/%m/%d/')
+	image = models.ManyToManyField(Image)
 	title = models.CharField(max_length=150)
 	sub_title = models.CharField(max_length=100)
 
@@ -18,7 +25,18 @@ class Carousel(models.Model):
 
 class AboutUs(models.Model):
     title = models.CharField(max_length = 50)
-    content = models.TextField()
+    logo = models.ImageField(upload_to="logo/", blank=True, null=True)
+    about = CKEditor5Field('Text', config_name='extends')
+    born_date = models.DateField(blank=True, null=True)
+    address = models.CharField(max_length=100, blank=True, null=True)
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    email = models.EmailField(max_length=255, blank=True, null=True)
+    # Social Network
+    github = models.URLField(blank=True, null=True)
+    linkedin = models.URLField(blank=True, null=True)
+    facebook = models.URLField(blank=True, null=True)
+    twitter = models.URLField(blank=True, null=True)
+    instagram = models.URLField(blank=True, null=True)
 
 
     class Meta:
@@ -45,7 +63,12 @@ class Team(models.Model):
     name = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
     bio = models.CharField(max_length=500)
-    image = models.ImageField(upload_to='chef/')    
+    image = models.ImageField(upload_to='chef/')
+    github = models.URLField(blank=True, null=True)
+    linkedin = models.URLField(blank=True, null=True)
+    facebook = models.URLField(blank=True, null=True)
+    twitter = models.URLField(blank=True, null=True)
+    instagram = models.URLField(blank=True, null=True)
 
     class Meta:
         verbose_name = 'Squad'
@@ -66,8 +89,6 @@ class Contact(models.Model):
     from_email = models.EmailField()
     phone = models.CharField(max_length=9)
     message = models.TextField(verbose_name='Conteúdo')
-   
-  
     timestamp = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -80,62 +101,3 @@ class Contact(models.Model):
         return self.subject
 
 
-
-class PublishedManager(models.Manager):
-    def get_queryset(self):
-        return super().get_queryset().filter(status='published')
-
-
-class Post(models.Model):
-    STATUS_CHOICES = (
-        ('draft', 'Draft'),
-        ('published', 'Published'),
-    )
-    title = models.CharField(max_length=250)
-    slug = models.SlugField(max_length=250,
-                            unique_for_date='publish')
-   
-    body = models.TextField()
-    publish = models.DateTimeField(default=timezone.now)
-    available = models.BooleanField(default=True)
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
-    status = models.CharField(max_length=10,
-                              choices=STATUS_CHOICES,
-                              default='draft')
-
-    objects = models.Manager() # The default manager.
-    published = PublishedManager() # Our custom manager.
-   
-
-    class Meta:
-        ordering = ('-publish',)
-        verbose_name = 'Hire '
-        verbose_name_plural = 'Hire '
-
-    def __str__(self):
-        return self.title
-
-    def get_absolute_url(self):
-        return reverse('home:hire_detail',
-                       args=[self.id, self.slug])
-
-class Document(models.Model):
-    photo = models.ImageField(upload_to='pics/%y/%m/%d/')
-    full_name = models.CharField(max_length=250)
-    phone = models.CharField(max_length=25)
-    address = models.CharField(max_length=250)
-    position = models.CharField(max_length=250)
-    title = models.CharField(max_length=250)
-    cv = models.FileField(upload_to='documents/%Y/%m/%d')
-    upload_date = models.DateTimeField(auto_now_add =True)
-
-
-    def __str__(self):
-        return self.full_name
-   
-
-    
-
-
-   
