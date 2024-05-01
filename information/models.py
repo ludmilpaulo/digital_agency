@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.urls import reverse
 import re
-from ckeditor.fields import RichTextField
+
 from django_ckeditor_5.fields import CKEditor5Field
 
 class Image(models.Model):
@@ -26,6 +26,8 @@ class Carousel(models.Model):
 class AboutUs(models.Model):
     title = models.CharField(max_length = 50)
     logo = models.ImageField(upload_to="logo/", blank=True, null=True)
+    backgroundImage = models.ImageField(upload_to="Back_logo/", blank=True, null=True)
+    backgroundApp = models.ImageField(upload_to="Back_logo/", blank=True, null=True)
     about = CKEditor5Field('Text', config_name='extends')
     born_date = models.DateField(blank=True, null=True)
     address = models.CharField(max_length=100, blank=True, null=True)
