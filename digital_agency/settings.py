@@ -35,10 +35,12 @@ INSTALLED_APPS = [
     'courses',
     'django_ckeditor_5',
     'rest_framework',
+    'modeltranslation',
 ]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
