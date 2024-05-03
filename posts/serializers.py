@@ -9,10 +9,7 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         fields = '__all__'
 
-    def create(self, validated_data):
-        post_id = self.context['view'].kwargs.get('post_id')
-        validated_data['post'] = get_object_or_404(Post, pk=post_id)
-        return super().create(validated_data)
+   
 
         
 class PostSerializer(serializers.ModelSerializer):
