@@ -17,15 +17,11 @@ class ServiceCategory(models.Model):
 
 
 
-class ServiceImage(models.Model):
-    image = models.ImageField(max_length=3000, default=None, blank=True, upload_to='service_images/')
 
-    def __str__(self):
-        return self.image.name
 class Service(models.Model):
     category = models.ForeignKey(ServiceCategory, related_name='service', on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=200)
-    images = models.ManyToManyField(ServiceImage)  # Many-to-many relationship with Image model
+    image = models.ImageField(max_length=3000, default=None, blank=True, upload_to='service_images/')
     rating = models.IntegerField(default=0)
     description = CKEditor5Field()
 
