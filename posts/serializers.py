@@ -1,21 +1,17 @@
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers
-from .models import Post, Comment
+from .models import Comment, Post
 
-
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = '__all__'
 
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = '__all__'
+        fields = ['name', 'email', 'content']  # Do not include 'post' or 'postId' here
 
-   
-
-        
-class PostSerializer(serializers.ModelSerializer):
-    comments = CommentSerializer(many=True, read_only=True)
-
-    class Meta:
-        model = Post
-        fields = ['id', 'title', 'content', 'image', 'published_date', 'comments']
-
+    def create(self, validated_data):
+        # 'post' is added in the view, not here
+        return Comment.objects.create(**validated_data)

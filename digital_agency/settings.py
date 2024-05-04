@@ -27,7 +27,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'corsheaders',
+    'accounts',
     'careers',
     'posts',
     'projects',
@@ -38,8 +40,25 @@ INSTALLED_APPS = [
     'courses',
     'django_ckeditor_5',
     'rest_framework',
+    'rest_framework.authtoken',
+    'djoser',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',  # If using Google
+    'allauth.socialaccount.providers.facebook',  # If using Facebook
+    
     'modeltranslation',
 ]
+
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_USERNAME_REQUIRED = False
+
+
+AUTH_USER_MODEL = 'accounts.User'
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -51,7 +70,28 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
+
+AUTHENTICATION_BACKENDS = (
+    'accounts.authentication.EmailOrUsernameModelBackend',
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+}
+
+DJOSER = {
+    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
+    'ACTIVATION_URL': 'activate/{uid}/{token}',
+    'SEND_ACTIVATION_EMAIL': True,
+    'SERIALIZERS': {
+        'token_create': 'djoser.serializers.TokenCreateSerializer',
+    },
+}
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -160,9 +200,9 @@ SERVER_EMAIL = 'support@ludmilpaulo.co.za' # this is for to send 500 mail to adm
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtpout.secureserver.net'
-EMAIL_HOST_USER='support@ludmilpaulo.co.za'
+EMAIL_HOST_USER='support@maindodigital.com'
 EMAIL_HOST_PASSWORD='Maitland@2024'
-DEFAULT_FROM_EMAIL = 'support@ludmilpaulo.co.za'
+DEFAULT_FROM_EMAIL = 'support@maindodigital.com'
 EMAIL_PORT=465
 EMAIL_USE_SSL=True
 EMAIL_USE_TLS=False
@@ -254,3 +294,6 @@ CKEDITOR_5_CONFIGS = {
         }
     }
 }
+
+
+SITE_ID = 1

@@ -21,7 +21,14 @@ urlpatterns = [
     path('service/', include('services.urls')),
     path('careers/', include('careers.urls')),
     path('post/', include('posts.urls')),
+    path('project/', include('projects.urls')),
+    path('appointment/', include('appointments.urls')),
     path("ckeditor5/", include('django_ckeditor_5.urls'), name="ck_editor_5_upload_file"),
+    
+    path('account/', include('accounts.urls')),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
+    path('social/', include('allauth.urls')),
     
 
 ]

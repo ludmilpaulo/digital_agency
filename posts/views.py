@@ -1,29 +1,36 @@
 from django.shortcuts import get_object_or_404
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework.views import APIView
+
 from rest_framework import viewsets
 from .models import Post, Comment
-from .serializers import CommentSerializer, PostSerializer
+from .serializers import PostSerializer, CommentSerializer
 
 class PostViewSet(viewsets.ModelViewSet):
-    queryset = Post.objects.all().order_by('-published_date')
+    queryset = Post.objects.all()
     serializer_class = PostSerializer
 
 
 
 
-class CommentViewSet(viewsets.ModelViewSet):
-    serializer_class = CommentSerializer
+@api_view(['POST'])
+def post_comments(request, post_id):
+    """
+    Create a new comment for a post.
+    """
+    post = get_object_or_404(Post, pk=post_id)
+    # Update serializer to only include comment-related fields
+    serializer = CommentSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save(post=post)  # Automatically links the comment to the fetched post
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def get_queryset(self):
-        """
-        This method filters the comments by the post ID passed in the URL.
-        """
-        post_id = self.kwargs.get('post_id')
-        return Comment.objects.filter(post=post_id)
 
-    def perform_create(self, serializer):
-        """
-        This method sets the post for a new comment based on the post ID.
-        """
-        post_id = self.kwargs.get('post_id')
-        post = get_object_or_404(Post, pk=post_id)
-        serializer.save(post=post)
+class CommentListView(APIView):
+    def get(self, request, post_id):
+        comments = Comment.objects.filter(post__id=post_id)
+        serializer = CommentSerializer(comments, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)

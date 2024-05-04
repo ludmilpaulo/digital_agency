@@ -1,7 +1,9 @@
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 
-
+from django.core.mail import send_mail
+from rest_framework import status
+from rest_framework.response import Response
 from django.db.models import Q
 
 
@@ -14,12 +16,12 @@ from rest_framework.generics import ListAPIView
 
 #from django.contrib.auth.models import User
 from rest_framework.parsers import *
-from django.contrib.auth import get_user_model
-User = get_user_model()
+
 from rest_framework import generics
 from .models import Service, ServiceCategory, ServiceRequest
 from .serializers import ServiceCategorySerializer, ServiceRequestSerializer, ServiceSerializer
-
+from django.contrib.auth import get_user_model
+User = get_user_model()
 class ServiceListCreateAPIView(generics.ListCreateAPIView):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
@@ -70,6 +72,32 @@ class ServiceDetailAPIView(generics.RetrieveAPIView):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
 
+from django.core.mail import send_mail
+from rest_framework import status
+from rest_framework.response import Response
+from django.conf import settings
+
 class ServiceRequestCreateAPIView(generics.CreateAPIView):
     queryset = ServiceRequest.objects.all()
     serializer_class = ServiceRequestSerializer
+
+    def perform_create(self, serializer):
+        instance = serializer.save()
+        self.send_service_request_email(instance)
+        return super().perform_create(serializer)
+
+    def send_service_request_email(self, service_request):
+        subject = 'Service Request Received'
+        message = f'Hello, thank you for submitting your service request for "{service_request.service.title}". ' \
+                  'We have received it and will be in touch soon. Meanwhile, you can check the user dashboard on our platform ' \
+                  'under services to track your request.'
+        from_email = settings.DEFAULT_FROM_EMAIL  # Use default from email
+        recipient_list = [service_request.email]  # Email provided in the POST request
+
+        send_mail(
+            subject,
+            message,
+            from_email,
+            recipient_list,
+            fail_silently=False,
+        )
