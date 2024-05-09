@@ -23,7 +23,7 @@ class Service(models.Model):
     title = models.CharField(max_length=200)
     image = models.ImageField(max_length=3000, default=None, blank=True, upload_to='service_images/')
     rating = models.IntegerField(default=0)
-    description = CKEditor5Field()
+    description = CKEditor5Field('Text', config_name='extends')
 
 
     class Meta:

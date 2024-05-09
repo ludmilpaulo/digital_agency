@@ -3,7 +3,7 @@ from django_ckeditor_5.fields import CKEditor5Field
 
 class Post(models.Model):
     title = models.CharField(max_length=200)
-    content = CKEditor5Field()
+    content = CKEditor5Field('Text', config_name='extends')
     image = models.ImageField(upload_to='posts/', blank=True, null=True)
     published_date = models.DateTimeField(auto_now_add=True)
 
@@ -14,7 +14,7 @@ class Comment(models.Model):
     post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     email = models.EmailField()
-    content = models.TextField()
+    content = CKEditor5Field('Text', config_name='extends')
     created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

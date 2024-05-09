@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .models import Client, Partner
-from .serializers import ClientSerializer, PartnerSerializer
+from .models import Client, Partner, Testimonial
+from .serializers import ClientSerializer, PartnerSerializer, TestimonialSerializer
 
 class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all()

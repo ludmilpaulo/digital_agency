@@ -32,3 +32,20 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.username
+    
+    
+    
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+    ROLE_CHOICES = (
+        ('PM', 'Project Manager'),
+        ('Dev', 'Developer'),
+        ('Client', 'Client'),
+    )
+    role = models.CharField(max_length=10, choices=ROLE_CHOICES)
+
+    def __str__(self):
+        return f"{self.user.username}'s profile"
+
