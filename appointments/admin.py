@@ -1,21 +1,10 @@
-from django.db import models
-from django_ckeditor_5.fields import CKEditor5Field
+from django.contrib import admin
+from .models import Appointment
 
-class Career(models.Model):
-    title = models.CharField(max_length=100)
-    description = CKEditor5Field('Text', config_name='extends')
+class AppointmentAdmin(admin.ModelAdmin):
+    list_display = ('user', 'phone', 'email', 'date', 'time', 'reason')
+    list_filter = ('date', 'time', 'user')
+    search_fields = ('user__username', 'phone', 'email', 'reason')
+    ordering = ('-date', '-time')
 
-    def __str__(self):
-        return self.title
-
-class JobApplication(models.Model):
-    career = models.ForeignKey(Career, on_delete=models.CASCADE)
-    full_name = models.CharField(max_length=100)
-    email = models.EmailField()
-    resume = models.FileField(upload_to='resumes/')
-
-    def __str__(self):
-        return f"Application for {self.career.title} by {self.full_name}"
-
-
-# Create your models here.
+admin.site.register(Appointment, AppointmentAdmin)
