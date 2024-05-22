@@ -35,7 +35,7 @@ Our mission is to empower businesses by enhancing their digital presence through
 
 ### Client Services
 
-- **Project Manager**: Oversees project timelines and deliverables, ensuring projects meet client expectations.
+- **Project Manager**: Oversees project timelines and delies, ensuring projects meet client expectations.
 - **Account Manager**: Acts as the primary liaison between clients and the agency, managing communications and project specifics.
 
 ### Legal and Finance
