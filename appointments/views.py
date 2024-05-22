@@ -5,6 +5,7 @@ from rest_framework.exceptions import ValidationError
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib.auth import get_user_model
+from datetime import datetime  # Import datetime module
 from .models import Appointment
 from .serializers import AppointmentSerializer
 
@@ -124,7 +125,7 @@ class AppointmentCreateAPIView(generics.CreateAPIView):
                         <p>Thank you for choosing our service.</p>
                     </div>
                     <div class="footer">
-                        <p>&copy; {datetime.now().year} Your Company. All rights reserved.</p>
+                        <p>&copy; {datetime.now().year} Maindo Digital Agency. All rights reserved.</p>
                     </div>
                 </div>
             </body>
