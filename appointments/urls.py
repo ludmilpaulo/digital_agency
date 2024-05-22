@@ -1,7 +1,6 @@
-# urls.py
 from django.urls import path
-from .views import AppointmentCreateAPIView
+from .views import create_appointment
 
 urlpatterns = [
-    path('appointments/', AppointmentCreateAPIView.as_view(), name='appointment-create'),
+    path('appointments/', create_appointment, name='create_appointment'),
 ]
