@@ -251,10 +251,10 @@ CKEDITOR_5_CONFIGS = {
             'blockQuote',
         ],
         'toolbar': ['heading', '|', 'outdent', 'indent', '|', 'bold', 'italic', 'link', 'underline', 'strikethrough',
-        'code','subscript', 'superscript', 'highlight', '|', 'codeBlock', 'sourceEditing', 'insertImage',
-                    'bulletedList', 'numberedList', 'todoList', '|',  'blockQuote', 'imageUpload', '|',
-                    'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'mediaEmbed', 'removeFormat',
-                    'insertTable',],
+        'code', 'subscript', 'superscript', 'highlight', '|', 'codeBlock', 'sourceEditing', 'insertImage',
+        'bulletedList', 'numberedList', 'todoList', '|',  'blockQuote', 'imageUpload', '|',
+        'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'mediaEmbed', 'removeFormat',
+        'insertTable', 'alignment',],  # Added 'alignment' here
         'image': {
             'toolbar': ['imageTextAlternative', '|', 'imageStyle:alignLeft',
                         'imageStyle:alignRight', 'imageStyle:alignCenter', 'imageStyle:side',  '|'],
@@ -297,5 +297,8 @@ CKEDITOR_5_CONFIGS = {
     }
 }
 
+# Allow .gif files
+DATA_UPLOAD_MAX_MEMORY_SIZE = 50485760  # 10MB
+FILE_UPLOAD_MAX_MEMORY_SIZE = 50485760  # 10MB
 
 SITE_ID = 1
