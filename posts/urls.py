@@ -1,12 +1,21 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import CommentListView, PostViewSet, post_comments
+from .views import (
+    PostViewSet, CommentViewSet, AuthorViewSet,
+    CategoryViewSet, NewsletterSubscriberViewSet,
+    approve_comment, reject_comment,
+)
 
 router = DefaultRouter()
+#router.register(r'posts', PostViewSet)
 router.register(r'blogs', PostViewSet)
+router.register(r'comments', CommentViewSet)
+router.register(r'authors', AuthorViewSet)
+router.register(r'categories', CategoryViewSet)
+router.register(r'newsletter', NewsletterSubscriberViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('posts/<int:post_id>/comments/', post_comments, name='post-comments'),
-    path('blog/<int:post_id>/comments/', CommentListView.as_view(), name='post-comments'),
+    path('comments/<int:pk>/approve/', approve_comment),
+    path('comments/<int:pk>/reject/', reject_comment),
 ]

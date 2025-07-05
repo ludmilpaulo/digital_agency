@@ -1,0 +1,421 @@
+[
+  {
+    "model": "services.service",
+    "pk": 1,
+    "fields": {
+      "title": "Web Development",
+      "slug": "web-development",
+      "description": "Custom, scalable websites and portals that grow with your business. From landing pages to full e-commerce.",
+      "icon": "fa-code",
+      "featured": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": 2,
+    "fields": {
+      "title": "Mobile App Development",
+      "slug": "mobile-app-development",
+      "description": "iOS & Android apps that wow your users. Fast, secure, and beautiful. React Native and Flutter experts.",
+      "icon": "fa-mobile-alt",
+      "featured": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": 3,
+    "fields": {
+      "title": "Digital Marketing",
+      "slug": "digital-marketing",
+      "description": "SEO, PPC, social media & content strategies proven to drive real results for African and global brands.",
+      "icon": "fa-chart-line",
+      "featured": false,
+      "order": 3
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": 4,
+    "fields": {
+      "title": "Automation & SaaS",
+      "slug": "automation-saas",
+      "description": "We automate your processes or build your next SaaS product. More productivity, less stress.",
+      "icon": "fa-cogs",
+      "featured": false,
+      "order": 4
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": 5,
+    "fields": {
+      "title": "Cloud Solutions",
+      "slug": "cloud-solutions",
+      "description": "Cloud migration, DevOps, managed hosting, and secure global scale for modern businesses.",
+      "icon": "fa-cloud",
+      "featured": false,
+      "order": 5
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": 6,
+    "fields": {
+      "title": "Branding & Creative",
+      "slug": "branding-creative",
+      "description": "Brand strategy, logo, and all creative for a bold digital presence. Stand out in Africa & beyond.",
+      "icon": "fa-rocket",
+      "featured": false,
+      "order": 6
+    }
+  },
+
+
+  {
+    "model": "services.plan",
+    "pk": 1,
+    "fields": {
+      "service": 1,
+      "name": "Starter",
+      "price": "R3,900",
+      "features": [
+        "1 Page Modern Website",
+        "Mobile Responsive",
+        "Basic SEO Setup",
+        "Contact Form",
+        "Delivery: 5 days"
+      ],
+      "cta": "Get Started",
+      "popular": false,
+      "order": 1
+    }
+  },
+  {
+    "model": "services.plan",
+    "pk": 2,
+    "fields": {
+      "service": 1,
+      "name": "Business",
+      "price": "R8,900",
+      "features": [
+        "5-8 Pages, Blog, Portfolio",
+        "Advanced SEO",
+        "Performance Optimization",
+        "Whatsapp/Chat Integration",
+        "Delivery: 10 days"
+      ],
+      "cta": "Book Now",
+      "popular": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "services.plan",
+    "pk": 3,
+    "fields": {
+      "service": 1,
+      "name": "Growth",
+      "price": "R14,900",
+      "features": [
+        "E-commerce or App",
+        "Custom Integrations",
+        "Marketing Setup",
+        "Ongoing Support (2 mo)",
+        "Delivery: 14-21 days"
+      ],
+      "cta": "Consult Us",
+      "popular": false,
+      "order": 3
+    }
+  },
+
+
+  {
+    "model": "services.plan",
+    "pk": 4,
+    "fields": {
+      "service": 2,
+      "name": "App Starter",
+      "price": "R19,000",
+      "features": [
+        "Simple 1-platform app",
+        "Beautiful UI/UX",
+        "Core business features",
+        "Launch on Play/App Store",
+        "Delivery: 3 weeks"
+      ],
+      "cta": "Get Started",
+      "popular": false,
+      "order": 1
+    }
+  },
+  {
+    "model": "services.plan",
+    "pk": 5,
+    "fields": {
+      "service": 2,
+      "name": "Business App",
+      "price": "R39,000",
+      "features": [
+        "iOS & Android",
+        "API Integration",
+        "Push Notifications",
+        "App Analytics",
+        "Delivery: 5-6 weeks"
+      ],
+      "cta": "Book Now",
+      "popular": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "services.plan",
+    "pk": 6,
+    "fields": {
+      "service": 2,
+      "name": "Enterprise App",
+      "price": "Custom",
+      "features": [
+        "Custom features & integrations",
+        "Payments, E-commerce",
+        "Bespoke UI/UX, admin dashboard",
+        "Training & support",
+        "Delivery: 2+ months"
+      ],
+      "cta": "Consult Us",
+      "popular": false,
+      "order": 3
+    }
+  },
+
+
+  {
+    "model": "services.plan",
+    "pk": 7,
+    "fields": {
+      "service": 3,
+      "name": "SEO Essentials",
+      "price": "R2,500/mo",
+      "features": [
+        "SEO Audit & Setup",
+        "Keyword Optimization",
+        "Monthly Reporting",
+        "Local Listings",
+        "On-page SEO"
+      ],
+      "cta": "Start Now",
+      "popular": false,
+      "order": 1
+    }
+  },
+  {
+    "model": "services.plan",
+    "pk": 8,
+    "fields": {
+      "service": 3,
+      "name": "Growth Marketing",
+      "price": "R6,900/mo",
+      "features": [
+        "SEO & SEM",
+        "Content Marketing",
+        "Social Media Ads",
+        "Google Analytics",
+        "Monthly Strategy"
+      ],
+      "cta": "Grow Now",
+      "popular": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "services.plan",
+    "pk": 9,
+    "fields": {
+      "service": 3,
+      "name": "Full Funnel",
+      "price": "R14,500/mo",
+      "features": [
+        "360° Marketing Management",
+        "Paid Campaigns",
+        "Email & SMS Marketing",
+        "Lead Gen Automation",
+        "Weekly Reports"
+      ],
+      "cta": "Contact Us",
+      "popular": false,
+      "order": 3
+    }
+  },
+
+  {
+    "model": "services.plan",
+    "pk": 10,
+    "fields": {
+      "service": 4,
+      "name": "Starter Automation",
+      "price": "R5,500",
+      "features": [
+        "1 workflow automated",
+        "Google Sheets, Email, Slack etc.",
+        "No-code/Low-code tools",
+        "2 week delivery"
+      ],
+      "cta": "Get Started",
+      "popular": false,
+      "order": 1
+    }
+  },
+  {
+    "model": "services.plan",
+    "pk": 11,
+    "fields": {
+      "service": 4,
+      "name": "Pro Automation",
+      "price": "R12,500",
+      "features": [
+        "Multi-app automation",
+        "API integrations",
+        "Bot/AI workflows",
+        "Training Included",
+        "3-4 week delivery"
+      ],
+      "cta": "Book Now",
+      "popular": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "services.plan",
+    "pk": 12,
+    "fields": {
+      "service": 4,
+      "name": "Custom SaaS",
+      "price": "Custom",
+      "features": [
+        "End-to-end SaaS platform",
+        "Bespoke features",
+        "Subscription & user management",
+        "Ongoing maintenance"
+      ],
+      "cta": "Consult Us",
+      "popular": false,
+      "order": 3
+    }
+  },
+
+
+  {
+    "model": "services.plan",
+    "pk": 13,
+    "fields": {
+      "service": 5,
+      "name": "Cloud Starter",
+      "price": "R4,900",
+      "features": [
+        "Cloud Hosting Setup",
+        "Domain/SSL",
+        "Backups",
+        "Monitoring",
+        "1 month support"
+      ],
+      "cta": "Start Now",
+      "popular": false,
+      "order": 1
+    }
+  },
+  {
+    "model": "services.plan",
+    "pk": 14,
+    "fields": {
+      "service": 5,
+      "name": "Growth Cloud",
+      "price": "R9,500",
+      "features": [
+        "DevOps Setup",
+        "Staging & Production",
+        "API Gateway",
+        "Scale on Demand",
+        "Support: 3 months"
+      ],
+      "cta": "Book Now",
+      "popular": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "services.plan",
+    "pk": 15,
+    "fields": {
+      "service": 5,
+      "name": "Enterprise Cloud",
+      "price": "Custom",
+      "features": [
+        "Custom Infrastructure",
+        "Kubernetes/Serverless",
+        "VPC & Security",
+        "On-call DevOps",
+        "Ongoing SLA"
+      ],
+      "cta": "Contact Us",
+      "popular": false,
+      "order": 3
+    }
+  },
+
+  {
+    "model": "services.plan",
+    "pk": 16,
+    "fields": {
+      "service": 6,
+      "name": "Logo Starter",
+      "price": "R2,700",
+      "features": [
+        "2 logo concepts",
+        "2 revisions",
+        "Brand color palette",
+        "All formats delivered"
+      ],
+      "cta": "Get Started",
+      "popular": false,
+      "order": 1
+    }
+  },
+  {
+    "model": "services.plan",
+    "pk": 17,
+    "fields": {
+      "service": 6,
+      "name": "Brand Kit",
+      "price": "R6,500",
+      "features": [
+        "Logo + Social Media Kit",
+        "Typography",
+        "Brand Guide PDF",
+        "Business Card Design"
+      ],
+      "cta": "Book Now",
+      "popular": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "services.plan",
+    "pk": 18,
+    "fields": {
+      "service": 6,
+      "name": "Creative Suite",
+      "price": "R12,000",
+      "features": [
+        "Brand Strategy Workshop",
+        "Logo & Visuals",
+        "Full Marketing Collateral",
+        "Website Landing Page"
+      ],
+      "cta": "Consult Us",
+      "popular": false,
+      "order": 3
+    }
+  }
+]

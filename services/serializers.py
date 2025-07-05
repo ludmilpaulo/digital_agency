@@ -1,27 +1,13 @@
 from rest_framework import serializers
-from .models import Service, ServiceCategory, ServiceRequest
+from .models import Service, Plan
 
-from django.contrib.auth import get_user_model
-User = get_user_model()
+class PlanSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Plan
+        fields = ['id', 'name', 'price', 'features', 'cta', 'popular', 'order']
 
 class ServiceSerializer(serializers.ModelSerializer):
-   
+    plans = PlanSerializer(many=True, read_only=True)
     class Meta:
         model = Service
-        fields = '__all__'
-
-   
-class ServiceCategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ServiceCategory
-        fields = '__all__'
-
-
-
-class ServiceRequestSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ServiceRequest
-        fields = ['service', 'user', 'message', 'phone', 'address', 'email']
-
-    service = serializers.PrimaryKeyRelatedField(queryset=Service.objects.all())
-    user = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
+        fields = ['id', 'title', 'slug', 'description', 'icon', 'featured', 'order', 'plans']

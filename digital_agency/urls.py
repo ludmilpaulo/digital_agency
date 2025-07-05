@@ -18,9 +18,9 @@ from django.contrib.sitemaps.views import sitemap
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('info/', include('information.urls')),
-    path('service/', include('services.urls')),
+    path('services/', include('services.urls')),
     path('careers/', include('careers.urls')),
-    path('post/', include('posts.urls')),
+    path('blog/', include('posts.urls')),
     path('project/', include('projects.urls')),
     path('appointment/', include('appointments.urls')),
     path('task/', include('tasks.urls')),

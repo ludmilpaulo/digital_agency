@@ -1,9 +1,18 @@
 from django.contrib import admin
+from .models import Service, Plan
 
-from .models import *
+class PlanInline(admin.TabularInline):
+    model = Plan
+    extra = 1
 
-admin.site.register(ServiceCategory)
-admin.site.register(Service)
-admin.site.register(ServiceRequest)
+@admin.register(Service)
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ['title', 'featured', 'order']
+    prepopulated_fields = {"slug": ("title",)}
+    inlines = [PlanInline]
+    ordering = ["order"]
 
-
+@admin.register(Plan)
+class PlanAdmin(admin.ModelAdmin):
+    list_display = ['name', 'service', 'price', 'popular', 'order']
+    ordering = ["service", "order"]
