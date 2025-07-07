@@ -1,5 +1,11 @@
 from rest_framework import serializers
 from .models import Service, Plan
+from .models import ProposalRequest
+
+class ProposalRequestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProposalRequest
+        fields = "__all__"  
 
 class PlanSerializer(serializers.ModelSerializer):
     class Meta:

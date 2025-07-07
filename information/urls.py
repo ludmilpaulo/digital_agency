@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (ImageListCreateAPIView, ImageRetrieveUpdateDestroyAPIView,
                     CarouselListCreateAPIView, CarouselRetrieveUpdateDestroyAPIView,
-                    AboutUsListCreateAPIView, AboutUsRetrieveUpdateDestroyAPIView,
+                    AboutUsListCreateAPIView, AboutUsRetrieveUpdateDestroyAPIView, PartnerListAPIView, TimelineListAPIView,
                     WhyChooseUsListCreateAPIView, WhyChooseUsRetrieveUpdateDestroyAPIView,
                     TeamListCreateAPIView, TeamRetrieveUpdateDestroyAPIView,
                     ContactListCreateAPIView, ContactRetrieveUpdateDestroyAPIView)
@@ -24,6 +24,9 @@ urlpatterns = [
 
     path('contacts/', ContactListCreateAPIView.as_view(), name='contact-list-create'),
     path('contacts/<int:pk>/', ContactRetrieveUpdateDestroyAPIView.as_view(), name='contact-retrieve-update-destroy'),
+    
+    path('timeline/', TimelineListAPIView.as_view(), name='timeline-list'),
+    path('partners/', PartnerListAPIView.as_view(), name='partner-list'),
     
 
 ]

@@ -22,3 +22,17 @@ class Plan(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.service.title})"
+    
+    
+class ProposalRequest(models.Model):
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20, blank=True)
+    company = models.CharField(max_length=80, blank=True)
+    service = models.CharField(max_length=100, blank=True)
+    time_frame = models.CharField(max_length=100, blank=True, null=True)
+    message = models.TextField()
+    submitted_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name} ({self.email})"

@@ -1,6 +1,15 @@
 from rest_framework import serializers
-from .models import Image, Carousel, AboutUs, Why_Choose_Us, Team, Contact
+from .models import Image, Carousel, AboutUs, Partner, Timeline, Why_Choose_Us, Team, Contact
 
+class TimelineSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Timeline
+        fields = "__all__"
+
+class PartnerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Partner
+        fields = "__all__"
 
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:

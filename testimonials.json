@@ -1,0 +1,50 @@
+[
+  {
+    "model": "testimonials.testimonial",
+    "pk": 1,
+    "fields": {
+      "name": "Kudya Foods",
+      "role": "Operations Manager",
+      "quote": "Maindo Digital transformed our online ordering and delivery platform. Our sales have doubled in just three months.",
+      "avatar": "https://randomuser.me/api/portraits/men/81.jpg",
+      "stars": 5,
+      "created_at": "2024-07-07T12:00:00Z"
+    }
+  },
+  {
+    "model": "testimonials.testimonial",
+    "pk": 2,
+    "fields": {
+      "name": "Ghanadue Consulting",
+      "role": "Founder & CEO",
+      "quote": "Professional, insightful, and a real partner. Our brand and reach have grown tremendously with Maindo’s expertise.",
+      "avatar": "https://randomuser.me/api/portraits/women/18.jpg",
+      "stars": 5,
+      "created_at": "2024-07-07T12:10:00Z"
+    }
+  },
+  {
+    "model": "testimonials.testimonial",
+    "pk": 3,
+    "fields": {
+      "name": "Aki Tens",
+      "role": "Product Owner",
+      "quote": "They delivered a beautiful, functional app that our customers love. Highly recommended for innovation and support.",
+      "avatar": "https://randomuser.me/api/portraits/men/34.jpg",
+      "stars": 5,
+      "created_at": "2024-07-07T12:20:00Z"
+    }
+  },
+  {
+    "model": "testimonials.testimonial",
+    "pk": 4,
+    "fields": {
+      "name": "Tembhalethu Mens Clinic",
+      "role": "Clinic Director",
+      "quote": "The website redesign improved our bookings and patient engagement dramatically. Thank you Maindo Digital!",
+      "avatar": "https://randomuser.me/api/portraits/men/56.jpg",
+      "stars": 5,
+      "created_at": "2024-07-07T12:30:00Z"
+    }
+  }
+]

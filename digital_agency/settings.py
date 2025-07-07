@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'solutions',
     'information',
     'appointments',
+    'testimonials',
     'projectManagement',
     'services',
     'courses',
@@ -53,10 +54,9 @@ INSTALLED_APPS = [
     'modeltranslation',
 ]
 
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_LOGIN_METHODS = {'email'}
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+
 
 
 AUTH_USER_MODEL = 'accounts.User'
@@ -107,7 +107,7 @@ ROOT_URLCONF = 'digital_agency.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

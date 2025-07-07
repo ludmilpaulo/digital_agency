@@ -1,18 +1,11 @@
+# core/serializers.py
+
 from rest_framework import serializers
-from .models import Client, Partner
-
-class ClientSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Client
-        fields = '__all__'
-
-class PartnerSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Partner
-        fields = '__all__'
-
+from .models import Testimonial
 
 class TestimonialSerializer(serializers.ModelSerializer):
     class Meta:
         model = Testimonial
-        fields = '__all__'
+        fields = [
+            'id', 'name', 'role', 'quote', 'avatar', 'stars', 'created_at'
+        ]

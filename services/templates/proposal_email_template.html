@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <body style="background:#f5f8fd; font-family:'Segoe UI', Arial, sans-serif; padding:0; margin:0;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f8fd;">
+      <tr>
+        <td align="center" style="padding:48px 0;">
+          <table width="520" cellpadding="0" cellspacing="0" style="background:#fff; border-radius:18px; box-shadow:0 6px 32px #2563eb22; overflow:hidden;">
+            <tr>
+              <td style="background:#2563eb; padding:28px 0;">
+                <img src="{{ logo_url }}" alt="{{ title }} Logo" width="88" height="88" style="border-radius:24px; box-shadow:0 2px 8px #1112; margin:auto; display:block;">
+                <h1 style="color:#fff; margin:14px 0 0 0; font-size:2rem; text-align:center; letter-spacing:1px;">Thank You for Reaching Out!</h1>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:32px 36px 18px 36px;">
+                <h2 style="color:#2563eb; font-size:1.3rem; margin-bottom:6px;">Hi {{ name }},</h2>
+                <p style="color:#222; font-size:1.08rem; line-height:1.7; margin:0 0 16px;">
+                  Your request for a proposal has been received! We’re excited to learn about your project and explore how {{ title }} can deliver the best solution for you.
+                </p>
+                <div style="background:#f1f6fb; border-radius:8px; padding:18px 20px; margin:16px 0 24px 0; color:#111;">
+                  <strong style="color:#2563eb;">Here’s what you shared:</strong>
+                  <table style="margin:14px 0 0 0; font-size:1rem; width:100%;">
+                    <tr><td style="font-weight:600; color:#333; width:120px;">Email:</td><td>{{ email }}</td></tr>
+                    {% if phone %}
+                    <tr><td style="font-weight:600;color:#333;">Phone:</td><td>{{ phone }}</td></tr>
+                    {% endif %}
+                    {% if company %}
+                    <tr><td style="font-weight:600;color:#333;">Company:</td><td>{{ company }}</td></tr>
+                    {% endif %}
+                    {% if time_frame %}
+                    <tr>
+                    <td style="font-weight:600;color:#333;">Time Frame:</td>
+                    <td>{{ time_frame }}</td>
+                    </tr>
+                    {% endif %}
+
+                    {% if service %}
+                    <tr><td style="font-weight:600;color:#333;">Service:</td><td>{{ service }}</td></tr>
+                    {% endif %}
+                  </table>
+                  <div style="margin-top:16px;"><strong style="color:#2563eb;">Message:</strong>
+                    <div style="margin-top:6px; color:#444; background:#fff; border-left:4px solid #2563eb; padding:12px 16px; border-radius:6px;">
+                      {{ message }}
+                    </div>
+                  </div>
+                </div>
+                <p style="color:#222; font-size:1.1rem; margin-bottom:16px;">
+                  <b>What happens next?</b><br>
+                  One of our digital experts will review your request and get in touch—usually within 24 hours. We’ll discuss your goals, share a free expert insight, and propose your best next step. 
+                </p>
+                <p style="color:#2563eb; font-size:1.08rem; font-weight:600; margin-bottom:0;">
+                  We’re passionate about creating digital solutions that grow your business.<br>
+                  <span style="color:#222; font-weight:400;">Let’s build something great together.</span>
+                </p>
+                <div style="margin:26px 0 0 0; text-align:center;">
+                  <a href="https://www.maindodigital.com/" style="background:#2563eb; color:#fff; text-decoration:none; padding:13px 38px; border-radius:7px; font-size:1rem; font-weight:600; letter-spacing:0.5px; box-shadow:0 2px 8px #2563eb33;">Visit Our Website</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="background:#f1f6fb; color:#888; text-align:center; padding:24px 36px 12px 36px; font-size:13px;">
+                <div>Need to talk to us sooner? <a href="mailto:{{ email_contact }}" style="color:#2563eb;">{{ email_contact }}</a></div>
+                <div style="margin-top:7px;">{{ title }} &mdash; Innovative Digital Solutions for Modern Business</div>
+                <div style="margin-top:8px;">
+                  {% if linkedin %}
+                  <a href="{{ linkedin }}" style="color:#2563eb; text-decoration:none; margin:0 8px;">LinkedIn</a>
+                  {% endif %}
+                  {% if instagram %}
+                  <a href="{{ instagram }}" style="color:#2563eb; text-decoration:none; margin:0 8px;">Instagram</a>
+                  {% endif %}
+                  {% if facebook %}
+                  <a href="{{ facebook }}" style="color:#2563eb; text-decoration:none; margin:0 8px;">Facebook</a>
+                  {% endif %}
+                  {% if twitter %}
+                  <a href="{{ twitter }}" style="color:#2563eb; text-decoration:none; margin:0 8px;">Twitter</a>
+                  {% endif %}
+                  {% if tiktok %}
+                  <a href="{{ tiktok }}" style="color:#2563eb; text-decoration:none; margin:0 8px;">TikTok</a>
+                  {% endif %}
+                  {% if github %}
+                  <a href="{{ github }}" style="color:#2563eb; text-decoration:none; margin:0 8px;">GitHub</a>
+                  {% endif %}
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

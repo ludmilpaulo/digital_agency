@@ -1,0 +1,172 @@
+[
+  {
+    "model": "information.aboutus",
+    "pk": 1,
+    "fields": {
+      "title": "Maindo Digital Agency",
+      "logo": "logo/maindo-logo.png",
+      "backgroundImage": "Back_logo/bg-agency.jpg",
+      "backgroundApp": "Back_logo/bg-app.jpg",
+      "about": "<p>Maindo Digital Agency delivers cutting-edge digital solutions, empowering brands and businesses across Africa and beyond. Our expert team crafts innovative websites, mobile apps, and comprehensive digital strategies that drive growth, visibility, and engagement.</p>",
+      "born_date": "2023-03-01",
+      "address": "Sandton, Johannesburg, South Africa",
+      "phone": "+27 82 000 0000",
+      "email": "info@maindodigital.com",
+      "github": "https://github.com/maindodigital",
+      "linkedin": "https://www.linkedin.com/company/maindodigital/",
+      "facebook": "https://www.facebook.com/maindodigital",
+      "twitter": "https://twitter.com/maindodigital",
+      "instagram": "https://instagram.com/maindodigital",
+      "tiktok": "https://tiktok.com/@maindodigital"
+    }
+  },
+  {
+    "model": "information.why_choose_us",
+    "pk": 1,
+    "fields": {
+      "title": "Global Experience",
+      "content": "We know the African market—and the world."
+    }
+  },
+  {
+    "model": "information.why_choose_us",
+    "pk": 2,
+    "fields": {
+      "title": "Client-First",
+      "content": "You get direct communication, fast feedback, and true partnership."
+    }
+  },
+  {
+    "model": "information.why_choose_us",
+    "pk": 3,
+    "fields": {
+      "title": "Tech Mastery",
+      "content": "Modern stacks, automation, and robust scalable builds."
+    }
+  },
+  {
+    "model": "information.why_choose_us",
+    "pk": 4,
+    "fields": {
+      "title": "Hybrid Work",
+      "content": "Flexible, always available for your success."
+    }
+  },
+  {
+    "model": "information.team",
+    "pk": 1,
+    "fields": {
+      "name": "Ludmil Paulo",
+      "title": "Founder & CTO",
+      "bio": "Visionary full-stack, mobile, and cloud leader.",
+      "image": "",
+      "github": "",
+      "linkedin": "https://www.linkedin.com/in/ludmilpaulo/",
+      "facebook": "",
+      "twitter": "",
+      "instagram": ""
+    }
+  },
+  {
+    "model": "information.team",
+    "pk": 2,
+    "fields": {
+      "name": "Sarah K.",
+      "title": "Lead Designer",
+      "bio": "Crafts pixel-perfect, human-first interfaces.",
+      "image": "",
+      "github": "",
+      "linkedin": "",
+      "facebook": "",
+      "twitter": "",
+      "instagram": ""
+    }
+  },
+  {
+    "model": "information.team",
+    "pk": 3,
+    "fields": {
+      "name": "John D.",
+      "title": "Growth Strategist",
+      "bio": "Turns ideas into scalable global strategies.",
+      "image": "",
+      "github": "",
+      "linkedin": "",
+      "facebook": "",
+      "twitter": "",
+      "instagram": ""
+    }
+  },
+  {
+    "model": "information.timeline",
+    "pk": 1,
+    "fields": {
+      "year": "2018",
+      "title": "Founded",
+      "desc": "Maindo Digital is born, launching first apps for local startups."
+    }
+  },
+  {
+    "model": "information.timeline",
+    "pk": 2,
+    "fields": {
+      "year": "2019",
+      "title": "African Expansion",
+      "desc": "Delivered projects for major brands and NGOs."
+    }
+  },
+  {
+    "model": "information.timeline",
+    "pk": 3,
+    "fields": {
+      "year": "2021",
+      "title": "South Africa Office Opens",
+      "desc": "Cape Town becomes our base for Southern Africa and global work."
+    }
+  },
+  {
+    "model": "information.timeline",
+    "pk": 4,
+    "fields": {
+      "year": "2024",
+      "title": "Global Clients",
+      "desc": "Serving clients in 10+ countries, trusted by global partners."
+    }
+  },
+  {
+    "model": "information.partner",
+    "pk": 1,
+    "fields": {
+      "name": "Google",
+      "img": "partners/google.svg",
+      "url": "https://google.com"
+    }
+  },
+  {
+    "model": "information.partner",
+    "pk": 2,
+    "fields": {
+      "name": "AWS",
+      "img": "partners/aws.svg",
+      "url": "https://aws.amazon.com/"
+    }
+  },
+  {
+    "model": "information.partner",
+    "pk": 3,
+    "fields": {
+      "name": "HubSpot",
+      "img": "partners/hubspot.svg",
+      "url": "https://hubspot.com"
+    }
+  },
+  {
+    "model": "information.partner",
+    "pk": 4,
+    "fields": {
+      "name": "Flutterwave",
+      "img": "partners/flutterwave.svg",
+      "url": "https://flutterwave.com"
+    }
+  }
+]

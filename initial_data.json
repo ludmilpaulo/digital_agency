@@ -1,0 +1,88 @@
+[
+  {
+    "model": "information.aboutus",
+    "pk": 1,
+    "fields": {
+      "title": "Maindo Digital Agency",
+      "logo": "logo/maindo-logo.png",
+      "backgroundImage": "Back_logo/bg-agency.jpg",
+      "backgroundApp": "Back_logo/bg-app.jpg",
+      "about": "<p>Maindo Digital Agency delivers cutting-edge digital solutions, empowering brands and businesses across Africa and beyond. Our expert team crafts innovative websites, mobile apps, and comprehensive digital strategies that drive growth, visibility, and engagement.</p>",
+      "born_date": "2023-03-01",
+      "address": "Sandton, Johannesburg, South Africa",
+      "phone": "+27 82 000 0000",
+      "email": "info@maindodigital.com",
+      "github": "https://github.com/maindodigital",
+      "linkedin": "https://www.linkedin.com/company/maindodigital/",
+      "facebook": "https://www.facebook.com/maindodigital",
+      "twitter": "https://twitter.com/maindodigital",
+      "instagram": "https://instagram.com/maindodigital",
+      "tiktok": "https://tiktok.com/@maindodigital"
+    }
+  },
+  {
+    "model": "information.why_choose_us",
+    "pk": 1,
+    "fields": {
+      "title": "Full-Service Expertise",
+      "content": "We offer comprehensive digital services, from web and app development to digital marketing and branding—all under one roof."
+    }
+  },
+  {
+    "model": "information.why_choose_us",
+    "pk": 2,
+    "fields": {
+      "title": "Proven Results",
+      "content": "Our portfolio demonstrates real, measurable impact for startups and established enterprises alike."
+    }
+  },
+  {
+    "model": "information.why_choose_us",
+    "pk": 3,
+    "fields": {
+      "title": "Client-Centric Approach",
+      "content": "We believe in transparent communication, agile processes, and putting client success at the heart of everything we do."
+    }
+  },
+  {
+    "model": "information.team",
+    "pk": 1,
+    "fields": {
+      "name": "Ludmil Paulo Samuel Avelino",
+      "title": "Founder & CEO",
+      "bio": "A passionate full-stack software engineer and visionary entrepreneur with deep experience in building scalable digital solutions across multiple industries.",
+      "image": "chef/ludmil.jpg",
+      "github": "https://github.com/ludmilpaulo",
+      "linkedin": "https://www.linkedin.com/in/ludmilpaulo/",
+      "facebook": "",
+      "twitter": "",
+      "instagram": ""
+    }
+  },
+  {
+    "model": "information.team",
+    "pk": 2,
+    "fields": {
+      "name": "Jane Doe",
+      "title": "Lead Designer",
+      "bio": "Creative UX/UI specialist committed to creating beautiful and user-friendly digital experiences for all platforms.",
+      "image": "chef/jane.jpg",
+      "github": "",
+      "linkedin": "https://www.linkedin.com/in/janedoe/",
+      "facebook": "",
+      "twitter": "",
+      "instagram": "https://instagram.com/janedoe"
+    }
+  },
+  {
+    "model": "information.contact",
+    "pk": 1,
+    "fields": {
+      "subject": "Welcome to Maindo Digital!",
+      "from_email": "client@company.com",
+      "phone": "082123456",
+      "message": "Excited to connect with Maindo Digital Agency. Looking forward to exploring how we can work together!",
+      "timestamp": "2024-07-07T11:00:00Z"
+    }
+  }
+]

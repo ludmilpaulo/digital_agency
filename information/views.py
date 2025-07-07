@@ -1,7 +1,7 @@
 from rest_framework import generics
 from rest_framework import viewsets
-from .models import Image, Carousel, AboutUs, Why_Choose_Us, Team, Contact
-from .serializers import ImageSerializer, CarouselSerializer, AboutUsSerializer, WhyChooseUsSerializer, TeamSerializer, ContactSerializer
+from .models import Image, Carousel, AboutUs, Partner, Timeline, Why_Choose_Us, Team, Contact
+from .serializers import ImageSerializer, CarouselSerializer, AboutUsSerializer, PartnerSerializer, TimelineSerializer, WhyChooseUsSerializer, TeamSerializer, ContactSerializer
 
 # ListCreateAPIView for creating and listing all instances
 class ImageListCreateAPIView(generics.ListCreateAPIView):
@@ -52,6 +52,15 @@ class TeamRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
 class ContactRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
+    
+    
+class TimelineListAPIView(generics.ListAPIView):
+    queryset = Timeline.objects.all()
+    serializer_class = TimelineSerializer
+
+class PartnerListAPIView(generics.ListAPIView):
+    queryset = Partner.objects.all()
+    serializer_class = PartnerSerializer
     
     
     
