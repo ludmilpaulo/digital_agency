@@ -100,13 +100,20 @@ class Partner(models.Model):
         return self.name
 
 
+class NewsletterSubscriber(models.Model):
+    email = models.EmailField(unique=True)
+    subscribed_at = models.DateTimeField(auto_now_add=True)
+    is_confirmed = models.BooleanField(default=False)
+    confirm_token = models.CharField(max_length=128, blank=True, null=True)
 
+    def __str__(self):
+        return self.email
 
 
 class Contact(models.Model):
     subject = models.CharField(max_length=50)
     from_email = models.EmailField()
-    phone = models.CharField(max_length=9)
+    phone = models.CharField(max_length=39)
     message = models.TextField(verbose_name='Conteúdo')
     timestamp = models.DateTimeField(auto_now_add=True)
 

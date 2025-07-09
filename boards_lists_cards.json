@@ -1,0 +1,162 @@
+[
+  {
+    "model": "tasks.board",
+    "pk": 1,
+    "fields": {
+      "name": "Maindo Client Portal",
+      "description": "<p>Portal project for clients and staff.</p>",
+      "development_link": "https://dev.maindodigital.com",
+      "repository_link": "https://github.com/maindo/client-portal",
+      "client_link": "https://portal.maindodigital.com",
+      "sample_link": "",
+      "budget": "120000.00",
+      "budget_used": "35000.00",
+      "deadline": "2024-10-31",
+      "start_date": "2024-07-01",
+      "end_date": null,
+      "status": "Started",
+      "users": [1, 2, 3, 4],
+      "managers": [1, 2]
+    }
+  },
+  {
+    "model": "tasks.board",
+    "pk": 2,
+    "fields": {
+      "name": "TBAE Rebuild",
+      "description": "<p>Rebuilding the TBAE site with new stack.</p>",
+      "development_link": "https://dev.tbae.co.za",
+      "repository_link": "https://github.com/maindo/tbae-rebuild",
+      "client_link": "https://www.tbae.co.za",
+      "sample_link": "",
+      "budget": "80000.00",
+      "budget_used": "42000.00",
+      "deadline": "2024-09-15",
+      "start_date": "2024-06-15",
+      "end_date": null,
+      "status": "In Progress",
+      "users": [1, 3, 4, 5],
+      "managers": [1, 3]
+    }
+  },
+
+  {
+    "model": "tasks.list",
+    "pk": 1,
+    "fields": {
+      "name": "To Do",
+      "board": 1
+    }
+  },
+  {
+    "model": "tasks.list",
+    "pk": 2,
+    "fields": {
+      "name": "In Progress",
+      "board": 1
+    }
+  },
+  {
+    "model": "tasks.list",
+    "pk": 3,
+    "fields": {
+      "name": "Completed",
+      "board": 1
+    }
+  },
+  {
+    "model": "tasks.list",
+    "pk": 4,
+    "fields": {
+      "name": "To Do",
+      "board": 2
+    }
+  },
+  {
+    "model": "tasks.list",
+    "pk": 5,
+    "fields": {
+      "name": "In Progress",
+      "board": 2
+    }
+  },
+  {
+    "model": "tasks.list",
+    "pk": 6,
+    "fields": {
+      "name": "Completed",
+      "board": 2
+    }
+  },
+
+  {
+    "model": "tasks.card",
+    "pk": 1,
+    "fields": {
+      "title": "Design UI/UX",
+      "description": "<p>Initial design and prototyping of portal UI.</p>",
+      "status": "In Progress",
+      "list": 2,
+      "start_date": "2024-07-01",
+      "due_date": "2024-07-15",
+      "assignees": [3, 4],
+      "image": null
+    }
+  },
+  {
+    "model": "tasks.card",
+    "pk": 2,
+    "fields": {
+      "title": "Setup DevOps",
+      "description": "<p>Setup AWS, pipelines, secrets for project.</p>",
+      "status": "Not Started",
+      "list": 1,
+      "start_date": "2024-07-02",
+      "due_date": "2024-07-10",
+      "assignees": [1, 2],
+      "image": null
+    }
+  },
+  {
+    "model": "tasks.card",
+    "pk": 3,
+    "fields": {
+      "title": "Client Demo",
+      "description": "<p>Prepare and present demo to client team.</p>",
+      "status": "Completed",
+      "list": 3,
+      "start_date": "2024-07-10",
+      "due_date": "2024-07-14",
+      "assignees": [1, 5],
+      "image": null
+    }
+  },
+  {
+    "model": "tasks.card",
+    "pk": 4,
+    "fields": {
+      "title": "New Homepage",
+      "description": "<p>Create modern homepage for TBAE.</p>",
+      "status": "In Progress",
+      "list": 5,
+      "start_date": "2024-06-15",
+      "due_date": "2024-07-05",
+      "assignees": [3, 4],
+      "image": null
+    }
+  },
+  {
+    "model": "tasks.card",
+    "pk": 5,
+    "fields": {
+      "title": "Booking API",
+      "description": "<p>Develop and integrate booking API.</p>",
+      "status": "Not Started",
+      "list": 4,
+      "start_date": "2024-06-18",
+      "due_date": "2024-07-08",
+      "assignees": [1, 2],
+      "image": null
+    }
+  }
+]

@@ -1,0 +1,108 @@
+[
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": { "name": "Executive" }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": { "name": "Staff" }
+  },
+  {
+    "model": "auth.group",
+    "pk": 3,
+    "fields": { "name": "Freelancer" }
+  },
+  {
+    "model": "auth.group",
+    "pk": 4,
+    "fields": { "name": "Basic" }
+  },
+
+  {
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+      "email": "ludmil@maindodigital.com",
+      "username": "ludmil",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": true,
+      "password": "pbkdf2_sha256$600000$XHzgk0MJeK0n$kqdJ...rest_of_hash"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+      "email": "ian@maindodigital.com",
+      "username": "ian",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$600000$XHzgk0MJeK0n$kqdJ...rest_of_hash"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+      "email": "jane@maindodigital.com",
+      "username": "jane",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$600000$XHzgk0MJeK0n$kqdJ...rest_of_hash"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+      "email": "freelance1@maindodigital.com",
+      "username": "freelance1",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$600000$XHzgk0MJeK0n$kqdJ...rest_of_hash"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 5,
+    "fields": {
+      "email": "client@maindodigital.com",
+      "username": "clientbasic",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$600000$XHzgk0MJeK0n$kqdJ...rest_of_hash"
+    }
+  },
+  {
+    "model": "accounts.user_groups",
+    "pk": 1,
+    "fields": { "user": 1, "group": 1 }
+  },
+  {
+    "model": "accounts.user_groups",
+    "pk": 2,
+    "fields": { "user": 2, "group": 2 }
+  },
+  {
+    "model": "accounts.user_groups",
+    "pk": 3,
+    "fields": { "user": 3, "group": 2 }
+  },
+  {
+    "model": "accounts.user_groups",
+    "pk": 4,
+    "fields": { "user": 4, "group": 3 }
+  },
+  {
+    "model": "accounts.user_groups",
+    "pk": 5,
+    "fields": { "user": 5, "group": 4 }
+  }
+]

@@ -1,4 +1,6 @@
 from django.urls import path
+
+from .news_views import NewsletterConfirmAPIView, NewsletterSubscribeAPIView
 from .views import (ImageListCreateAPIView, ImageRetrieveUpdateDestroyAPIView,
                     CarouselListCreateAPIView, CarouselRetrieveUpdateDestroyAPIView,
                     AboutUsListCreateAPIView, AboutUsRetrieveUpdateDestroyAPIView, PartnerListAPIView, TimelineListAPIView,
@@ -27,6 +29,9 @@ urlpatterns = [
     
     path('timeline/', TimelineListAPIView.as_view(), name='timeline-list'),
     path('partners/', PartnerListAPIView.as_view(), name='partner-list'),
+    
+    path("newsletter/subscribe/", NewsletterSubscribeAPIView.as_view(), name="newsletter-subscribe"),
+    path("newsletter/confirm/<str:token>/", NewsletterConfirmAPIView.as_view(), name="newsletter-confirm"),
     
 
 ]

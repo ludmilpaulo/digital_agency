@@ -48,4 +48,11 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return f"{self.user.username}'s profile"
+    
+class ProjectGroup(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    users = models.ManyToManyField(User, related_name="project_groups", blank=True)
+
+    def __str__(self):
+        return self.name
 

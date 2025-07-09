@@ -1,8 +1,8 @@
-db.sqlite3
-static_cdn/
-db.sqlite3
-static_cdn/
-**/migrations/
-db.sqlite3
-static_cdn/
-**/migrations/
+#db.sqlite3
+#static_cdn/
+#db.sqlite3
+#static_cdn/
+#**/migrations/
+#db.sqlite3
+#static_cdn/
+#**/migrations/

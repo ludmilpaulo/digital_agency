@@ -17,8 +17,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['maindoagency.pythonanywhere.com', '127.0.0.1']
 
+ADMINS = [
+    ("Support Team", "support@maindodigital.com"),
+]
+FRONTEND_URL = "https://www.maindodigital.com"
 
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -29,8 +32,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'corsheaders',
-    'accounts',
+    'accounts',  # <-- Your custom user app
+    'emailmarketing',
     'careers',
+    'documents',
     'posts',
     'projects',
     'solutions',
@@ -45,18 +50,22 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'djoser',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',  # If using Google
-    'allauth.socialaccount.providers.facebook',  # If using Facebook
-    
+    'allauth',  # <---
+    'allauth.account',  # <---
+    'allauth.socialaccount',  # <---
+    'allauth.socialaccount.providers.google',  # <---
+    'allauth.socialaccount.providers.facebook',  # <---
+    'api',
     'modeltranslation',
 ]
+
 
 ACCOUNT_LOGIN_METHODS = {'email'}
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
 
+GOOGLE_CLIENT_ID = "72586448671-ajiinvlilr5r51dnamdjj2k1bkm7uufi.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET = "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"
+GOOGLE_REDIRECT_URI = "https://www.maindodigital.com/api/google/oauth2callback/"
 
 
 AUTH_USER_MODEL = 'accounts.User'

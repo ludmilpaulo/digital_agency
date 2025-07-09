@@ -1,5 +1,11 @@
 from rest_framework import serializers
 from .models import Image, Carousel, AboutUs, Partner, Timeline, Why_Choose_Us, Team, Contact
+from .models import NewsletterSubscriber
+
+class NewsletterSubscriberSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = NewsletterSubscriber
+        fields = ["id", "email", "subscribed_at", "is_confirmed"]
 
 class TimelineSerializer(serializers.ModelSerializer):
     class Meta:

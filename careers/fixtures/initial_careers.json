@@ -1,0 +1,222 @@
+[
+  {
+    "model": "careers.career",
+    "pk": 1,
+    "fields": {
+      "title": "Frontend Developer",
+      "location": "Remote, South Africa",
+      "description": "<p>Build beautiful, performant user interfaces using React and Next.js for our clients.</p><ul><li>Modern JS frameworks</li><li>Animation & microinteractions</li></ul>",
+      "requirements": "<ul><li>2+ years React/Next.js</li><li>Strong CSS/Tailwind</li></ul>",
+      "created_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 2,
+    "fields": {
+      "title": "UI/UX Designer",
+      "location": "Johannesburg (Hybrid)",
+      "description": "<p>Create engaging digital experiences and work with both Figma and dev teams for pixel-perfect handoff.</p><ul><li>User research</li><li>Wireframes & prototypes</li></ul>",
+      "requirements": "<ul><li>Portfolio of web/mobile UI</li><li>Figma/Adobe XD experience</li></ul>",
+      "created_at": "2025-07-01T11:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 3,
+    "fields": {
+      "title": "Backend Developer",
+      "location": "Remote",
+      "description": "<p>Develop APIs and microservices with Django and FastAPI, powering scalable products.</p><ul><li>Database design</li><li>REST/GraphQL</li></ul>",
+      "requirements": "<ul><li>3+ years Python</li><li>Experience with Postgres</li></ul>",
+      "created_at": "2025-07-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 4,
+    "fields": {
+      "title": "Digital Marketing Specialist",
+      "location": "Cape Town, Hybrid",
+      "description": "<p>Plan, execute, and measure results of digital campaigns across channels for our clients.</p><ul><li>PPC, SEO, SMM</li><li>Content strategy</li></ul>",
+      "requirements": "<ul><li>Google Ads certified</li><li>Excellent copywriting</li></ul>",
+      "created_at": "2025-07-02T09:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 5,
+    "fields": {
+      "title": "Account Manager",
+      "location": "Johannesburg",
+      "description": "<p>Act as the main point of contact for key clients, ensuring their satisfaction and growth.</p><ul><li>Client presentations</li><li>Upselling services</li></ul>",
+      "requirements": "<ul><li>3+ years in account management</li><li>Great interpersonal skills</li></ul>",
+      "created_at": "2025-07-02T12:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 6,
+    "fields": {
+      "title": "Content Writer",
+      "location": "Remote",
+      "description": "<p>Write compelling blog posts, web copy, and campaign content for a range of brands.</p><ul><li>SEO-optimized writing</li><li>Content calendars</li></ul>",
+      "requirements": "<ul><li>Excellent English skills</li><li>Portfolio of published content</li></ul>",
+      "created_at": "2025-07-03T08:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 7,
+    "fields": {
+      "title": "SEO Strategist",
+      "location": "Remote",
+      "description": "<p>Analyze, plan, and implement SEO strategies to drive traffic and conversions for clients.</p><ul><li>Technical audits</li><li>Backlink building</li></ul>",
+      "requirements": "<ul><li>2+ years SEO</li><li>Google Analytics proficiency</li></ul>",
+      "created_at": "2025-07-03T10:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 8,
+    "fields": {
+      "title": "Project Manager",
+      "location": "Cape Town (Hybrid)",
+      "description": "<p>Lead cross-functional teams to deliver projects on time and on budget.</p><ul><li>Agile/Scrum</li><li>Client communication</li></ul>",
+      "requirements": "<ul><li>Certified Scrum Master a plus</li><li>Experience with digital products</li></ul>",
+      "created_at": "2025-07-03T11:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 9,
+    "fields": {
+      "title": "Graphic Designer",
+      "location": "Remote, South Africa",
+      "description": "<p>Create digital assets for web, social, and advertising campaigns.</p><ul><li>Photoshop/Illustrator</li><li>Brand guidelines</li></ul>",
+      "requirements": "<ul><li>Portfolio of design work</li><li>Experience with motion graphics is a bonus</li></ul>",
+      "created_at": "2025-07-04T09:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 10,
+    "fields": {
+      "title": "Sales Executive",
+      "location": "Johannesburg",
+      "description": "<p>Generate new business and help Maindo grow through strategic outreach.</p><ul><li>Lead generation</li><li>Client pitches</li></ul>",
+      "requirements": "<ul><li>Outgoing personality</li><li>Previous sales experience</li></ul>",
+      "created_at": "2025-07-04T12:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 11,
+    "fields": {
+      "title": "Junior QA Tester",
+      "location": "Remote",
+      "description": "<p>Ensure quality releases by writing test plans and reporting bugs to dev teams.</p><ul><li>Manual and automated testing</li><li>Bug tracking</li></ul>",
+      "requirements": "<ul><li>Basic coding skills a plus</li><li>Attention to detail</li></ul>",
+      "created_at": "2025-07-05T08:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 12,
+    "fields": {
+      "title": "Cloud DevOps Engineer",
+      "location": "Remote",
+      "description": "<p>Automate deployment and infrastructure for our cloud-native applications.</p><ul><li>CI/CD</li><li>AWS or GCP experience</li></ul>",
+      "requirements": "<ul><li>2+ years in DevOps role</li><li>IaC tools (Terraform, Ansible)</li></ul>",
+      "created_at": "2025-07-05T11:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 13,
+    "fields": {
+      "title": "Social Media Manager",
+      "location": "Cape Town",
+      "description": "<p>Grow and engage audiences for top brands on social platforms.</p><ul><li>Campaign strategy</li><li>Analytics & reporting</li></ul>",
+      "requirements": "<ul><li>Track record managing brand socials</li><li>Canva/Adobe Suite experience</li></ul>",
+      "created_at": "2025-07-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 14,
+    "fields": {
+      "title": "Product Owner",
+      "location": "Remote",
+      "description": "<p>Shape and prioritize product features for internal tools and client solutions.</p><ul><li>Stakeholder management</li><li>Agile processes</li></ul>",
+      "requirements": "<ul><li>Excellent communication</li><li>Technical background a plus</li></ul>",
+      "created_at": "2025-07-06T11:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 15,
+    "fields": {
+      "title": "Mobile App Developer",
+      "location": "Remote, South Africa",
+      "description": "<p>Develop innovative cross-platform mobile apps using React Native or Flutter.</p><ul><li>UI/UX for mobile</li><li>App Store/Play Store deployment</li></ul>",
+      "requirements": "<ul><li>2+ apps published</li><li>Experience with push notifications/APIs</li></ul>",
+      "created_at": "2025-07-07T08:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 16,
+    "fields": {
+      "title": "Finance Administrator",
+      "location": "Johannesburg",
+      "description": "<p>Manage invoicing, budgets, and contracts for a fast-paced digital agency.</p><ul><li>Bookkeeping</li><li>Quickbooks/Xero</li></ul>",
+      "requirements": "<ul><li>Finance degree or 2+ years relevant experience</li><li>Attention to accuracy</li></ul>",
+      "created_at": "2025-07-07T09:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 17,
+    "fields": {
+      "title": "Client Success Manager",
+      "location": "Remote",
+      "description": "<p>Ensure clients are getting value from our products and services, and help retain/grow accounts.</p><ul><li>Onboarding & support</li><li>Upsell opportunities</li></ul>",
+      "requirements": "<ul><li>Experience in B2B SaaS/client services</li><li>Empathetic communicator</li></ul>",
+      "created_at": "2025-07-08T08:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 18,
+    "fields": {
+      "title": "Copywriter (Portuguese/English)",
+      "location": "Remote, Angola or South Africa",
+      "description": "<p>Craft high-impact content in both English and Portuguese for web and campaigns.</p><ul><li>Bilingual writing</li><li>Brand tone/voice</li></ul>",
+      "requirements": "<ul><li>Fluency in PT and EN</li><li>Relevant writing samples</li></ul>",
+      "created_at": "2025-07-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 19,
+    "fields": {
+      "title": "HR & Talent Acquisition Lead",
+      "location": "Cape Town",
+      "description": "<p>Find and hire world-class digital talent for our fast-growing team.</p><ul><li>Recruitment strategy</li><li>Culture champion</li></ul>",
+      "requirements": "<ul><li>3+ years HR/recruitment experience</li><li>Interviewing and onboarding</li></ul>",
+      "created_at": "2025-07-09T08:00:00Z"
+    }
+  },
+  {
+    "model": "careers.career",
+    "pk": 20,
+    "fields": {
+      "title": "Junior Support Analyst",
+      "location": "Remote, South Africa",
+      "description": "<p>Assist clients and staff with support tickets, training, and troubleshooting.</p><ul><li>Helpdesk systems</li><li>Process documentation</li></ul>",
+      "requirements": "<ul><li>Good communicator</li><li>Fast learner</li></ul>",
+      "created_at": "2025-07-09T09:00:00Z"
+    }
+  }
+]

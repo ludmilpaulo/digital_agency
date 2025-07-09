@@ -71,26 +71,60 @@ def custom_signup(request, format=None):
     return JsonResponse({"error": "Method not allowed"}, status=405)
 
 
+from django.contrib.auth import authenticate, get_user_model, login
+from rest_framework.decorators import api_view
+from rest_framework.authtoken.models import Token
+from django.http import JsonResponse
 
 @api_view(['POST'])
 def custom_login(request, format=None):
-    print("Received data:", request.data)
-    if request.method == 'POST':
-    
-        try:
-            username_or_email = request.data.get("username")
-            password = request.data.get("password")
-            user = authenticate(request, username=username_or_email, password=password)
-            if user is not None:
-                token, created = Token.objects.get_or_create(user=user)
-                login(request, user)
-                return JsonResponse({"message": "Login successful",
-                                     'token':token.key,
-                                        'user_id':user.pk,
-                                        'username':user.username,
-                                     }, status=200)
-            else:
-                return JsonResponse({"error": "Invalid credentials"}, status=400)
-        except json.JSONDecodeError:
-            return JsonResponse({"error": "Invalid JSON"}, status=400)
-    return JsonResponse({"error": "Method not allowed"}, status=405)
+    print("------ Login attempt ------")
+    print("Raw request data:", request.data)
+
+    if request.method != 'POST':
+        print("Method not allowed:", request.method)
+        return JsonResponse({"error": "Method not allowed"}, status=405)
+
+    login_id = request.data.get("username") or request.data.get("email")
+    password = request.data.get("password")
+    print(f"Parsed login_id: {login_id!r}, password present: {bool(password)}")
+
+    if not login_id or not password:
+        print("Missing username/email or password!")
+        return JsonResponse({"error": "Both username/email and password are required."}, status=400)
+
+    User = get_user_model()
+    user = None
+
+    try:
+        if '@' in login_id:
+            print("Trying to find user by email...")
+            user_obj = User.objects.get(email__iexact=login_id)
+        else:
+            print("Trying to find user by username...")
+            user_obj = User.objects.get(username=login_id)
+        print(f"User found: {user_obj}")
+        # Always use USERNAME_FIELD for authentication
+        user = authenticate(request, username=getattr(user_obj, User.USERNAME_FIELD), password=password)
+        print("authenticate() result:", user)
+    except User.DoesNotExist:
+        print("No user with that login_id.")
+
+    if user is not None:
+        print("User authenticated! Getting or creating token...")
+        token, created = Token.objects.get_or_create(user=user)
+        login(request, user)
+        groups = list(user.groups.values_list('name', flat=True))
+        print("Groups:", groups)
+        print("Returning success response.")
+        return JsonResponse({
+            "message": "Login successful",
+            "token": token.key,
+            "user_id": user.pk,
+            "username": user.username,
+            "email": user.email,
+            "groups": groups,
+        }, status=200)
+    else:
+        print("Login failed: Invalid credentials.")
+        return JsonResponse({"error": "Invalid credentials"}, status=400)
