@@ -3,8 +3,6 @@ from unittest.mock import ANY, patch
 
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import AnonymousUser
-from django.contrib.messages.middleware import MessageMiddleware
-from django.contrib.sessions.middleware import SessionMiddleware
 from django.urls import reverse
 
 import pytest
@@ -27,7 +25,7 @@ def test_email_authentication(
     user_factory,
     sociallogin_factory,
     client,
-    rf,
+    request_factory,
     mailoutbox,
     auto_connect,
     with_emailaddress,
@@ -38,9 +36,10 @@ def test_email_authentication(
     settings.ACCOUNT_EMAIL_REQUIRED = True
     settings.ACCOUNT_UNIQUE_EMAIL = True
     settings.ACCOUNT_USERNAME_REQUIRED = False
-    settings.ACCOUNT_AUTHENTICATION_METHOD = "email"
+    settings.ACCOUNT_LOGIN_METHODS = {"email"}
     settings.ACCOUNT_EMAIL_VERIFICATION = "mandatory"
     settings.SOCIALACCOUNT_AUTO_SIGNUP = True
+    settings.SOCIALACCOUNT_STORE_TOKENS = True
     if setting == "on-global":
         settings.SOCIALACCOUNT_EMAIL_AUTHENTICATION = True
     elif setting == "on-provider":
@@ -55,12 +54,13 @@ def test_email_authentication(
     settings.SOCIALACCOUNT_EMAIL_AUTHENTICATION_AUTO_CONNECT = auto_connect
 
     user = user_factory(with_emailaddress=with_emailaddress)
+    assert user.has_usable_password()
 
-    sociallogin = sociallogin_factory(email=user.email, provider="unittest-server")
+    sociallogin = sociallogin_factory(
+        email=user.email, provider="unittest-server", with_token=True
+    )
 
-    request = rf.get("/")
-    SessionMiddleware(lambda request: None).process_request(request)
-    MessageMiddleware(lambda request: None).process_request(request)
+    request = request_factory.get("/")
     request.user = AnonymousUser()
     with context.request_context(request):
         with patch(
@@ -70,6 +70,7 @@ def test_email_authentication(
                 "allauth.socialaccount.signals.social_account_added.send"
             ) as added_signal:
                 resp = complete_social_login(request, sociallogin)
+    user.refresh_from_db()
     if setting == "off":
         assert resp["location"] == reverse("account_email_verification_sent")
         assert not added_signal.called
@@ -77,11 +78,20 @@ def test_email_authentication(
     else:
         if with_emailaddress:
             assert resp["location"] == "/accounts/profile/"
+            assert user.has_usable_password()
         else:
+            assert not user.has_usable_password()
+            # This should be improved. The provider vouches for the fact that
+            # the user verified the email, so we can mark it as such locally as
+            # well.
+
             # user.email is set, but not verified.
             assert resp["location"] == reverse("account_email_verification_sent")
         assert get_user_model().objects.count() == 1
         assert SocialAccount.objects.filter(user=user.pk).exists() == auto_connect
+        assert (
+            SocialToken.objects.filter(account__user=user.pk).exists() == auto_connect
+        )
         assert added_signal.called == auto_connect
         assert not updated_signal.called
 
@@ -104,7 +114,7 @@ def test_record_authentication(
     db,
     sociallogin_factory,
     client,
-    rf,
+    request_factory,
     user,
     process,
     did_record,
@@ -115,12 +125,10 @@ def test_record_authentication(
     sociallogin = sociallogin_factory(provider="unittest-server", uid="123")
     sociallogin.state["process"] = process
     sociallogin.token = SocialToken(
-        app=sociallogin.account.get_provider().app, token="123", token_secret="456"
+        app=sociallogin.provider.app, token="123", token_secret="456"
     )
     SocialAccount.objects.create(user=user, uid="123", provider="unittest-server")
-    request = rf.get("/")
-    SessionMiddleware(lambda request: None).process_request(request)
-    MessageMiddleware(lambda request: None).process_request(request)
+    request = request_factory.get("/")
     request.user = AnonymousUser()
     with context.request_context(request):
         complete_social_login(request, sociallogin)

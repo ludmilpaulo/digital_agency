@@ -15,19 +15,11 @@ class FrontierAccount(ProviderAccount):
 
     def get_avatar_url(self):
         return "https://www.gravatar.com/avatar/%s?%s" % (
-            hashlib.md5(
+            hashlib.sha256(
                 self.account.extra_data.get("email").lower().encode("utf-8")
             ).hexdigest(),
             urlencode({"d": "mp"}),
         )
-
-    def to_str(self):
-        dflt = super(FrontierAccount, self).to_str()
-        full_name = "%s %s" % (
-            self.account.extra_data.get("firstname", dflt),
-            self.account.extra_data.get("lastname", dflt),
-        )
-        return full_name
 
 
 class FrontierProvider(OAuth2Provider):

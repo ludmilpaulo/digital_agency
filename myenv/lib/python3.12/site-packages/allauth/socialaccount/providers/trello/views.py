@@ -7,14 +7,12 @@ from allauth.socialaccount.providers.oauth.views import (
     OAuthLoginView,
 )
 
-from .provider import TrelloProvider
-
 
 class TrelloOAuthAdapter(OAuthAdapter):
-    provider_id = TrelloProvider.id
-    request_token_url = "https://trello.com/1/OAuthGetRequestToken"
+    provider_id = "trello"
+    request_token_url = "https://trello.com/1/OAuthGetRequestToken"  # nosec
     authorize_url = "https://trello.com/1/OAuthAuthorizeToken"
-    access_token_url = "https://trello.com/1/OAuthGetAccessToken"
+    access_token_url = "https://trello.com/1/OAuthGetAccessToken"  # nosec
 
     def complete_login(self, request, app, token, response):
         # we need to get the member id and the other information

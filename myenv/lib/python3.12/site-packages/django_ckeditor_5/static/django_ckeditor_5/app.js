@@ -1,8 +1,12 @@
 import ClassicEditor from './src/ckeditor';
 import './src/override-django.css';
 
-
-let editors = [];
+window.ClassicEditor = ClassicEditor;
+window.ckeditorRegisterCallback = registerCallback;
+window.ckeditorUnregisterCallback = unregisterCallback;
+window.editors = {};
+let editors = {};
+let callbacks = {};
 
 function getCookie(name) {
     let cookieValue = null;
@@ -48,13 +52,19 @@ function createEditors(element = document.body) {
             editorEl.id.indexOf('__prefix__') !== -1 ||
             editorEl.getAttribute('data-processed') === '1'
         ) {
-            return
+            return;
         }
         const script_id = `${editorEl.id}_script`;
-        editorEl.nextSibling.remove();
+        // remove next sibling if it is an empty text node
+        if (editorEl.nextSibling.nodeType == Node.TEXT_NODE && editorEl.nextSibling.textContent.trim() === '') {
+          editorEl.nextSibling.remove();
+        }
         const upload_url = element.querySelector(
             `#${script_id}-ck-editor-5-upload-url`
         ).getAttribute('data-upload-url');
+        const upload_file_types = JSON.parse(element.querySelector(
+            `#${script_id}-ck-editor-5-upload-url`
+        ).getAttribute('data-upload-file-types'));
         const csrf_cookie_name = element.querySelector(
             `#${script_id}-ck-editor-5-upload-url`
         ).getAttribute('data-csrf_cookie_name');
@@ -75,29 +85,41 @@ function createEditors(element = document.body) {
             }
         );
         config.simpleUpload = {
-            'uploadUrl': upload_url, 'headers': {
+            'uploadUrl': upload_url,
+            'headers': {
                 'X-CSRFToken': getCookie(csrf_cookie_name),
-            }
+            },
         };
+
+        config.fileUploader = {
+            'fileTypes': upload_file_types
+        };
+        config.licenseKey = 'GPL';
         ClassicEditor.create(
             editorEl,
             config
         ).then(editor => {
+
+            const textarea = document.querySelector(`#${editorEl.id}`);
+            editor.model.document.on('change:data', () => {
+                textarea.value = editor.getData();
+            });
             if (editor.plugins.has('WordCount')) {
                 const wordCountPlugin = editor.plugins.get('WordCount');
                 const wordCountWrapper = element.querySelector(`#${script_id}-word-count`);
                 wordCountWrapper.innerHTML = '';
                 wordCountWrapper.appendChild(wordCountPlugin.wordCountContainer);
             }
-            editors.push(editor);
+            editors[editorEl.id] = editor;
+            if (callbacks[editorEl.id]) {
+                    callbacks[editorEl.id](editor);
+                }
         }).catch(error => {
             console.error((error));
         });
         editorEl.setAttribute('data-processed', '1');
     });
-
     window.editors = editors;
-    window.ClassicEditor = ClassicEditor;
 }
 
 /**
@@ -116,11 +138,30 @@ function getAddedNodes(recordList) {
         .filter(node => node.nodeType === 1);
 }
 
+/**
+ * Register a callback for when an editor with `id` is created.
+ *
+ * @param {!string} id - the id of the ckeditor element.
+ * @callback callback - the callback function to be invoked.
+ */
+function registerCallback(id, callback) {
+    callbacks[id] = callback;
+}
+
+/**
+ * Unregister a previously registered callback.
+ *
+ * @param {!string} id - the id of the ckeditor element.
+ */
+function unregisterCallback(id) {
+    callbacks[id] = null;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     createEditors();
 
     if (typeof django === "object" && django.jQuery) {
-        django.jQuery(document).on("formset:added", createEditors);
+        django.jQuery(document).on("formset:added", () => {createEditors();});
     }
 
     const observer = new MutationObserver((mutations) => {

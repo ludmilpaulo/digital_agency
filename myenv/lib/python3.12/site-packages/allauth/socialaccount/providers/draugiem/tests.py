@@ -3,14 +3,13 @@ from hashlib import md5
 from unittest.mock import Mock, patch
 
 from django.contrib.auth.models import User
-from django.test import RequestFactory
+from django.test import RequestFactory, TestCase
 from django.urls import reverse
 from django.utils.http import urlencode
 
 from allauth import app_settings
 from allauth.socialaccount.internal import statekit
 from allauth.socialaccount.models import SocialAccount, SocialApp, SocialToken
-from allauth.tests import TestCase
 
 from . import views
 from .provider import DraugiemProvider
@@ -144,4 +143,4 @@ class DraugiemTests(TestCase):
                 pacc.get_avatar_url()
                 == "http://cdn.memegenerator.net/instances/500x/23395689.jpg"
             )
-            assert pacc.to_str() == "Draugiem"
+            assert pacc.to_str() == "Anakin"

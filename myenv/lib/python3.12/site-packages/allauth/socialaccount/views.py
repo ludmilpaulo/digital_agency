@@ -6,6 +6,7 @@ from django.utils.decorators import method_decorator
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
 
+from allauth.account.internal.decorators import login_not_required
 from allauth.socialaccount.forms import DisconnectForm, SignupForm
 from allauth.socialaccount.internal import flows
 from allauth.socialaccount.models import SocialAccount
@@ -33,6 +34,7 @@ class SignupView(
     def get_form_class(self):
         return get_form_class(app_settings.FORMS, "signup", self.form_class)
 
+    @method_decorator(login_not_required)
     def dispatch(self, request, *args, **kwargs):
         self.sociallogin = flows.signup.get_pending_signup(request)
         if not self.sociallogin:
@@ -69,6 +71,7 @@ class SignupView(
 signup = SignupView.as_view()
 
 
+@method_decorator(login_not_required, name="dispatch")
 class LoginCancelledView(TemplateView):
     template_name = (
         "socialaccount/login_cancelled." + account_settings.TEMPLATE_EXTENSION

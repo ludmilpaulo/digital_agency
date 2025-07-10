@@ -1,5 +1,7 @@
+from django.test import TestCase
+
 from allauth.socialaccount.tests import OAuth2TestsMixin
-from allauth.tests import MockedResponse, TestCase
+from allauth.tests import MockedResponse
 
 from .provider import AtlassianProvider
 
@@ -28,3 +30,6 @@ class AtlassianTests(OAuth2TestsMixin, TestCase):
             }
         }"""
         return MockedResponse(200, response_data)
+
+    def get_expected_to_str(self):
+        return "mia@example.com"

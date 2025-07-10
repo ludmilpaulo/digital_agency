@@ -1,8 +1,9 @@
+from django.test import TestCase
 from django.test.utils import override_settings
 
 from allauth.socialaccount.models import SocialAccount
 from allauth.socialaccount.tests import OAuth2TestsMixin
-from allauth.tests import MockedResponse, TestCase
+from allauth.tests import MockedResponse
 
 from .provider import BitbucketOAuth2Provider
 
@@ -89,13 +90,16 @@ class BitbucketOAuth2Tests(OAuth2TestsMixin, TestCase):
             MockedResponse(200, self.email_response_data),
         ]
 
+    def get_expected_to_str(self):
+        return "tutorials"
+
     def test_provider_account(self):
         self.login(self.get_mocked_response())
         socialaccount = SocialAccount.objects.get(uid="tutorials")
         self.assertEqual(socialaccount.user.username, "tutorials")
         self.assertEqual(socialaccount.user.email, "tutorials@bitbucket.org")
         account = socialaccount.get_provider_account()
-        self.assertEqual(account.to_str(), "tutorials account")
+        self.assertEqual(account.to_str(), "tutorials")
         self.assertEqual(account.get_profile_url(), "https://bitbucket.org/tutorials")
         self.assertEqual(
             account.get_avatar_url(),

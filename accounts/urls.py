@@ -2,6 +2,8 @@
 
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+
+from .staff_views import check_staff_view
 from .group import AllGroupsView, BuiltinGroupViewSet, ProjectGroupViewSet, UserViewSet
 from .user_views import UserListView
 from .views import custom_login, custom_signup
@@ -17,4 +19,5 @@ urlpatterns = [
     path('users/', UserListView.as_view(), name='user-list'),
     path('custom-login/', custom_login, name='custom-login'),
     path('custom-sign/', custom_signup, name='custom-sign'),
+    path("check-staff/", check_staff_view, name="check_staff"),
 ]

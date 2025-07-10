@@ -19,18 +19,13 @@ class VKAccount(ProviderAccount):
         else:
             return ret
 
-    def to_str(self):
-        first_name = self.account.extra_data.get("first_name", "")
-        last_name = self.account.extra_data.get("last_name", "")
-        name = " ".join([first_name, last_name]).strip()
-        return name or super(VKAccount, self).to_str()
-
 
 class VKProvider(OAuth2Provider):
     id = "vk"
     name = "VK"
     account_class = VKAccount
     oauth2_adapter_class = VKOAuth2Adapter
+    pkce_enabled_default = True
 
     def get_default_scope(self):
         scope = []
@@ -39,7 +34,7 @@ class VKProvider(OAuth2Provider):
         return scope
 
     def extract_uid(self, data):
-        return str(data["id"])
+        return str(data["user_id"])
 
     def extract_common_fields(self, data):
         return dict(
@@ -47,6 +42,7 @@ class VKProvider(OAuth2Provider):
             last_name=data.get("last_name"),
             username=data.get("screen_name"),
             first_name=data.get("first_name"),
+            phone=data.get("phone"),
         )
 
 

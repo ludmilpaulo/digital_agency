@@ -8,7 +8,9 @@
     {% element h1 %}
         {% trans "Confirm Access" %}
     {% endelement %}
-    <p>{% blocktranslate %}Please reauthenticate to safeguard your account.{% endblocktranslate %}</p>
+    {% element p %}
+        {% blocktranslate %}Please reauthenticate to safeguard your account.{% endblocktranslate %}
+    {% endelement %}
     {% block reauthenticate_content %}{% endblock %}
     {% if reauthentication_alternatives %}
         {% element hr %}
@@ -16,12 +18,12 @@
         {% element h2 %}
             {% translate "Alternative options" %}
         {% endelement %}
-        <ul>
+        {% element button_group %}
             {% for alt in reauthentication_alternatives %}
-                <li>
-                    <a href="{{ alt.url }}">{{ alt.description }}</a>
-                </li>
+                {% element button href=alt.url tags="primary,outline" %}
+                    {{ alt.description }}
+                {% endelement %}
             {% endfor %}
-        </ul>
+        {% endelement %}
     {% endif %}
 {% endblock content %}

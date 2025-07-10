@@ -78,6 +78,8 @@ class ElementNode(template.Node):
         self.nodelist = nodelist
 
     def render(self, context):
+        from allauth.account.app_settings import TEMPLATE_EXTENSION
+
         slots = {}
         extends_context = context.render_context.get(ExtendsNode.context_key)
         layout = None
@@ -108,13 +110,15 @@ class ElementNode(template.Node):
                 attrs[k] = v.resolve(context)
             tags = attrs.get("tags")
             if tags:
-                attrs["tags"] = tags.split(",")
+                attrs["tags"] = [tag.strip() for tag in tags.split(",")]
             return render_to_string(
                 template_names,
                 {
                     "attrs": attrs,
                     "slots": slots,
-                    "origin": self.origin.template_name.replace(".html", ""),
+                    "origin": self.origin.template_name.replace(
+                        f".{TEMPLATE_EXTENSION}", ""
+                    ),
                 },
             )
 
@@ -137,5 +141,5 @@ class SetVarNode(template.Node):
         self.var = var
 
     def render(self, context):
-        context[self.var] = mark_safe(self.nodelist.render(context).strip())
+        context[self.var] = mark_safe(self.nodelist.render(context).strip())  # nosec
         return ""

@@ -1,11 +1,12 @@
 import json
-from datetime import datetime, timedelta
+import time
 from importlib import import_module
 from unittest.mock import Mock, patch
 
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.core import mail
+from django.test import TestCase
 from django.test.client import RequestFactory
 from django.test.utils import override_settings
 from django.urls import reverse
@@ -21,7 +22,7 @@ from allauth.socialaccount.models import SocialAccount, SocialToken
 from allauth.socialaccount.providers.apple.client import jwt_encode
 from allauth.socialaccount.providers.google.views import GoogleOAuth2Adapter
 from allauth.socialaccount.tests import OAuth2TestsMixin
-from allauth.tests import TestCase, mocked_response
+from allauth.tests import mocked_response
 
 from .provider import GoogleProvider
 
@@ -53,8 +54,11 @@ class GoogleTests(OAuth2TestsMixin, TestCase):
         self.email = "raymond.penners@example.com"
         self.identity_overwrites = {}
 
+    def get_expected_to_str(self):
+        return "raymond.penners@example.com"
+
     def get_google_id_token_payload(self):
-        now = datetime.utcnow()
+        now = int(time.time())
         client_id = "app123id"  # Matches `setup_app`
         payload = {
             "iss": "https://accounts.google.com",
@@ -71,7 +75,7 @@ class GoogleTests(OAuth2TestsMixin, TestCase):
             "family_name": "Penners",
             "locale": "en",
             "iat": now,
-            "exp": now + timedelta(hours=1),
+            "exp": now + 60 * 60,
         }
         payload.update(self.identity_overwrites)
         return payload
@@ -94,7 +98,7 @@ class GoogleTests(OAuth2TestsMixin, TestCase):
     def test_wrong_id_token_claim_values(self):
         wrong_claim_values = {
             "iss": "not-google",
-            "exp": datetime.utcnow() - timedelta(seconds=1),
+            "exp": time.time() - 1,
             "aud": "foo",
         }
         for key, value in wrong_claim_values.items():

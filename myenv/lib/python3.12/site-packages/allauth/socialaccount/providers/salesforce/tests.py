@@ -1,5 +1,7 @@
+from django.test import TestCase
+
 from allauth.socialaccount.tests import OAuth2TestsMixin
-from allauth.tests import MockedResponse, TestCase
+from allauth.tests import MockedResponse
 
 from .provider import SalesforceProvider
 
@@ -30,6 +32,9 @@ class SalesforceTests(OAuth2TestsMixin, TestCase):
             is_app_installed="true",
         )
         return MockedResponse(200, userinfo)
+
+    def get_expected_to_str(self):
+        return "raymond.penners@gmail.com"
 
 
 USERINFO_RESPONSE = """

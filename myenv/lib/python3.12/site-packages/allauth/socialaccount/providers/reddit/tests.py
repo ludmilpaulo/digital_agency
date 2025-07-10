@@ -1,5 +1,7 @@
+from django.test import TestCase
+
 from allauth.socialaccount.tests import OAuth2TestsMixin
-from allauth.tests import MockedResponse, TestCase
+from allauth.tests import MockedResponse
 
 from .provider import RedditProvider
 
@@ -15,3 +17,6 @@ class RedditTests(OAuth2TestsMixin, TestCase):
         "name": "wayward710"}""",
             )
         ]
+
+    def get_expected_to_str(self):
+        return "wayward710"

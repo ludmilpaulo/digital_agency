@@ -1,9 +1,10 @@
 import json
-from datetime import datetime, timedelta
+import time
 from importlib import import_module
 from urllib.parse import parse_qs, urlparse
 
 from django.conf import settings
+from django.test import TestCase
 from django.test.utils import override_settings
 from django.urls import reverse
 from django.utils.http import urlencode
@@ -11,7 +12,7 @@ from django.utils.http import urlencode
 import jwt
 
 from allauth.socialaccount.tests import OAuth2TestsMixin
-from allauth.tests import MockedResponse, TestCase, mocked_response
+from allauth.tests import MockedResponse, mocked_response
 
 from .apple_session import APPLE_SESSION_COOKIE_NAME
 from .client import jwt_encode
@@ -123,11 +124,11 @@ class AppleTests(OAuth2TestsMixin, TestCase):
     provider_id = AppleProvider.id
 
     def get_apple_id_token_payload(self):
-        now = datetime.utcnow()
+        now = int(time.time())
         return {
             "iss": "https://appleid.apple.com",
             "aud": "app123id",  # Matches `setup_app`
-            "exp": now + timedelta(hours=1),
+            "exp": now + 60 * 60,
             "iat": now,
             "sub": "000313.c9720f41e9434e18987a.1218",
             "at_hash": "CkaUPjk4MJinaAq6Z0tGUA",
@@ -169,6 +170,9 @@ class AppleTests(OAuth2TestsMixin, TestCase):
         return MockedResponse(
             200, KEY_SERVER_RESP_JSON, {"content-type": "application/json"}
         )
+
+    def get_expected_to_str(self):
+        return "A B"
 
     def get_complete_parameters(self, auth_request_params):
         """

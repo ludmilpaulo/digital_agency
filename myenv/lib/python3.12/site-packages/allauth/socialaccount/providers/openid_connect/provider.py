@@ -1,8 +1,13 @@
+import requests
+
 from django.urls import reverse
 from django.utils.http import urlencode
 
 from allauth.account.models import EmailAddress
+from allauth.socialaccount.adapter import get_adapter
+from allauth.socialaccount.internal import jwtkit
 from allauth.socialaccount.providers.base import ProviderAccount
+from allauth.socialaccount.providers.oauth2.client import OAuth2Error
 from allauth.socialaccount.providers.oauth2.provider import OAuth2Provider
 from allauth.socialaccount.providers.openid_connect.views import (
     OpenIDConnectOAuth2Adapter,
@@ -10,9 +15,7 @@ from allauth.socialaccount.providers.openid_connect.views import (
 
 
 class OpenIDConnectProviderAccount(ProviderAccount):
-    def to_str(self):
-        dflt = super(OpenIDConnectProviderAccount, self).to_str()
-        return self.account.extra_data.get("name", dflt)
+    pass
 
 
 class OpenIDConnectProvider(OAuth2Provider):
@@ -20,6 +23,7 @@ class OpenIDConnectProvider(OAuth2Provider):
     name = "OpenID Connect"
     account_class = OpenIDConnectProviderAccount
     oauth2_adapter_class = OpenIDConnectOAuth2Adapter
+    supports_token_authentication = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -32,7 +36,7 @@ class OpenIDConnectProvider(OAuth2Provider):
 
     def wk_server_url(self, url):
         well_known_uri = "/.well-known/openid-configuration"
-        if not url.endswith(well_known_uri):
+        if "/.well-known/" not in url:
             url += well_known_uri
         return url
 
@@ -67,6 +71,8 @@ class OpenIDConnectProvider(OAuth2Provider):
             name=data.get("name"),
             user_id=data.get("user_id"),
             picture=data.get("picture"),
+            last_name=data.get("family_name"),
+            first_name=data.get("given_name"),
         )
 
     def extract_email_addresses(self, data):
@@ -84,6 +90,25 @@ class OpenIDConnectProvider(OAuth2Provider):
 
     def get_oauth2_adapter(self, request):
         return self.oauth2_adapter_class(request, self.app.provider_id)
+
+    def verify_token(self, request, token):
+        id_token = token.get("id_token")
+        if not id_token:
+            raise get_adapter().validation_error("invalid_token")
+        try:
+            oauth2_adapter = self.get_oauth2_adapter(request)
+            openid_config = oauth2_adapter.openid_config
+            identity_data = jwtkit.verify_and_decode(
+                credential=id_token,
+                keys_url=openid_config["jwks_uri"],
+                issuer=openid_config["issuer"],
+                audience=[self.app.client_id],
+                lookup_kid=jwtkit.lookup_kid_jwk,
+            )
+        except (OAuth2Error, requests.RequestException) as e:
+            raise get_adapter().validation_error("invalid_token") from e
+        login = self.sociallogin_from_response(request, identity_data)
+        return login
 
 
 provider_classes = [OpenIDConnectProvider]

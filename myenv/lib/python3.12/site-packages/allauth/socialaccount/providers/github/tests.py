@@ -1,6 +1,11 @@
+from unittest.mock import patch
+
+from django.test import TestCase
+
+from allauth.account.models import EmailAddress
 from allauth.socialaccount.models import SocialAccount
 from allauth.socialaccount.tests import OAuth2TestsMixin
-from allauth.tests import MockedResponse, TestCase
+from allauth.tests import MockedResponse
 
 from .provider import GitHubProvider
 
@@ -47,15 +52,18 @@ class GitHubTests(OAuth2TestsMixin, TestCase):
             MockedResponse(
                 200,
                 """
-            {
+            [{
               "email": "octocat@github.com",
               "verified": true,
               "primary": true,
               "visibility": "public"
-            }
+            }]
             """,
             ),
         ]
+
+    def get_expected_to_str(self):
+        return "pennersr"
 
     def test_account_name_null(self):
         """String conversion when GitHub responds with empty name"""
@@ -80,15 +88,35 @@ class GitHubTests(OAuth2TestsMixin, TestCase):
             "verified": true,
             "primary": true,
             "visibility": "public"
+          },
+          {
+            "email": "secONDary@GitHub.COM",
+            "verified": true,
+            "primary": false,
+            "visibility": "public"
           }
         ]
         """,
             ),
         ]
-        self.login(mocks)
+        with patch(
+            "allauth.socialaccount.adapter.DefaultSocialAccountAdapter.populate_user"
+        ) as populate_mock:
+            self.login(mocks)
+        populate_data = populate_mock.call_args[0][2]
+        assert populate_data["email"] == "octocat@github.com"
         socialaccount = SocialAccount.objects.get(uid="201022")
         self.assertIsNone(socialaccount.extra_data.get("name"))
         account = socialaccount.get_provider_account()
         self.assertIsNotNone(account.to_str())
         self.assertEqual(account.to_str(), "pennersr")
         self.assertEqual(socialaccount.user.email, "octocat@github.com")
+        self.assertTrue(
+            EmailAddress.objects.filter(
+                primary=False,
+                verified=True,
+                email="secondary@github.com",
+                user=socialaccount.user,
+            ).exists()
+        )
+        self.assertTrue("emails" not in socialaccount.extra_data)
