@@ -36,11 +36,11 @@ class BoardAdmin(admin.ModelAdmin):
     readonly_fields = ()
 
     def users_list(self, obj):
-        return ", ".join([u.get_full_name() or u.username for u in obj.users.all()])
+        return ", ".join([u.username for u in obj.users.all()])
     users_list.short_description = "Users"
 
     def managers_list(self, obj):
-        return ", ".join([u.get_full_name() or u.username for u in obj.managers.all()])
+        return ", ".join([u.username for u in obj.managers.all()])
     managers_list.short_description = "Managers"
 
 @admin.register(List)
