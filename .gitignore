@@ -1,23 +1,42 @@
-db.sqlite3
-# Django
-*.pyc
+# Python bytecode and cache
 __pycache__/
-static_cdn/
-db.sqlite3
-static_cdn/
+*.py[cod]
+*.so
+
+# Django migrations
 **/migrations/
+!**/migrations/__init__.py  # Keep __init__.py so Django sees the app
+
+# SQLite database
 db.sqlite3
+
+# Environment files and folders
+.env
+*.env
+env/
+venv/
+ENV/
+*.env.*
+
+# Django static/media/CDN
+static/
+staticfiles/
+static_cdn/
+media/
+**/static_cdn/
+**/media/
+
+# VS Code and PyCharm settings
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Django settings for extra protection (don't usually ignore your main settings.py, only local/dev/secret ones)
 settings.py
-**/settings.py/
 *settings.py
 *settings
-
-settings
 **/settings/
-static_cdn/
-static_cdn/
-**/static_cdn/
-**/migrations/
-.env
-env/
-*.env
+**/settings.py/

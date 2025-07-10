@@ -1,8 +1,6 @@
 import os
-from pathlib import Path
-from dotenv import load_dotenv
 
-load_dotenv()
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -136,39 +134,13 @@ WSGI_APPLICATION = 'digital_agency.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-# Database: Use environment variables for all secrets!
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', 'postgres'),
-        'USER': os.environ.get('DB_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', ''),  # set in .env
-        'HOST': os.environ.get('DB_HOST', ''),
-        'PORT': os.environ.get('DB_PORT', '5432'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-# STATIC/MEDIA
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "statics")]
-STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn", "static_root")
-
-# Supabase S3 Storage for Django media files
-INSTALLED_APPS += ["storages"]
-
-DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME', 'maindodigital.com')
-AWS_S3_ENDPOINT_URL = os.environ.get('AWS_S3_ENDPOINT_URL', 'https://fzsektsquzbxzqoynmft.supabase.co/storage/v1/s3')
-AWS_DEFAULT_ACL = None
-AWS_S3_FILE_OVERWRITE = False
-AWS_QUERYSTRING_AUTH = False
-
-MEDIA_URL = '/media/'   # Will serve from bucket in production
-MEDIA_ROOT = os.path.join(BASE_DIR, "static_cdn", "media_root")  # Only used for local
-
-# NOTE: Your .env file must be in the root directory of your project!
 
 
 # Password validation
@@ -214,6 +186,17 @@ LOCALE_PATHS = [
 
 
 
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "statics"),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn", "static_root")
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "static_cdn", "media_root")
 
 LOGIN_REDIRECT_URL = '/'
 
