@@ -40,3 +40,8 @@ settings.py
 *settings
 **/settings/
 **/settings.py/
+# Ignore ALL settings.py files anywhere in the project
+**/settings.py
+
+# Or, if you only want to ignore your main one:
+digital_agency/settings.py
