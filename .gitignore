@@ -7,7 +7,13 @@ db.sqlite3
 static_cdn/
 **/migrations/
 db.sqlite3
+settings.py
+**/settings.py/
+*settings.py
+*settings
 
+settings
+**/settings/
 static_cdn/
 static_cdn/
 **/static_cdn/
