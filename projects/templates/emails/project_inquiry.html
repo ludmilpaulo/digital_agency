@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>New Project Inquiry</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7fafd; margin: 0; padding: 0;}
+    .container { background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.09); max-width: 520px; margin: 40px auto; padding: 32px;}
+    h2 { color: #174ea6; font-size: 1.6rem; margin-bottom: 8px;}
+    .label { color: #5286d9; font-weight: bold; }
+    .value { color: #293350; }
+    .footer { margin-top: 32px; font-size: 0.97rem; color: #677792; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🚀 New Project Inquiry - Maindo Digital</h2>
+    <p><span class="label">Name:</span> <span class="value">{{ name }}</span></p>
+    <p><span class="label">Email:</span> <span class="value">{{ email }}</span></p>
+    <p><span class="label">Phone:</span> <span class="value">{{ phone }}</span></p>
+    <p><span class="label">Company:</span> <span class="value">{{ company }}</span></p>
+    <p><span class="label">Project:</span> <span class="value">{{ project }}</span></p>
+    <p><span class="label">Budget:</span> <span class="value">{{ budget }}</span></p>
+    <p><span class="label">Message:</span></p>
+    <div class="value" style="background: #f3f7ff; border-radius: 8px; padding: 14px 16px; margin-bottom: 18px;">{{ message }}</div>
+    <div class="footer">
+      This message was sent from the Maindo Digital website.<br>
+      <a href="https://www.maindodigital.com" style="color:#2b6ce1;text-decoration:none;">www.maindodigital.com</a>
+    </div>
+  </div>
+</body>
+</html>
