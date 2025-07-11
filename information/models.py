@@ -61,16 +61,22 @@ class Why_Choose_Us(models.Model):
         return self.title
 
 
+from django.db import models
+
 class Team(models.Model):
     name = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
     bio = models.CharField(max_length=500)
-    image = models.ImageField(upload_to='chef/')
+    image = models.ImageField(upload_to='team/', blank=True, null=True)
     github = models.URLField(blank=True, null=True)
     linkedin = models.URLField(blank=True, null=True)
     facebook = models.URLField(blank=True, null=True)
     twitter = models.URLField(blank=True, null=True)
     instagram = models.URLField(blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)  # For 'Contact' button
+
+    # Store tags/skills as a JSON field (PostgreSQL recommended) or as comma-separated if using SQLite
+    tags = models.JSONField(blank=True, null=True, default=list)
 
     class Meta:
         verbose_name = 'Squad'
@@ -78,6 +84,7 @@ class Team(models.Model):
 
     def __str__(self):
         return self.name
+
 
 
 class Timeline(models.Model):
