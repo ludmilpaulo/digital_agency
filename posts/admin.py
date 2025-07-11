@@ -14,7 +14,7 @@ class CommentInline(admin.TabularInline):
 @admin.register(Author)
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ("id", "user", "avatar_preview", "linkedin", "twitter")
-    search_fields = ("user__username", "user__email", "user__first_name", "user__last_name")
+    search_fields = ("user__username", "user__email", "user__username")
     readonly_fields = ("avatar_preview",)
 
     def avatar_preview(self, obj):
