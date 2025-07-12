@@ -13,7 +13,7 @@ class Author(models.Model):
     twitter = models.URLField(blank=True, null=True)
 
     def __str__(self):
-        return self.user.get_full_name() or self.user.username
+        return self.user.name() or self.user.username
 
 class Category(models.Model):
     name = models.CharField(max_length=64)
