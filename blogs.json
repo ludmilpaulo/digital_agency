@@ -18,6 +18,33 @@
     }
   },
   {
+    "model": "posts.category",
+    "pk": 3,
+    "fields": {
+      "name": "Lead Generation",
+      "slug": "lead-generation",
+      "description": "Tactics to attract and convert more customers online."
+    }
+  },
+  {
+    "model": "posts.category",
+    "pk": 4,
+    "fields": {
+      "name": "Social Media",
+      "slug": "social-media",
+      "description": "Proven ways to grow, engage, and sell with social media."
+    }
+  },
+  {
+    "model": "posts.category",
+    "pk": 5,
+    "fields": {
+      "name": "Web Design",
+      "slug": "web-design",
+      "description": "Inspiration and best practices for building stunning websites."
+    }
+  },
+  {
     "model": "posts.tag",
     "pk": 1,
     "fields": {
