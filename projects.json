@@ -1,0 +1,102 @@
+[
+  {
+    "model": "projects.project",
+    "pk": 1,
+    "fields": {
+      "title": "Kudya – Africa’s Marketplace & Super App",
+      "description": "<h2>Kudya: Transforming How Africa Shops, Eats, and Connects</h2><p><b>Kudya</b> is Africa’s first true super app, connecting buyers and sellers across food, goods, and services. Our team handled the full digital ecosystem: branding, mobile & web apps, payments, logistics, and multi-language support. Kudya has become a benchmark for digital commerce in Africa, enabling hundreds of businesses and thousands of users daily.</p><ul><li>Custom e-commerce engine</li><li>Integrated delivery logistics</li><li>Secure wallet/payments</li><li>Vendor & customer dashboards</li><li>Multi-country, multi-language</li></ul><p><i>Built with Django, React Native, Stripe, and AWS.</i></p>",
+      "image": "projects/kudya_app.png",
+      "link": "https://www.kudya.africa"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 2,
+    "fields": {
+      "title": "Family Cladding – Home Makeover Platform",
+      "description": "<h2>Family Cladding: Elevate Your Space, Effortlessly</h2><p><b>Family Cladding</b> is a modern B2C and B2B platform for the cladding and home-improvement sector. We developed a sleek, visual site that allows customers to browse cladding solutions, request quotes, and book installations in a few clicks. The admin dashboard helps Family Cladding manage leads, projects, and customer feedback with ease.</p><ul><li>Elegant gallery and product showcases</li><li>Custom project inquiry forms</li><li>Automated quote generator</li><li>SEO & Google Ads integration</li></ul><p><i>Stack: Django, Next.js, Postgres, Tailwind CSS.</i></p>",
+      "image": "projects/family_cladding.png",
+      "link": "https://familycladding.co.za"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 3,
+    "fields": {
+      "title": "TBAE – Team Building Africa Events",
+      "description": "<h2>TBAE: Leading Team Building Events in Africa</h2><p><b>TBAE</b> is the continent’s top team-building company, and we completely re-imagined their digital experience. From instant booking and payment to an interactive event gallery, the new site delivers a world-class user journey for corporates and individuals. Our work helped TBAE triple their lead volume and streamline event management.</p><ul><li>Custom booking engine</li><li>Dynamic event galleries</li><li>Client dashboard with calendar sync</li><li>Review & testimonial system</li></ul><p><i>Stack: Django, Next.js, React, Stripe, Metabase analytics.</i></p>",
+      "image": "projects/tbae_website.png",
+      "link": "https://www.tbae.co.za"
+    }
+  },
+  {
+  "model": "projects.project",
+  "pk": 4,
+  "fields": {
+    "title": "DEbarn – Venue, School & WiFi Hotspot Platform",
+    "description": "<h2>DEbarn: Smart Venue, School & WiFi Management</h2><p><b>DEbarn</b> transforms how venues, schools, and event organizers manage spaces and guest connectivity. Our cloud platform lets clients book facilities, schedule school activities, and securely offer WiFi to guests, all from one dashboard. Real-time analytics help owners maximize usage and revenue, while guests enjoy seamless access.</p><ul><li>One-click venue booking & calendar</li><li>School timetables and notifications</li><li>Automated guest WiFi codes</li><li>Usage analytics and admin controls</li></ul><p><i>Trusted by top schools and event venues in Southern Africa.</i></p>",
+    "image": "projects/debarn.png",
+    "link": "https://debarnafrica.com"
+  }
+},
+  {
+    "model": "projects.project",
+    "pk": 5,
+    "fields": {
+      "title": "Ghanadude – Pan-African Lifestyle Media",
+      "description": "<h2>Ghanadude: Redefining African Pop Culture Online</h2><p><b>Ghanadude</b> is a dynamic blog, community, and store for African pop culture and lifestyle. We built a scalable platform with viral content features, influencer dashboards, and a merch store. Ghanadude now reaches millions of users across the continent and diaspora, supporting cultural pride and new talent.</p><ul><li>Multi-author CMS</li><li>Viral social sharing tools</li><li>Online shop for merchandise</li><li>Event ticketing integration</li></ul><p><i>Stack: Django, Next.js, Paystack, Google Analytics.</i></p>",
+      "image": "projects/ghanadude.png",
+      "link": "https://www.ghanadude.com"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 6,
+    "fields": {
+      "title": "Case Study: EdTech for Rural Africa – Mlimi Learning",
+      "description": "<h2>Mlimi Learning: Bridging the Education Gap</h2><p><b>Mlimi Learning</b> brings digital education to remote villages. We built an offline-first learning app with curriculum tracking, teacher dashboards, and WhatsApp-based support. The result: 20% higher pass rates and thousands of rural students with digital skills.</p><ul><li>Offline & low-bandwidth features</li><li>Curriculum alignment for multiple countries</li><li>Parent & teacher communication tools</li></ul><p><i>Stack: Django, React Native, Twilio API.</i></p>",
+      "image": "projects/mlimi.png",
+      "link": ""
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 7,
+    "fields": {
+      "title": "Case Study: FinTech Success – MobiCash Africa",
+      "description": "<h2>MobiCash: Financial Access for All</h2><p>We helped <b>MobiCash Africa</b> launch a mobile wallet that allows anyone to send, receive, and pay securely with their phone—no bank required. Our custom KYC onboarding, agent management, and security modules powered their rapid growth to 50,000+ users in 18 months.</p><ul><li>Bank-grade security</li><li>Agent & merchant portal</li><li>API integrations for bill payments</li></ul><p><i>Stack: Django, Flutter, REST API, AWS.</i></p>",
+      "image": "projects/mobicash.png",
+      "link": ""
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 8,
+    "fields": {
+      "title": "Case Study: HealthTech Platform – Tembhalethu Men’s Clinic",
+      "description": "<h2>Tembhalethu Men’s Clinic: Digital Health Redefined</h2><p>We digitized bookings, patient records, and reminders for Tembhalethu Men’s Clinic. Our platform improved client retention and reduced no-shows by 30% within six months.</p><ul><li>Secure patient portal</li><li>SMS & WhatsApp reminders</li><li>Doctor dashboard & telehealth integration</li></ul><p><i>Stack: Django, React, Nexmo API.</i></p>",
+      "image": "projects/tembhalethu.png",
+      "link": ""
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 9,
+    "fields": {
+      "title": "Case Study: E-commerce – African Rise",
+      "description": "<h2>African Rise: Selling African Products Worldwide</h2><p><b>African Rise</b> connects artisans, brands, and customers globally. We built a robust multi-vendor marketplace with local delivery, international shipping, and automated currency conversion. African Rise now empowers dozens of African brands with global sales and easy digital marketing.</p><ul><li>Vendor onboarding & store setup</li><li>Secure payments & payouts</li><li>Marketing automation & analytics</li></ul><p><i>Stack: Django, Next.js, Stripe, DHL API.</i></p>",
+      "image": "projects/africanrise.png",
+      "link": "https://www.africarise.co"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 10,
+    "fields": {
+      "title": "Case Study: Logistics Platform – QuickMove Africa",
+      "description": "<h2>QuickMove: Next-Gen Logistics & Courier Tech</h2><p>We powered <b>QuickMove Africa</b> with a full-stack logistics platform: instant booking, driver tracking, automated invoicing, and real-time notifications. This tech leap reduced delivery errors by 45% and boosted client satisfaction for their B2B partners.</p><ul><li>Driver & client portals</li><li>GPS tracking</li><li>Instant quote engine</li></ul><p><i>Stack: Django, React Native, Google Maps API.</i></p>",
+      "image": "projects/quickmove.png",
+      "link": ""
+    }
+  }
+]
