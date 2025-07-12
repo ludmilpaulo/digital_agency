@@ -1,41 +1,94 @@
 [
   {
-    "model": "posts.post",
+    "model": "posts.category",
     "pk": 1,
     "fields": {
-      "author": 1,
-      "title": "10 Ways to Get More Customers Online in South Africa",
-      "content": "<h2>Unlock Your Digital Potential</h2><p>Are you struggling to attract new clients? Discover the top 10 strategies to boost your online presence and dominate the South African market in 2025.</p><ul><li>Local SEO</li><li>Paid Ads</li><li>Content Marketing</li><li>And more…</li></ul><hr><p><b>Need a free website audit?</b> <a href='mailto:support@maindodigital.com'>Contact us today</a> or <a href='https://wa.me/27659031894'>WhatsApp us</a>!</p>",
-      "markdown": "# 10 Ways to Get More Customers Online in South Africa\n\n**Unlock Your Digital Potential**\n\nAre you struggling to attract new clients? Discover the top 10 strategies to boost your online presence and dominate the South African market in 2025.\n\n- Local SEO\n- Paid Ads\n- Content Marketing\n- And more…\n\n---\n\n**Need a free website audit?** [Contact us today](mailto:support@maindodigital.com) or [WhatsApp us](https://wa.me/27659031894)!\n",
-      "image": "",
-      "published_date": "2024-07-01T09:00:00Z",
-      "status": "published",
-      "category": 1,
-      "featured": true,
-      "views": 0,
-      "newsletter_sent": false,
-      "updated_at": "2024-07-01T09:00:00Z",
-      "created_at": "2024-07-01T08:30:00Z",
-      "tags": [1, 2, 3]
+      "name": "Digital Growth",
+      "slug": "digital-growth",
+      "description": "Actionable strategies for businesses to thrive in Africa’s digital landscape."
     }
   },
   {
-    "model": "posts.post",
+    "model": "posts.category",
     "pk": 2,
     "fields": {
-      "author": 1,
-      "title": "Why Your Business Needs a Mobile-First Website in 2025",
-      "content": "<h2>Go Mobile, Grow Faster</h2><p>80% of web traffic in Africa is now mobile. If your website isn’t mobile-first, you’re losing leads and customers. Learn how a responsive design can drive sales, increase brand trust, and future-proof your business.</p><hr><p><b>Ready to upgrade?</b> <a href='mailto:support@maindodigital.com'>Book a free consult</a> with Maindo Digital Agency today.</p>",
-      "markdown": "# Why Your Business Needs a Mobile-First Website in 2025\n\n**Go Mobile, Grow Faster**\n\n80% of web traffic in Africa is now mobile. If your website isn’t mobile-first, you’re losing leads and customers. Learn how a responsive design can drive sales, increase brand trust, and future-proof your business.\n\n---\n\n**Ready to upgrade?** [Book a free consult](mailto:support@maindodigital.com) with Maindo Digital Agency today.\n",
+      "name": "Brand Building",
+      "slug": "brand-building",
+      "description": "Tips and inspiration to help you create a memorable brand."
+    }
+  },
+  {
+    "model": "posts.tag",
+    "pk": 1,
+    "fields": {
+      "name": "Business Tips"
+    }
+  },
+  {
+    "model": "posts.tag",
+    "pk": 2,
+    "fields": {
+      "name": "Lead Generation"
+    }
+  },
+  {
+    "model": "posts.tag",
+    "pk": 3,
+    "fields": {
+      "name": "Digital Marketing"
+    }
+  },
+  {
+    "model": "posts.author",
+    "pk": 9,
+    "fields": {
+      "user": 1,
+      "avatar": "",
+      "bio": "Digital strategist and founder at Maindo Digital Agency. Helping African businesses succeed online.",
+      "linkedin": "https://www.linkedin.com/in/maindodigital",
+      "twitter": "https://twitter.com/maindodigital"
+    }
+  },
+
+
+  {
+    "model": "posts.post",
+    "pk": 1,
+    "fields": {
+      "author": 9,
+      "title": "How African Businesses Can Dominate Online: 7 Digital Strategies for 2025",
+      "content": "<h2>Transform Your Digital Presence in 2025</h2><p>Ready to attract more customers and grow your business online? Africa’s digital economy is booming—make sure your brand stands out with these proven strategies from Maindo Digital Agency.</p><h3>1. Go Mobile-First</h3><p>Most Africans access the web on mobile. Your website <b>must</b> be fast, modern, and responsive for all devices. Not sure if your site is mobile-ready? <a href='mailto:support@maindodigital.com'>Request a free audit</a>.</p><h3>2. Social Media for Business</h3><p>Engage your audience where they spend their time: Facebook, Instagram, WhatsApp, TikTok. Share valuable content, answer questions, and show your expertise to build trust and loyalty.</p><h3>3. Master Local SEO</h3><p>Get found by people searching for your services! Claim your Google My Business listing, use local keywords, and ask happy customers for reviews.</p><h3>4. E-commerce: Sell Beyond Borders</h3><p>Launch a simple, secure online store and offer easy payments. We help African businesses get online—<a href='https://www.maindodigital.com/contact'>let’s chat!</a></p><h3>5. Reviews Build Trust</h3><p>Showcase reviews and testimonials everywhere. Positive reviews boost sales—ask every customer to share their feedback.</p><h3>6. Influencer Partnerships</h3><p>Work with local micro-influencers to reach new audiences. Even small campaigns can bring big results when done right.</p><h3>7. Track, Test, Improve</h3><p>Use analytics to see what works. Improve your website, ads, and posts based on data—not guesswork. Need help? <a href='mailto:support@maindodigital.com'>Book a free strategy call</a>.</p><hr><h3>Let’s Grow Your Business!</h3><p>Maindo Digital Agency specializes in building high-conversion websites, powerful marketing, and creative content. <b>Contact us today for a free consultation and take the first step to online success:</b><br>Email: <a href='mailto:support@maindodigital.com'>support@maindodigital.com</a> | WhatsApp: <a href='https://wa.me/27659031894'>+27 65 903 1894</a></p>",
+      "markdown": "# How African Businesses Can Dominate Online: 7 Digital Strategies for 2025\n\n**Transform Your Digital Presence in 2025**\n\nReady to attract more customers and grow your business online? Africa’s digital economy is booming—make sure your brand stands out with these proven strategies from Maindo Digital Agency.\n\n## 1. Go Mobile-First\nMost Africans access the web on mobile. Your website **must** be fast, modern, and responsive for all devices. Not sure if your site is mobile-ready? [Request a free audit](mailto:support@maindodigital.com).\n\n## 2. Social Media for Business\nEngage your audience where they spend their time: Facebook, Instagram, WhatsApp, TikTok. Share valuable content, answer questions, and show your expertise to build trust and loyalty.\n\n## 3. Master Local SEO\nGet found by people searching for your services! Claim your Google My Business listing, use local keywords, and ask happy customers for reviews.\n\n## 4. E-commerce: Sell Beyond Borders\nLaunch a simple, secure online store and offer easy payments. We help African businesses get online—[let’s chat!](https://www.maindodigital.com/contact)\n\n## 5. Reviews Build Trust\nShowcase reviews and testimonials everywhere. Positive reviews boost sales—ask every customer to share their feedback.\n\n## 6. Influencer Partnerships\nWork with local micro-influencers to reach new audiences. Even small campaigns can bring big results when done right.\n\n## 7. Track, Test, Improve\nUse analytics to see what works. Improve your website, ads, and posts based on data—not guesswork. Need help? [Book a free strategy call](mailto:support@maindodigital.com).\n\n---\n\n### Let’s Grow Your Business!\nMaindo Digital Agency specializes in building high-conversion websites, powerful marketing, and creative content. **Contact us today for a free consultation and take the first step to online success:**\n\nEmail: [support@maindodigital.com](mailto:support@maindodigital.com) | WhatsApp: [+27 65 903 1894](https://wa.me/27659031894)\n",
       "image": "",
-      "published_date": "2024-07-02T09:00:00Z",
+      "published_date": "2024-07-12T13:00:00Z",
       "status": "published",
       "category": 1,
       "featured": true,
       "views": 0,
       "newsletter_sent": false,
-      "updated_at": "2024-07-02T09:00:00Z",
-      "created_at": "2024-07-02T08:30:00Z",
+      "updated_at": "2024-07-12T13:00:00Z",
+      "created_at": "2024-07-12T12:30:00Z",
+      "tags": [1, 2, 3]
+    }
+  },
+
+{
+    "model": "posts.post",
+    "pk": 2,
+    "fields": {
+      "author": 9,
+      "title": "The Power of Branding: How to Make Your Business Unforgettable",
+      "content": "<h2>Stand Out in a Crowded Marketplace</h2><p>Your brand is more than just a logo—it's your story, your voice, and your promise. In Africa’s fast-moving digital economy, a strong brand can make the difference between blending in and leading the pack.</p><h3>1. Define Your Unique Value</h3><p>What sets you apart? Focus on what makes your business special and communicate that in every touchpoint.</p><h3>2. Consistent Visual Identity</h3><p>Use the same colors, fonts, and style everywhere—from your website to social media. Consistency builds trust and recognition.</p><h3>3. Authentic Messaging</h3><p>Speak to your audience in a way that resonates. Show your passion, your vision, and how you solve their problems.</p><h3>4. Engage Your Community</h3><p>Host webinars, run contests, or share customer stories. The more you involve your audience, the more loyal they become.</p><hr><h3>Get a Free Brand Audit!</h3><p>Maindo Digital Agency offers free brand audits to help you understand your strengths and opportunities. <b>Contact us for a personalized review and see how we can elevate your brand:</b><br>Email: <a href='mailto:support@maindodigital.com'>support@maindodigital.com</a> | WhatsApp: <a href='https://wa.me/27659031894'>+27 65 903 1894</a></p>",
+      "markdown": "# The Power of Branding: How to Make Your Business Unforgettable\n\n## Stand Out in a Crowded Marketplace\nYour brand is more than just a logo—it's your story, your voice, and your promise. In Africa’s fast-moving digital economy, a strong brand can make the difference between blending in and leading the pack.\n\n## 1. Define Your Unique Value\nWhat sets you apart? Focus on what makes your business special and communicate that in every touchpoint.\n\n## 2. Consistent Visual Identity\nUse the same colors, fonts, and style everywhere—from your website to social media. Consistency builds trust and recognition.\n\n## 3. Authentic Messaging\nSpeak to your audience in a way that resonates. Show your passion, your vision, and how you solve their problems.\n\n## 4. Engage Your Community\nHost webinars, run contests, or share customer stories. The more you involve your audience, the more loyal they become.\n\n---\n\n### Get a Free Brand Audit!\nMaindo Digital Agency offers free brand audits to help you understand your strengths and opportunities. **Contact us for a personalized review and see how we can elevate your brand:**\n\nEmail: [support@maindodigital.com](mailto:support@maindodigital.com) | WhatsApp: [+27 65 903 1894](https://wa.me/27659031894)\n",
+      "image": "",
+      "published_date": "2024-07-13T09:00:00Z",
+      "status": "published",
+      "category": 2,
+      "featured": true,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-13T09:00:00Z",
+      "created_at": "2024-07-13T08:30:00Z",
       "tags": [1, 3]
     }
   },
@@ -43,160 +96,960 @@
     "model": "posts.post",
     "pk": 3,
     "fields": {
-      "author": 1,
-      "title": "How to Build a Powerful Brand in Africa",
-      "content": "<h2>Branding That Wins</h2><p>Great brands build trust, loyalty, and recognition. Discover proven branding secrets that top African businesses use to win in today’s digital world.</p><ul><li>Define Your Story</li><li>Consistent Messaging</li><li>Customer Engagement</li></ul><hr><p><b>Want a free brand review?</b> <a href='mailto:support@maindodigital.com'>Let’s talk!</a></p>",
-      "markdown": "# How to Build a Powerful Brand in Africa\n\n**Branding That Wins**\n\nGreat brands build trust, loyalty, and recognition. Discover proven branding secrets that top African businesses use to win in today’s digital world.\n\n- Define Your Story\n- Consistent Messaging\n- Customer Engagement\n\n---\n\n**Want a free brand review?** [Let’s talk!](mailto:support@maindodigital.com)\n",
+      "author": 9,
+      "title": "Unlock More Leads: Proven Digital Marketing Tactics for 2025",
+      "content": "<h2>Leads Are the Lifeblood of Your Business</h2><p>Every successful business needs a steady stream of high-quality leads. Here’s how you can use digital marketing to attract, nurture, and convert more prospects in 2025.</p><h3>1. Create Targeted Content</h3><p>Blog posts, guides, and videos that answer your audience’s questions will attract the right visitors to your site.</p><h3>2. Use Landing Pages with Strong CTAs</h3><p>Every campaign needs a landing page with a single, clear call to action. Offer value—like a free eBook or consultation—to capture emails.</p><h3>3. Automate Your Follow-Up</h3><p>Email automation lets you nurture leads without lifting a finger. Send helpful tips, exclusive offers, and updates to keep your brand top-of-mind.</p><h3>4. Invest in Paid Ads</h3><p>Smart spending on Google Ads or Facebook campaigns can put your business in front of thousands of new leads—fast.</p><hr><h3>Need More Leads?</h3><p>Maindo Digital Agency specializes in building marketing systems that generate real results. <b>Contact us for a free lead generation consultation:</b><br>Email: <a href='mailto:support@maindodigital.com'>support@maindodigital.com</a> | WhatsApp: <a href='https://wa.me/27659031894'>+27 65 903 1894</a></p>",
+      "markdown": "# Unlock More Leads: Proven Digital Marketing Tactics for 2025\n\n## Leads Are the Lifeblood of Your Business\nEvery successful business needs a steady stream of high-quality leads. Here’s how you can use digital marketing to attract, nurture, and convert more prospects in 2025.\n\n## 1. Create Targeted Content\nBlog posts, guides, and videos that answer your audience’s questions will attract the right visitors to your site.\n\n## 2. Use Landing Pages with Strong CTAs\nEvery campaign needs a landing page with a single, clear call to action. Offer value—like a free eBook or consultation—to capture emails.\n\n## 3. Automate Your Follow-Up\nEmail automation lets you nurture leads without lifting a finger. Send helpful tips, exclusive offers, and updates to keep your brand top-of-mind.\n\n## 4. Invest in Paid Ads\nSmart spending on Google Ads or Facebook campaigns can put your business in front of thousands of new leads—fast.\n\n---\n\n### Need More Leads?\nMaindo Digital Agency specializes in building marketing systems that generate real results. **Contact us for a free lead generation consultation:**\n\nEmail: [support@maindodigital.com](mailto:support@maindodigital.com) | WhatsApp: [+27 65 903 1894](https://wa.me/27659031894)\n",
       "image": "",
-      "published_date": "2024-07-03T09:00:00Z",
+      "published_date": "2024-07-14T15:00:00Z",
       "status": "published",
-      "category": 2,
-      "featured": true,
+      "category": 1,
+      "featured": false,
       "views": 0,
       "newsletter_sent": false,
-      "updated_at": "2024-07-03T09:00:00Z",
-      "created_at": "2024-07-03T08:30:00Z",
-      "tags": [1, 3]
+      "updated_at": "2024-07-14T15:00:00Z",
+      "created_at": "2024-07-14T14:30:00Z",
+      "tags": [2, 3]
     }
   },
   {
     "model": "posts.post",
     "pk": 4,
     "fields": {
-      "author": 1,
-      "title": "The Ultimate SEO Checklist for African Businesses",
-      "content": "<h2>Rank Higher in Google</h2><p>SEO is not a luxury, it’s a necessity. Follow this step-by-step checklist to drive more organic traffic and grow your business in Africa.</p><ul><li>Keyword Research</li><li>On-Page SEO</li><li>Local Listings</li></ul><hr><p><b>Need expert help?</b> <a href='mailto:support@maindodigital.com'>Get your SEO audit</a> for free.</p>",
-      "markdown": "# The Ultimate SEO Checklist for African Businesses\n\n**Rank Higher in Google**\n\nSEO is not a luxury, it’s a necessity. Follow this step-by-step checklist to drive more organic traffic and grow your business in Africa.\n\n- Keyword Research\n- On-Page SEO\n- Local Listings\n\n---\n\n**Need expert help?** [Get your SEO audit](mailto:support@maindodigital.com) for free.\n",
+      "author": 9,
+      "title": "Website Design Trends in Africa: What Works in 2025",
+      "content": "<h2>Build a Site Your Customers Will Love</h2><p>Website design is always evolving. In 2025, African audiences want sites that are fast, beautiful, and easy to use. Here’s how to stand out:</p><ul><li><b>Minimalist Layouts:</b> Clean, simple, mobile-first designs get more leads.</li><li><b>Authentic Local Images:</b> Use real, relatable photos of African people and places—no generic stock!</li><li><b>Trust Signals:</b> Show reviews, certifications, and awards to build credibility.</li></ul><p>Need a website upgrade? <a href='mailto:support@maindodigital.com'>Request a free consultation</a>.</p>",
+      "markdown": "# Website Design Trends in Africa: What Works in 2025\n\n## Build a Site Your Customers Will Love\nWebsite design is always evolving. In 2025, African audiences want sites that are fast, beautiful, and easy to use. Here’s how to stand out:\n\n- **Minimalist Layouts:** Clean, simple, mobile-first designs get more leads.\n- **Authentic Local Images:** Use real, relatable photos of African people and places—no generic stock!\n- **Trust Signals:** Show reviews, certifications, and awards to build credibility.\n\nNeed a website upgrade? [Request a free consultation](mailto:support@maindodigital.com).\n",
       "image": "",
-      "published_date": "2024-07-04T09:00:00Z",
+      "published_date": "2024-07-15T10:00:00Z",
       "status": "published",
       "category": 1,
-      "featured": false,
+      "featured": true,
       "views": 0,
       "newsletter_sent": false,
-      "updated_at": "2024-07-04T09:00:00Z",
-      "created_at": "2024-07-04T08:30:00Z",
-      "tags": [3]
+      "updated_at": "2024-07-15T10:00:00Z",
+      "created_at": "2024-07-15T09:30:00Z",
+      "tags": [1, 3]
     }
   },
   {
     "model": "posts.post",
     "pk": 5,
     "fields": {
-      "author": 1,
-      "title": "7 Social Media Campaign Ideas to Skyrocket Engagement",
-      "content": "<h2>Social Success Starts Here</h2><p>Boost your followers and engagement rates with these proven campaign ideas for Facebook, Instagram, WhatsApp, and TikTok. Build community, run contests, and drive real results.</p><hr><p><b>Need creative social media management?</b> <a href='mailto:support@maindodigital.com'>Let’s grow together!</a></p>",
-      "markdown": "# 7 Social Media Campaign Ideas to Skyrocket Engagement\n\n**Social Success Starts Here**\n\nBoost your followers and engagement rates with these proven campaign ideas for Facebook, Instagram, WhatsApp, and TikTok. Build community, run contests, and drive real results.\n\n---\n\n**Need creative social media management?** [Let’s grow together!](mailto:support@maindodigital.com)\n",
+      "author": 9,
+      "title": "5 Free Tools Every Small Business Needs for Digital Growth",
+      "content": "<h2>Grow Your Business on a Budget</h2><ul><li><b>Google My Business:</b> Get discovered in local search.</li><li><b>Canva:</b> Design stunning graphics for social media.</li><li><b>Mailchimp:</b> Start free email marketing and grow your list.</li><li><b>Meta Business Suite:</b> Manage all your Facebook and Instagram pages in one place.</li><li><b>WhatsApp Business:</b> Build customer relationships with instant replies.</li></ul><p>Need help implementing these? <a href='mailto:support@maindodigital.com'>Contact Maindo Digital Agency</a>.</p>",
+      "markdown": "# 5 Free Tools Every Small Business Needs for Digital Growth\n\n## Grow Your Business on a Budget\n- **Google My Business:** Get discovered in local search.\n- **Canva:** Design stunning graphics for social media.\n- **Mailchimp:** Start free email marketing and grow your list.\n- **Meta Business Suite:** Manage all your Facebook and Instagram pages in one place.\n- **WhatsApp Business:** Build customer relationships with instant replies.\n\nNeed help implementing these? [Contact Maindo Digital Agency](mailto:support@maindodigital.com).\n",
       "image": "",
-      "published_date": "2024-07-05T09:00:00Z",
+      "published_date": "2024-07-16T09:00:00Z",
       "status": "published",
       "category": 1,
       "featured": false,
       "views": 0,
       "newsletter_sent": false,
-      "updated_at": "2024-07-05T09:00:00Z",
-      "created_at": "2024-07-05T08:30:00Z",
-      "tags": [1, 3]
+      "updated_at": "2024-07-16T09:00:00Z",
+      "created_at": "2024-07-16T08:30:00Z",
+      "tags": [1, 2]
     }
   },
   {
     "model": "posts.post",
     "pk": 6,
     "fields": {
-      "author": 1,
-      "title": "How to Turn Your Website into a Lead Generation Machine",
-      "content": "<h2>Websites that Sell</h2><p>Your website is your best salesperson. Learn how to design landing pages, add strong CTAs, and use lead magnets to grow your email list and generate more clients.</p><hr><p><b>Book a free web audit</b> with Maindo Digital Agency: <a href='mailto:support@maindodigital.com'>Click here</a>.</p>",
-      "markdown": "# How to Turn Your Website into a Lead Generation Machine\n\n**Websites that Sell**\n\nYour website is your best salesperson. Learn how to design landing pages, add strong CTAs, and use lead magnets to grow your email list and generate more clients.\n\n---\n\n**Book a free web audit** with Maindo Digital Agency: [Click here](mailto:support@maindodigital.com).\n",
+      "author": 9,
+      "title": "Why Every African Entrepreneur Needs a Personal Brand",
+      "content": "<h2>Become the Face of Your Business</h2><p>People connect with people. When you show your story, your values, and your expertise, you turn prospects into loyal customers. Here’s how to build your personal brand online:</p><ul><li>Share your journey and lessons learned.</li><li>Use professional headshots on all platforms.</li><li>Offer value before selling—teach, inspire, and help others grow.</li></ul><p>Want to grow your influence? <a href='mailto:support@maindodigital.com'>Let’s talk!</a></p>",
+      "markdown": "# Why Every African Entrepreneur Needs a Personal Brand\n\n## Become the Face of Your Business\nPeople connect with people. When you show your story, your values, and your expertise, you turn prospects into loyal customers. Here’s how to build your personal brand online:\n\n- Share your journey and lessons learned.\n- Use professional headshots on all platforms.\n- Offer value before selling—teach, inspire, and help others grow.\n\nWant to grow your influence? [Let’s talk!](mailto:support@maindodigital.com)\n",
       "image": "",
-      "published_date": "2024-07-06T09:00:00Z",
+      "published_date": "2024-07-17T11:00:00Z",
       "status": "published",
-      "category": 1,
+      "category": 2,
       "featured": false,
       "views": 0,
       "newsletter_sent": false,
-      "updated_at": "2024-07-06T09:00:00Z",
-      "created_at": "2024-07-06T08:30:00Z",
-      "tags": [2, 3]
+      "updated_at": "2024-07-17T11:00:00Z",
+      "created_at": "2024-07-17T10:30:00Z",
+      "tags": [1]
     }
   },
   {
     "model": "posts.post",
     "pk": 7,
     "fields": {
-      "author": 1,
-      "title": "Email Marketing in Africa: What Works in 2025?",
-      "content": "<h2>Emails That Get Opened</h2><p>Email marketing is not dead—it's evolving! Learn the best tactics to boost open rates, segment your audience, and automate your sales funnel.</p><hr><p><b>Get a free campaign review</b>—email <a href='mailto:support@maindodigital.com'>support@maindodigital.com</a> today.</p>",
-      "markdown": "# Email Marketing in Africa: What Works in 2025?\n\n**Emails That Get Opened**\n\nEmail marketing is not dead—it's evolving! Learn the best tactics to boost open rates, segment your audience, and automate your sales funnel.\n\n---\n\n**Get a free campaign review**—email [support@maindodigital.com](mailto:support@maindodigital.com) today.\n",
+      "author": 9,
+      "title": "The Ultimate Social Media Checklist for Small Businesses in Africa",
+      "content": "<h2>Get Consistent and Grow</h2><ul><li><b>Post 3–5 times a week</b> on your main platforms.</li><li><b>Engage with every comment</b> and reply fast to DMs.</li><li><b>Share real customer stories</b> and behind-the-scenes content.</li><li><b>Use local hashtags</b> for more reach.</li></ul><p>Consistency = more leads! Download our free checklist: <a href='mailto:support@maindodigital.com'>Request now</a>.</p>",
+      "markdown": "# The Ultimate Social Media Checklist for Small Businesses in Africa\n\n## Get Consistent and Grow\n- **Post 3–5 times a week** on your main platforms.\n- **Engage with every comment** and reply fast to DMs.\n- **Share real customer stories** and behind-the-scenes content.\n- **Use local hashtags** for more reach.\n\nConsistency = more leads! Download our free checklist: [Request now](mailto:support@maindodigital.com).\n",
       "image": "",
-      "published_date": "2024-07-07T09:00:00Z",
+      "published_date": "2024-07-18T09:00:00Z",
       "status": "published",
       "category": 1,
       "featured": false,
       "views": 0,
       "newsletter_sent": false,
-      "updated_at": "2024-07-07T09:00:00Z",
-      "created_at": "2024-07-07T08:30:00Z",
-      "tags": [1, 2]
+      "updated_at": "2024-07-18T09:00:00Z",
+      "created_at": "2024-07-18T08:30:00Z",
+      "tags": [1, 3]
     }
   },
   {
     "model": "posts.post",
     "pk": 8,
     "fields": {
-      "author": 1,
-      "title": "The Future of E-Commerce in Africa: Trends to Watch",
-      "content": "<h2>Shop the Future</h2><p>E-commerce is booming on the continent! Find out what’s changing in 2025, the best payment options, and how to build trust online.</p><ul><li>Mobile Payments</li><li>Social Commerce</li><li>Local Logistics</li></ul><hr><p><b>Start your e-commerce journey with Maindo Digital Agency</b>—<a href='mailto:support@maindodigital.com'>let's chat</a> today.</p>",
-      "markdown": "# The Future of E-Commerce in Africa: Trends to Watch\n\n**Shop the Future**\n\nE-commerce is booming on the continent! Find out what’s changing in 2025, the best payment options, and how to build trust online.\n\n- Mobile Payments\n- Social Commerce\n- Local Logistics\n\n---\n\n**Start your e-commerce journey with Maindo Digital Agency**—[let's chat](mailto:support@maindodigital.com) today.\n",
+      "author": 9,
+      "title": "How to Write Blog Posts That Convert Visitors Into Clients",
+      "content": "<h2>Stop Blogging for Fun—Start Blogging for Sales!</h2><p>A good blog can bring you a flood of quality leads. Here’s how to create posts that drive real business growth:</p><ul><li><b>Pick topics your clients actually search for.</b></li><li><b>Add a strong call-to-action</b> (book a call, download a guide, etc).</li><li><b>Share every blog post on all your channels</b> for more reach.</li></ul><p>Want a done-for-you content strategy? <a href='mailto:support@maindodigital.com'>Book a discovery call</a>.</p>",
+      "markdown": "# How to Write Blog Posts That Convert Visitors Into Clients\n\n## Stop Blogging for Fun—Start Blogging for Sales!\nA good blog can bring you a flood of quality leads. Here’s how to create posts that drive real business growth:\n\n- **Pick topics your clients actually search for.**\n- **Add a strong call-to-action** (book a call, download a guide, etc).\n- **Share every blog post on all your channels** for more reach.\n\nWant a done-for-you content strategy? [Book a discovery call](mailto:support@maindodigital.com).\n",
       "image": "",
-      "published_date": "2024-07-08T09:00:00Z",
+      "published_date": "2024-07-19T13:00:00Z",
       "status": "published",
       "category": 1,
       "featured": false,
       "views": 0,
       "newsletter_sent": false,
-      "updated_at": "2024-07-08T09:00:00Z",
-      "created_at": "2024-07-08T08:30:00Z",
-      "tags": [2, 3]
+      "updated_at": "2024-07-19T13:00:00Z",
+      "created_at": "2024-07-19T12:30:00Z",
+      "tags": [1, 2]
     }
   },
   {
     "model": "posts.post",
     "pk": 9,
     "fields": {
-      "author": 1,
-      "title": "How to Use Google Ads for Local Business Growth",
-      "content": "<h2>Smart Ads, Real Results</h2><p>Learn how Google Ads can drive targeted traffic to your business, increase sales, and improve your ROI—no matter your budget.</p><hr><p><b>Want a Google Ads strategy session?</b> <a href='mailto:support@maindodigital.com'>Book now</a> for free advice from our team.</p>",
-      "markdown": "# How to Use Google Ads for Local Business Growth\n\n**Smart Ads, Real Results**\n\nLearn how Google Ads can drive targeted traffic to your business, increase sales, and improve your ROI—no matter your budget.\n\n---\n\n**Want a Google Ads strategy session?** [Book now](mailto:support@maindodigital.com) for free advice from our team.\n",
+      "author": 9,
+      "title": "Local SEO Secrets: Ranking High in African Cities",
+      "content": "<h2>Be Seen by Your Community</h2><p>Google searches drive foot traffic and sales. Here’s how to stand out in local results:</p><ul><li>Claim and optimize your Google My Business page.</li><li>Ask clients for reviews.</li><li>Post photos and updates regularly.</li></ul><p>Want a free SEO audit? <a href='mailto:support@maindodigital.com'>Contact us now</a>.</p>",
+      "markdown": "# Local SEO Secrets: Ranking High in African Cities\n\n## Be Seen by Your Community\nGoogle searches drive foot traffic and sales. Here’s how to stand out in local results:\n- Claim and optimize your Google My Business page.\n- Ask clients for reviews.\n- Post photos and updates regularly.\n\nWant a free SEO audit? [Contact us now](mailto:support@maindodigital.com).\n",
       "image": "",
-      "published_date": "2024-07-09T09:00:00Z",
+      "published_date": "2024-07-20T10:00:00Z",
       "status": "published",
       "category": 1,
       "featured": false,
       "views": 0,
       "newsletter_sent": false,
-      "updated_at": "2024-07-09T09:00:00Z",
-      "created_at": "2024-07-09T08:30:00Z",
-      "tags": [1, 2, 3]
+      "updated_at": "2024-07-20T10:00:00Z",
+      "created_at": "2024-07-20T09:30:00Z",
+      "tags": [3]
     }
   },
   {
     "model": "posts.post",
     "pk": 10,
     "fields": {
-      "author": 1,
-      "title": "How to Design a High-Converting Landing Page",
-      "content": "<h2>Convert Visitors Into Customers</h2><p>A landing page is the most important part of your funnel. Get our best practices for headlines, CTAs, trust signals, and visual design for conversions.</p><hr><p><b>Want us to review your landing page?</b> <a href='mailto:support@maindodigital.com'>Send us your link</a> for a free assessment!</p>",
-      "markdown": "# How to Design a High-Converting Landing Page\n\n**Convert Visitors Into Customers**\n\nA landing page is the most important part of your funnel. Get our best practices for headlines, CTAs, trust signals, and visual design for conversions.\n\n---\n\n**Want us to review your landing page?** [Send us your link](mailto:support@maindodigital.com) for a free assessment!\n",
+      "author": 9,
+      "title": "Turn Instagram Followers Into Customers: 5 Proven Tactics",
+      "content": "<h2>Grow Sales, Not Just Likes!</h2><p>Instagram is a goldmine for African businesses. Here’s how to get real results:</p><ul><li>Share video testimonials from happy clients.</li><li>Use stories to show your team and process.</li><li>Reply to every DM—fast!</li><li>Promote limited-time offers and events.</li><li>Use Instagram Shopping if you sell products.</li></ul><p>Ready for more sales? <a href='mailto:support@maindodigital.com'>We’ll help you grow</a>.</p>",
+      "markdown": "# Turn Instagram Followers Into Customers: 5 Proven Tactics\n\n## Grow Sales, Not Just Likes!\nInstagram is a goldmine for African businesses. Here’s how to get real results:\n- Share video testimonials from happy clients.\n- Use stories to show your team and process.\n- Reply to every DM—fast!\n- Promote limited-time offers and events.\n- Use Instagram Shopping if you sell products.\n\nReady for more sales? [We’ll help you grow](mailto:support@maindodigital.com).\n",
       "image": "",
-      "published_date": "2024-07-10T09:00:00Z",
+      "published_date": "2024-07-21T12:00:00Z",
+      "status": "published",
+      "category": 2,
+      "featured": true,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-21T12:00:00Z",
+      "created_at": "2024-07-21T11:30:00Z",
+      "tags": [1, 3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 11,
+    "fields": {
+      "author": 9,
+      "title": "What Makes a High-Converting Landing Page?",
+      "content": "<h2>Your Homepage Is Not Enough</h2><p>A landing page is a focused page designed for one action: booking a call, downloading a guide, or buying a product. Make sure yours has:</p><ul><li>One clear offer and headline.</li><li>Zero distractions—remove menus and links.</li><li>Social proof: reviews, testimonials, awards.</li><li>Urgent, clear call-to-action.</li></ul><p>Want us to review your page? <a href='mailto:support@maindodigital.com'>Get a free landing page audit</a>.</p>",
+      "markdown": "# What Makes a High-Converting Landing Page?\n\n## Your Homepage Is Not Enough\nA landing page is a focused page designed for one action: booking a call, downloading a guide, or buying a product. Make sure yours has:\n\n- One clear offer and headline.\n- Zero distractions—remove menus and links.\n- Social proof: reviews, testimonials, awards.\n- Urgent, clear call-to-action.\n\nWant us to review your page? [Get a free landing page audit](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-07-22T14:00:00Z",
+      "status": "published",
+      "category": 1,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-22T14:00:00Z",
+      "created_at": "2024-07-22T13:30:00Z",
+      "tags": [2, 3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 12,
+    "fields": {
+      "author": 9,
+      "title": "Top 5 Reasons Your Website Isn't Converting (And How to Fix It)",
+      "content": "<h2>Stop Losing Leads—Start Growing Sales!</h2><p>Most business websites leak leads. Here’s what to fix:</p><ul><li>Slow page speed (use PageSpeed Insights).</li><li>Confusing navigation—make it simple.</li><li>No clear call-to-action on every page.</li><li>Missing contact info or forms.</li><li>Lack of trust badges and testimonials.</li></ul><p>Let’s improve your site: <a href='mailto:support@maindodigital.com'>Free website review</a>.</p>",
+      "markdown": "# Top 5 Reasons Your Website Isn't Converting (And How to Fix It)\n\n## Stop Losing Leads—Start Growing Sales!\nMost business websites leak leads. Here’s what to fix:\n\n- Slow page speed (use PageSpeed Insights).\n- Confusing navigation—make it simple.\n- No clear call-to-action on every page.\n- Missing contact info or forms.\n- Lack of trust badges and testimonials.\n\nLet’s improve your site: [Free website review](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-07-23T13:00:00Z",
+      "status": "published",
+      "category": 1,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-23T13:00:00Z",
+      "created_at": "2024-07-23T12:30:00Z",
+      "tags": [1, 2]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 13,
+    "fields": {
+      "author": 9,
+      "title": "How to Use Google Ads to Grow Your African Business",
+      "content": "<h2>Get Your Business Found, Fast!</h2><p>Google Ads can bring you targeted traffic in days. Here’s how to get started:</p><ul><li>Set a clear budget and daily limit.</li><li>Use local keywords and locations.</li><li>Write headlines that solve a problem.</li><li>Track every click and lead.</li></ul><p>Want an expert to run your ads? <a href='mailto:support@maindodigital.com'>Contact us for a free audit</a>.</p>",
+      "markdown": "# How to Use Google Ads to Grow Your African Business\n\n## Get Your Business Found, Fast!\nGoogle Ads can bring you targeted traffic in days. Here’s how to get started:\n\n- Set a clear budget and daily limit.\n- Use local keywords and locations.\n- Write headlines that solve a problem.\n- Track every click and lead.\n\nWant an expert to run your ads? [Contact us for a free audit](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-07-24T09:00:00Z",
+      "status": "published",
+      "category": 1,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-24T09:00:00Z",
+      "created_at": "2024-07-24T08:30:00Z",
+      "tags": [2, 3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 14,
+    "fields": {
+      "author": 9,
+      "title": "Content Marketing 101: The Fastest Way to Build Trust Online",
+      "content": "<h2>Become the Authority in Your Industry</h2><p>Content marketing isn’t just for big brands. Blog posts, videos, podcasts, and free guides help you:</p><ul><li>Show your expertise.</li><li>Help clients before they buy.</li><li>Get found on Google and social media.</li></ul><p>Need ideas? <a href='mailto:support@maindodigital.com'>Book a free brainstorming session</a>.</p>",
+      "markdown": "# Content Marketing 101: The Fastest Way to Build Trust Online\n\n## Become the Authority in Your Industry\nContent marketing isn’t just for big brands. Blog posts, videos, podcasts, and free guides help you:\n- Show your expertise.\n- Help clients before they buy.\n- Get found on Google and social media.\n\nNeed ideas? [Book a free brainstorming session](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-07-25T10:00:00Z",
       "status": "published",
       "category": 2,
       "featured": false,
       "views": 0,
       "newsletter_sent": false,
-      "updated_at": "2024-07-10T09:00:00Z",
-      "created_at": "2024-07-10T08:30:00Z",
+      "updated_at": "2024-07-25T10:00:00Z",
+      "created_at": "2024-07-25T09:30:00Z",
+      "tags": [1, 3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 15,
+    "fields": {
+      "author": 9,
+      "title": "The Beginner’s Guide to WhatsApp Marketing for African SMEs",
+      "content": "<h2>Why WhatsApp Wins in Africa</h2><p>WhatsApp is the most-used app in Africa. Here’s how to leverage it for sales:</p><ul><li>Set up a WhatsApp Business account (free!).</li><li>Create quick replies and labels for leads.</li><li>Send regular offers and updates to your list.</li><li>Always reply fast—speed = trust.</li></ul><p>Want to automate your WhatsApp? <a href='mailto:support@maindodigital.com'>Let’s get started</a>.</p>",
+      "markdown": "# The Beginner’s Guide to WhatsApp Marketing for African SMEs\n\n## Why WhatsApp Wins in Africa\nWhatsApp is the most-used app in Africa. Here’s how to leverage it for sales:\n- Set up a WhatsApp Business account (free!).\n- Create quick replies and labels for leads.\n- Send regular offers and updates to your list.\n- Always reply fast—speed = trust.\n\nWant to automate your WhatsApp? [Let’s get started](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-07-26T08:00:00Z",
+      "status": "published",
+      "category": 2,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-26T08:00:00Z",
+      "created_at": "2024-07-26T07:30:00Z",
+      "tags": [1, 2]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 16,
+    "fields": {
+      "author": 9,
+      "title": "How to Turn Your Website Visitors Into Qualified Leads",
+      "content": "<h2>Capture Every Opportunity</h2><p>If your website gets traffic but few leads, here’s what to fix:</p><ul><li>Use clear, irresistible CTAs (“Book Free Demo”, “Download Guide”).</li><li>Add popups or sticky bars with offers.</li><li>Offer a lead magnet (like a checklist or discount).</li></ul><p>Ready for a website that sells? <a href='mailto:support@maindodigital.com'>Contact our experts</a>.</p>",
+      "markdown": "# How to Turn Your Website Visitors Into Qualified Leads\n\n## Capture Every Opportunity\nIf your website gets traffic but few leads, here’s what to fix:\n- Use clear, irresistible CTAs (“Book Free Demo”, “Download Guide”).\n- Add popups or sticky bars with offers.\n- Offer a lead magnet (like a checklist or discount).\n\nReady for a website that sells? [Contact our experts](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-07-27T14:00:00Z",
+      "status": "published",
+      "category": 1,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-27T14:00:00Z",
+      "created_at": "2024-07-27T13:30:00Z",
       "tags": [2, 3]
     }
+  },
+  {
+    "model": "posts.post",
+    "pk": 17,
+    "fields": {
+      "author": 9,
+      "title": "Grow Your Email List With These 7 Simple Tactics",
+      "content": "<h2>Email Still Delivers the Best ROI</h2><p>Here’s how African businesses can grow a powerful email list:</p><ul><li>Offer a lead magnet—like a free guide or discount.</li><li>Use popups and slide-ins to capture emails.</li><li>Run contests and giveaways on social.</li><li>Ask for emails in WhatsApp conversations.</li><li>Always deliver value—don’t spam!</li></ul><p>Want email templates? <a href='mailto:support@maindodigital.com'>We’ll send you some free</a>.</p>",
+      "markdown": "# Grow Your Email List With These 7 Simple Tactics\n\n## Email Still Delivers the Best ROI\nHere’s how African businesses can grow a powerful email list:\n- Offer a lead magnet—like a free guide or discount.\n- Use popups and slide-ins to capture emails.\n- Run contests and giveaways on social.\n- Ask for emails in WhatsApp conversations.\n- Always deliver value—don’t spam!\n\nWant email templates? [We’ll send you some free](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-07-28T15:00:00Z",
+      "status": "published",
+      "category": 2,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-28T15:00:00Z",
+      "created_at": "2024-07-28T14:30:00Z",
+      "tags": [1, 2]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 18,
+    "fields": {
+      "author": 9,
+      "title": "Video Marketing in Africa: Why You Can’t Ignore It in 2025",
+      "content": "<h2>Get More Attention (and Sales) With Video</h2><p>Short, authentic videos get the most engagement. Here’s how to win:</p><ul><li>Post regular video tips on WhatsApp status and Instagram Reels.</li><li>Feature customer testimonials and case studies.</li><li>Don’t worry about fancy cameras—your phone is enough!</li></ul><p>Want to start? <a href='mailto:support@maindodigital.com'>Book a video marketing consultation</a>.</p>",
+      "markdown": "# Video Marketing in Africa: Why You Can’t Ignore It in 2025\n\n## Get More Attention (and Sales) With Video\nShort, authentic videos get the most engagement. Here’s how to win:\n- Post regular video tips on WhatsApp status and Instagram Reels.\n- Feature customer testimonials and case studies.\n- Don’t worry about fancy cameras—your phone is enough!\n\nWant to start? [Book a video marketing consultation](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-07-29T12:00:00Z",
+      "status": "published",
+      "category": 2,
+      "featured": true,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-29T12:00:00Z",
+      "created_at": "2024-07-29T11:30:00Z",
+      "tags": [3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 19,
+    "fields": {
+      "author": 9,
+      "title": "How to Get Your First 100 Customers Online in Africa",
+      "content": "<h2>Start Small, Grow Fast!</h2><p>Getting your first customers is the hardest part. Here’s how to make it easier:</p><ul><li>Tell friends and family—let them spread the word.</li><li>Run a launch giveaway or contest.</li><li>Partner with a local influencer.</li><li>Join business WhatsApp groups and share your offer.</li></ul><p>Want a step-by-step launch plan? <a href='mailto:support@maindodigital.com'>We’ll send you one free!</a></p>",
+      "markdown": "# How to Get Your First 100 Customers Online in Africa\n\n## Start Small, Grow Fast!\nGetting your first customers is the hardest part. Here’s how to make it easier:\n- Tell friends and family—let them spread the word.\n- Run a launch giveaway or contest.\n- Partner with a local influencer.\n- Join business WhatsApp groups and share your offer.\n\nWant a step-by-step launch plan? [We’ll send you one free!](mailto:support@maindodigital.com)\n",
+      "image": "",
+      "published_date": "2024-07-30T13:00:00Z",
+      "status": "published",
+      "category": 1,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-30T13:00:00Z",
+      "created_at": "2024-07-30T12:30:00Z",
+      "tags": [1, 2]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 20,
+    "fields": {
+      "author": 9,
+      "title": "SEO for Beginners: Ranking Your Business in Google Africa",
+      "content": "<h2>Get Seen by More Customers</h2><p>SEO doesn’t have to be hard. Here’s the fast track:</p><ul><li>Pick a primary keyword for every page.</li><li>Add keywords to your page title, headers, and image alt text.</li><li>List your business on Google My Business and local directories.</li><li>Start a blog and update weekly.</li></ul><p>Get a free SEO checklist: <a href='mailto:support@maindodigital.com'>Request now</a>.</p>",
+      "markdown": "# SEO for Beginners: Ranking Your Business in Google Africa\n\n## Get Seen by More Customers\nSEO doesn’t have to be hard. Here’s the fast track:\n- Pick a primary keyword for every page.\n- Add keywords to your page title, headers, and image alt text.\n- List your business on Google My Business and local directories.\n- Start a blog and update weekly.\n\nGet a free SEO checklist: [Request now](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-07-31T15:00:00Z",
+      "status": "published",
+      "category": 1,
+      "featured": true,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-31T15:00:00Z",
+      "created_at": "2024-07-31T14:30:00Z",
+      "tags": [1, 3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 21,
+    "fields": {
+      "author": 9,
+      "title": "How to Craft Emails That Get Opened and Drive Sales",
+      "content": "<h2>Email Isn’t Dead—It’s Still #1 for ROI</h2><p>Want your emails to get read and clicked? Start with irresistible subject lines, keep messages short, and always add a single clear CTA. Need a custom campaign? <a href='mailto:support@maindodigital.com'>Let’s plan it together</a>.</p>",
+      "markdown": "# How to Craft Emails That Get Opened and Drive Sales\n\n**Email Isn’t Dead—It’s Still #1 for ROI**\n\nWant your emails to get read and clicked? Start with irresistible subject lines, keep messages short, and always add a single clear CTA. Need a custom campaign? [Let’s plan it together](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-08-01T12:00:00Z",
+      "status": "published",
+      "category": 3,
+      "featured": true,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-08-01T12:00:00Z",
+      "created_at": "2024-08-01T11:30:00Z",
+      "tags": [2, 3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 22,
+    "fields": {
+      "author": 9,
+      "title": "Your 7-Point Website Checklist for Winning More Clients",
+      "content": "<h2>First Impressions Matter!</h2><p>Is your website clear, fast, mobile-friendly, and persuasive? Check your site for these 7 things: speed, design, calls-to-action, contact info, testimonials, services, and a blog. <a href='mailto:support@maindodigital.com'>Get a free checklist now</a>.</p>",
+      "markdown": "# Your 7-Point Website Checklist for Winning More Clients\n\n## First Impressions Matter!\nIs your website clear, fast, mobile-friendly, and persuasive? Check your site for these 7 things: speed, design, calls-to-action, contact info, testimonials, services, and a blog. [Get a free checklist now](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-08-02T09:00:00Z",
+      "status": "published",
+      "category": 5,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-08-02T09:00:00Z",
+      "created_at": "2024-08-02T08:30:00Z",
+      "tags": [1, 2]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 23,
+    "fields": {
+      "author": 9,
+      "title": "Why Your Business Needs a Blog (Even If You Hate Writing)",
+      "content": "<h2>Blogs = Google Traffic + Customer Trust</h2><p>Don’t love writing? No problem. Blogs help your site rank, answer questions, and build trust—even with just 1 post a month. <a href='mailto:support@maindodigital.com'>Ask us about blog packages</a>.</p>",
+      "markdown": "# Why Your Business Needs a Blog (Even If You Hate Writing)\n\n**Blogs = Google Traffic + Customer Trust**\n\nDon’t love writing? No problem. Blogs help your site rank, answer questions, and build trust—even with just 1 post a month. [Ask us about blog packages](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-08-03T13:00:00Z",
+      "status": "published",
+      "category": 1,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-08-03T13:00:00Z",
+      "created_at": "2024-08-03T12:30:00Z",
+      "tags": [3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 24,
+    "fields": {
+      "author": 9,
+      "title": "From Clicks to Clients: How to Build an Automated Sales Funnel",
+      "content": "<h2>Work Smarter—Not Harder</h2><p>An automated funnel captures leads, nurtures them, and turns them into customers—24/7. Want us to map one for you? <a href='mailto:support@maindodigital.com'>Book a funnel consultation</a>.</p>",
+      "markdown": "# From Clicks to Clients: How to Build an Automated Sales Funnel\n\n**Work Smarter—Not Harder**\n\nAn automated funnel captures leads, nurtures them, and turns them into customers—24/7. Want us to map one for you? [Book a funnel consultation](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-08-04T16:00:00Z",
+      "status": "published",
+      "category": 3,
+      "featured": true,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-08-04T16:00:00Z",
+      "created_at": "2024-08-04T15:30:00Z",
+      "tags": [2, 3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 25,
+    "fields": {
+      "author": 9,
+      "title": "5 Website Design Trends Every African Brand Should Watch",
+      "content": "<h2>Stay Modern—Get Results</h2><p>Want a fresh look? Watch for bold colors, video backgrounds, sticky menus, chatbots, and trust badges. <a href='mailto:support@maindodigital.com'>Request a free design review</a>.</p>",
+      "markdown": "# 5 Website Design Trends Every African Brand Should Watch\n\n**Stay Modern—Get Results**\n\nWant a fresh look? Watch for bold colors, video backgrounds, sticky menus, chatbots, and trust badges. [Request a free design review](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-08-05T12:00:00Z",
+      "status": "published",
+      "category": 5,
+      "featured": true,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-08-05T12:00:00Z",
+      "created_at": "2024-08-05T11:30:00Z",
+      "tags": [1, 3]
+    }
+  },
+{
+  "model": "posts.post",
+  "pk": 26,
+  "fields": {
+    "author": 9,
+    "title": "How to Turn Social Followers into Paying Customers",
+    "content": "<h2>Followers ≠ Customers—Here’s How to Bridge the Gap</h2><p>It’s not just about likes. Use DMs, exclusive offers, and clear CTAs to convert attention into business. <a href='mailto:support@maindodigital.com'>Let’s map your funnel</a>.</p>",
+    "markdown": "# How to Turn Social Followers into Paying Customers\n\nFollowers ≠ Customers—Here’s How to Bridge the Gap\n\nIt’s not just about likes. Use DMs, exclusive offers, and clear CTAs to convert attention into business. [Let’s map your funnel](mailto:support@maindodigital.com).\n",
+    "image": "",
+    "published_date": "2024-08-06T11:00:00Z",
+    "status": "published",
+    "category": 4,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-06T11:00:00Z",
+    "created_at": "2024-08-06T10:30:00Z",
+    "tags": [1, 3]
   }
+},
+{
+  "model": "posts.post",
+  "pk": 27,
+  "fields": {
+    "author": 9,
+    "title": "Why Mobile-First Design Wins in African Markets",
+    "content": "<h2>Be Where Your Customers Are</h2><p>Mobile is king in Africa. Fast-loading, touch-friendly sites get more leads and sales. Want a free mobile audit? <a href='mailto:support@maindodigital.com'>Book now</a>.</p>",
+    "markdown": "# Why Mobile-First Design Wins in African Markets\n\nBe Where Your Customers Are\n\nMobile is king in Africa. Fast-loading, touch-friendly sites get more leads and sales. Want a free mobile audit? [Book now](mailto:support@maindodigital.com).\n",
+    "image": "",
+    "published_date": "2024-08-07T14:00:00Z",
+    "status": "published",
+    "category": 5,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-07T14:00:00Z",
+    "created_at": "2024-08-07T13:30:00Z",
+    "tags": [1, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 28,
+  "fields": {
+    "author": 9,
+    "title": "How to Use WhatsApp for Instant Customer Support",
+    "content": "<h2>Connect Faster, Win More Customers</h2><p>WhatsApp is the new front desk. Set up auto-responders, answer FAQs, and close deals faster. Need help? <a href='mailto:support@maindodigital.com'>Let’s automate your chat</a>.</p>",
+    "markdown": "# How to Use WhatsApp for Instant Customer Support\n\nConnect Faster, Win More Customers\n\nWhatsApp is the new front desk. Set up auto-responders, answer FAQs, and close deals faster. Need help? [Let’s automate your chat](mailto:support@maindodigital.com).\n",
+    "image": "",
+    "published_date": "2024-08-08T15:00:00Z",
+    "status": "published",
+    "category": 4,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-08T15:00:00Z",
+    "created_at": "2024-08-08T14:30:00Z",
+    "tags": [2, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 29,
+  "fields": {
+    "author": 9,
+    "title": "Top 5 Landing Page Mistakes That Kill Your Conversions",
+    "content": "<h2>Don’t Lose Leads—Fix These Fast</h2><p>Slow load, too much text, missing CTA, no trust badges, and poor mobile UX. Want a landing page that converts? <a href='mailto:support@maindodigital.com'>Free review</a>.</p>",
+    "markdown": "# Top 5 Landing Page Mistakes That Kill Your Conversions\n\nDon’t Lose Leads—Fix These Fast\n\nSlow load, too much text, missing CTA, no trust badges, and poor mobile UX. Want a landing page that converts? [Free review](mailto:support@maindodigital.com).\n",
+    "image": "",
+    "published_date": "2024-08-09T09:00:00Z",
+    "status": "published",
+    "category": 5,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-09T09:00:00Z",
+    "created_at": "2024-08-09T08:30:00Z",
+    "tags": [1, 2]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 30,
+  "fields": {
+    "author": 9,
+    "title": "Simple SEO Tricks for Busy Entrepreneurs",
+    "content": "<h2>Get Found Without the Stress</h2><p>Use keywords in your titles, get backlinks, and publish regular blog posts. SEO is a marathon, not a sprint. Want a checklist? <a href='mailto:support@maindodigital.com'>Request it free</a>.</p>",
+    "markdown": "# Simple SEO Tricks for Busy Entrepreneurs\n\nGet Found Without the Stress\n\nUse keywords in your titles, get backlinks, and publish regular blog posts. SEO is a marathon, not a sprint. Want a checklist? [Request it free](mailto:support@maindodigital.com).\n",
+    "image": "",
+    "published_date": "2024-08-10T11:00:00Z",
+    "status": "published",
+    "category": 1,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-10T11:00:00Z",
+    "created_at": "2024-08-10T10:30:00Z",
+    "tags": [1, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 31,
+  "fields": {
+    "author": 9,
+    "title": "Brand Storytelling: How to Make Your Business Memorable",
+    "content": "<h2>Stories Sell—Stats Just Convince</h2><p>Tell your why. Share your wins. Use real customer stories and visuals. Want help crafting your brand story? <a href='mailto:support@maindodigital.com'>Let’s create it together</a>.</p>",
+    "markdown": "# Brand Storytelling: How to Make Your Business Memorable\n\nStories Sell—Stats Just Convince\n\nTell your why. Share your wins. Use real customer stories and visuals. Want help crafting your brand story? [Let’s create it together](mailto:support@maindodigital.com).\n",
+    "image": "",
+    "published_date": "2024-08-11T14:00:00Z",
+    "status": "published",
+    "category": 2,
+    "featured": true,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-11T14:00:00Z",
+    "created_at": "2024-08-11T13:30:00Z",
+    "tags": [1, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 32,
+  "fields": {
+    "author": 9,
+    "title": "Easy Facebook Ad Formulas That Deliver Results",
+    "content": "<h2>Quick, Profitable Campaigns</h2><p>Pick a single goal, use eye-catching images, write simple headlines, and always test two versions. <a href='mailto:support@maindodigital.com'>Want winning ad copy?</a></p>",
+    "markdown": "# Easy Facebook Ad Formulas That Deliver Results\n\nQuick, Profitable Campaigns\n\nPick a single goal, use eye-catching images, write simple headlines, and always test two versions. [Want winning ad copy?](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-12T10:00:00Z",
+    "status": "published",
+    "category": 4,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-12T10:00:00Z",
+    "created_at": "2024-08-12T09:30:00Z",
+    "tags": [3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 33,
+  "fields": {
+    "author": 9,
+    "title": "Why Local Listings Matter for Small Businesses",
+    "content": "<h2>Be Seen by Nearby Buyers</h2><p>Claim your business on Google, Facebook, and major local directories. Add reviews and update your info monthly for best results. Need help? <a href='mailto:support@maindodigital.com'>We’ll handle it</a>.</p>",
+    "markdown": "# Why Local Listings Matter for Small Businesses\n\nBe Seen by Nearby Buyers\n\nClaim your business on Google, Facebook, and major local directories. Add reviews and update your info monthly for best results. Need help? [We’ll handle it](mailto:support@maindodigital.com).\n",
+    "image": "",
+    "published_date": "2024-08-13T15:00:00Z",
+    "status": "published",
+    "category": 1,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-13T15:00:00Z",
+    "created_at": "2024-08-13T14:30:00Z",
+    "tags": [1, 2]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 34,
+  "fields": {
+    "author": 9,
+    "title": "How to Get More Customer Reviews (And Why They Matter)",
+    "content": "<h2>Reviews Build Trust Instantly</h2><p>Ask every customer for feedback. Share a link or QR code. Reply to all reviews, positive or negative. <a href='mailto:support@maindodigital.com'>Need a review strategy?</a></p>",
+    "markdown": "# How to Get More Customer Reviews (And Why They Matter)\n\nReviews Build Trust Instantly\n\nAsk every customer for feedback. Share a link or QR code. Reply to all reviews, positive or negative. [Need a review strategy?](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-14T13:00:00Z",
+    "status": "published",
+    "category": 2,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-14T13:00:00Z",
+    "created_at": "2024-08-14T12:30:00Z",
+    "tags": [1, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 35,
+  "fields": {
+    "author": 9,
+    "title": "Instagram Reels: The Fastest Way to Grow in 2025",
+    "content": "<h2>Short Videos, Big Reach</h2><p>Use trending audio, clear branding, and calls-to-action in every Reel. Consistency is key! <a href='mailto:support@maindodigital.com'>Let’s build your Reels plan</a>.</p>",
+    "markdown": "# Instagram Reels: The Fastest Way to Grow in 2025\n\nShort Videos, Big Reach\n\nUse trending audio, clear branding, and calls-to-action in every Reel. Consistency is key! [Let’s build your Reels plan](mailto:support@maindodigital.com).\n",
+    "image": "",
+    "published_date": "2024-08-15T11:00:00Z",
+    "status": "published",
+    "category": 4,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-15T11:00:00Z",
+    "created_at": "2024-08-15T10:30:00Z",
+    "tags": [3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 36,
+  "fields": {
+    "author": 9,
+    "title": "Lead Magnets That Actually Work for African SMEs",
+    "content": "<h2>Free Value Brings Real Leads</h2><p>Offer guides, checklists, or mini-courses in exchange for an email. Keep it simple and actionable. <a href='mailto:support@maindodigital.com'>Need ideas?</a></p>",
+    "markdown": "# Lead Magnets That Actually Work for African SMEs\n\nFree Value Brings Real Leads\n\nOffer guides, checklists, or mini-courses in exchange for an email. Keep it simple and actionable. [Need ideas?](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-16T12:00:00Z",
+    "status": "published",
+    "category": 3,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-16T12:00:00Z",
+    "created_at": "2024-08-16T11:30:00Z",
+    "tags": [2, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 37,
+  "fields": {
+    "author": 9,
+    "title": "Affordable Video Marketing Ideas for Any Budget",
+    "content": "<h2>Start Small, Grow Fast</h2><p>Short testimonials, how-tos, or product demos filmed on your phone work great. Add captions for more engagement. <a href='mailto:support@maindodigital.com'>We’ll edit for you</a>.</p>",
+    "markdown": "# Affordable Video Marketing Ideas for Any Budget\n\nStart Small, Grow Fast\n\nShort testimonials, how-tos, or product demos filmed on your phone work great. Add captions for more engagement. [We’ll edit for you](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-17T16:00:00Z",
+    "status": "published",
+    "category": 4,
+    "featured": true,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-17T16:00:00Z",
+    "created_at": "2024-08-17T15:30:00Z",
+    "tags": [1, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 38,
+  "fields": {
+    "author": 9,
+    "title": "How to Write Product Descriptions That Sell",
+    "content": "<h2>Words That Make People Buy</h2><p>Focus on benefits, not just features. Use short, punchy sentences. Add testimonials and FAQs. <a href='mailto:support@maindodigital.com'>Get your copy reviewed</a>.</p>",
+    "markdown": "# How to Write Product Descriptions That Sell\n\nWords That Make People Buy\n\nFocus on benefits, not just features. Use short, punchy sentences. Add testimonials and FAQs. [Get your copy reviewed](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-18T09:00:00Z",
+    "status": "published",
+    "category": 2,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-18T09:00:00Z",
+    "created_at": "2024-08-18T08:30:00Z",
+    "tags": [1, 2]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 39,
+  "fields": {
+    "author": 9,
+    "title": "Getting Started With Facebook Pixel (And Why You Should)",
+    "content": "<h2>Track, Learn, and Improve Every Ad</h2><p>Install Facebook Pixel to see what ads work. Track signups and sales with real data. <a href='mailto:support@maindodigital.com'>We’ll set it up for free</a>.</p>",
+    "markdown": "# Getting Started With Facebook Pixel (And Why You Should)\n\nTrack, Learn, and Improve Every Ad\n\nInstall Facebook Pixel to see what ads work. Track signups and sales with real data. [We’ll set it up for free](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-19T14:00:00Z",
+    "status": "published",
+    "category": 4,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-19T14:00:00Z",
+    "created_at": "2024-08-19T13:30:00Z",
+    "tags": [3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 40,
+  "fields": {
+    "author": 9,
+    "title": "What Makes a Great About Page (And Why It Matters)",
+    "content": "<h2>Your Story Sells</h2><p>People buy from people, not just brands. Add your photo, story, values, and a clear next step. <a href='mailto:support@maindodigital.com'>Want feedback on your About page?</a></p>",
+    "markdown": "# What Makes a Great About Page (And Why It Matters)\n\nYour Story Sells\n\nPeople buy from people, not just brands. Add your photo, story, values, and a clear next step. [Want feedback on your About page?](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-20T12:00:00Z",
+    "status": "published",
+    "category": 2,
+    "featured": true,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-20T12:00:00Z",
+    "created_at": "2024-08-20T11:30:00Z",
+    "tags": [1, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 41,
+  "fields": {
+    "author": 9,
+    "title": "SEO for E-commerce: How to Get Your Store on Google",
+    "content": "<h2>Rank Higher, Sell More</h2><p>Optimize product titles, use quality images, and get customer reviews. Add an FAQ page for bonus points! <a href='mailto:support@maindodigital.com'>Want an SEO check?</a></p>",
+    "markdown": "# SEO for E-commerce: How to Get Your Store on Google\n\nRank Higher, Sell More\n\nOptimize product titles, use quality images, and get customer reviews. Add an FAQ page for bonus points! [Want an SEO check?](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-21T10:00:00Z",
+    "status": "published",
+    "category": 1,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-21T10:00:00Z",
+    "created_at": "2024-08-21T09:30:00Z",
+    "tags": [1, 2, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 42,
+  "fields": {
+    "author": 9,
+    "title": "How to Turn Testimonials Into a Powerful Sales Tool",
+    "content": "<h2>Let Happy Customers Sell for You</h2><p>Put testimonials on your homepage, product pages, and checkout. Add faces for extra trust. <a href='mailto:support@maindodigital.com'>Need a testimonial layout?</a></p>",
+    "markdown": "# How to Turn Testimonials Into a Powerful Sales Tool\n\nLet Happy Customers Sell for You\n\nPut testimonials on your homepage, product pages, and checkout. Add faces for extra trust. [Need a testimonial layout?](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-22T13:00:00Z",
+    "status": "published",
+    "category": 2,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-22T13:00:00Z",
+    "created_at": "2024-08-22T12:30:00Z",
+    "tags": [1, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 43,
+  "fields": {
+    "author": 9,
+    "title": "Pinterest for Business: A Hidden Gem for Lead Generation",
+    "content": "<h2>Visual Content, Real Results</h2><p>Share product photos, guides, and tips on Pinterest to reach new audiences. Add your site link to every Pin. <a href='mailto:support@maindodigital.com'>Get a Pinterest setup</a>.</p>",
+    "markdown": "# Pinterest for Business: A Hidden Gem for Lead Generation\n\nVisual Content, Real Results\n\nShare product photos, guides, and tips on Pinterest to reach new audiences. Add your site link to every Pin. [Get a Pinterest setup](mailto:support@maindodigital.com).\n",
+    "image": "",
+    "published_date": "2024-08-23T12:00:00Z",
+    "status": "published",
+    "category": 4,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-23T12:00:00Z",
+    "created_at": "2024-08-23T11:30:00Z",
+    "tags": [2, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 44,
+  "fields": {
+    "author": 9,
+    "title": "How to Track Website Visitors (And Use Data for Growth)",
+    "content": "<h2>Turn Numbers Into Action</h2><p>Google Analytics shows you who visits and what they do. Use this data to improve content and offers. <a href='mailto:support@maindodigital.com'>Want a tracking setup?</a></p>",
+    "markdown": "# How to Track Website Visitors (And Use Data for Growth)\n\nTurn Numbers Into Action\n\nGoogle Analytics shows you who visits and what they do. Use this data to improve content and offers. [Want a tracking setup?](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-24T11:00:00Z",
+    "status": "published",
+    "category": 1,
+    "featured": true,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-24T11:00:00Z",
+    "created_at": "2024-08-24T10:30:00Z",
+    "tags": [3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 45,
+  "fields": {
+    "author": 9,
+    "title": "The Secret to Consistent Social Media Posting (Even When Busy)",
+    "content": "<h2>Batch, Schedule, Repeat</h2><p>Plan content once a week. Use scheduling tools. Repost your best content every few months. <a href='mailto:support@maindodigital.com'>Need a content calendar?</a></p>",
+    "markdown": "# The Secret to Consistent Social Media Posting (Even When Busy)\n\nBatch, Schedule, Repeat\n\nPlan content once a week. Use scheduling tools. Repost your best content every few months. [Need a content calendar?](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-25T10:00:00Z",
+    "status": "published",
+    "category": 4,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-25T10:00:00Z",
+    "created_at": "2024-08-25T09:30:00Z",
+    "tags": [3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 46,
+  "fields": {
+    "author": 9,
+    "title": "Winning at Google Ads Without Wasting Your Budget",
+    "content": "<h2>Small Budget? Big Results</h2><p>Start with a low daily budget, use local keywords, and track every click. Pause poor ads and scale winners. <a href='mailto:support@maindodigital.com'>Get an Ads audit free</a>.</p>",
+    "markdown": "# Winning at Google Ads Without Wasting Your Budget\n\nSmall Budget? Big Results\n\nStart with a low daily budget, use local keywords, and track every click. Pause poor ads and scale winners. [Get an Ads audit free](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-26T12:00:00Z",
+    "status": "published",
+    "category": 3,
+    "featured": true,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-26T12:00:00Z",
+    "created_at": "2024-08-26T11:30:00Z",
+    "tags": [2, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 47,
+  "fields": {
+    "author": 9,
+    "title": "5 Signs It’s Time to Refresh Your Business Website",
+    "content": "<h2>Don’t Let an Outdated Site Hurt Your Sales</h2><p>If your site loads slow, looks old, is hard to update, isn’t mobile-friendly, or doesn’t rank, it’s time! <a href='mailto:support@maindodigital.com'>Get a free redesign quote</a>.</p>",
+    "markdown": "# 5 Signs It’s Time to Refresh Your Business Website\n\nDon’t Let an Outdated Site Hurt Your Sales\n\nIf your site loads slow, looks old, is hard to update, isn’t mobile-friendly, or doesn’t rank, it’s time! [Get a free redesign quote](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-27T09:00:00Z",
+    "status": "published",
+    "category": 5,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-27T09:00:00Z",
+    "created_at": "2024-08-27T08:30:00Z",
+    "tags": [1, 2]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 48,
+  "fields": {
+    "author": 9,
+    "title": "How to Automate Your Lead Follow-Up With Email",
+    "content": "<h2>Never Miss a Sale Again</h2><p>Use tools like Mailchimp or HubSpot to send instant replies, reminders, and nurture campaigns to every lead. <a href='mailto:support@maindodigital.com'>Need help automating?</a></p>",
+    "markdown": "# How to Automate Your Lead Follow-Up With Email\n\nNever Miss a Sale Again\n\nUse tools like Mailchimp or HubSpot to send instant replies, reminders, and nurture campaigns to every lead. [Need help automating?](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-28T13:00:00Z",
+    "status": "published",
+    "category": 3,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-28T13:00:00Z",
+    "created_at": "2024-08-28T12:30:00Z",
+    "tags": [2, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 49,
+  "fields": {
+    "author": 9,
+    "title": "How to Get Found Online When You’re Just Starting Out",
+    "content": "<h2>Beat the Competition—Even as a Newbie</h2><p>Focus on Google My Business, a fast site, social pages, and ask everyone you know to share your business. <a href='mailto:support@maindodigital.com'>Get a new business SEO kit</a>.</p>",
+    "markdown": "# How to Get Found Online When You’re Just Starting Out\n\nBeat the Competition—Even as a Newbie\n\nFocus on Google My Business, a fast site, social pages, and ask everyone you know to share your business. [Get a new business SEO kit](mailto:support@maindodigital.com)\n",
+    "image": "",
+    "published_date": "2024-08-29T12:00:00Z",
+    "status": "published",
+    "category": 1,
+    "featured": false,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-08-29T12:00:00Z",
+    "created_at": "2024-08-29T11:30:00Z",
+    "tags": [1, 3]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 50,
+  "fields": {
+    "author": 9,
+    "title": "The Ultimate Guide to Winning Customers in 2025",
+    "content": "<h2>Get Ready for a New Digital Era</h2><p>Customer habits are changing fast. In 2025, your business will need to be everywhere: web, WhatsApp, Instagram, and Google. The best brands deliver value, engage personally, and adapt fast. Need a roadmap for next year? <a href='mailto:support@maindodigital.com'>We’ll build it with you</a>.</p>",
+    "markdown": "# The Ultimate Guide to Winning Customers in 2025\n\n**Get Ready for a New Digital Era**\n\nCustomer habits are changing fast. In 2025, your business will need to be everywhere: web, WhatsApp, Instagram, and Google. The best brands deliver value, engage personally, and adapt fast. Need a roadmap for next year? [We’ll build it with you](mailto:support@maindodigital.com).\n",
+    "image": "",
+    "published_date": "2024-09-01T10:00:00Z",
+    "status": "published",
+    "category": 1,
+    "featured": true,
+    "views": 0,
+    "newsletter_sent": false,
+    "updated_at": "2024-09-01T10:00:00Z",
+    "created_at": "2024-09-01T09:30:00Z",
+    "tags": [1, 2, 3]
+  }
+}
 ]
