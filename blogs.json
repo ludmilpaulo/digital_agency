@@ -1,71 +1,21 @@
 [
   {
-    "model": "posts.author",
-    "pk": 1,
-    "fields": {
-      "user": 1,
-      "avatar": "",
-      "bio": "Digital strategist and founder at Maindo Digital Agency. Helping African businesses succeed online.",
-      "linkedin": "https://www.linkedin.com/in/maindodigital",
-      "twitter": "https://twitter.com/maindodigital"
-    }
-  },
-  {
-    "model": "posts.category",
-    "pk": 1,
-    "fields": {
-      "name": "Digital Growth",
-      "slug": "digital-growth",
-      "description": "Actionable strategies for businesses to thrive in Africa’s digital landscape."
-    }
-  },
-  {
-    "model": "posts.category",
-    "pk": 2,
-    "fields": {
-      "name": "Brand Building",
-      "slug": "brand-building",
-      "description": "Tips and inspiration to help you create a memorable brand."
-    }
-  },
-  {
-    "model": "posts.tag",
-    "pk": 1,
-    "fields": {
-      "name": "Business Tips"
-    }
-  },
-  {
-    "model": "posts.tag",
-    "pk": 2,
-    "fields": {
-      "name": "Lead Generation"
-    }
-  },
-  {
-    "model": "posts.tag",
-    "pk": 3,
-    "fields": {
-      "name": "Digital Marketing"
-    }
-  },
-  {
     "model": "posts.post",
     "pk": 1,
     "fields": {
       "author": 1,
-      "title": "How African Businesses Can Dominate Online: 7 Digital Strategies for 2025",
-      "content": "<h2>Transform Your Digital Presence in 2025</h2><p>Ready to attract more customers and grow your business online? Africa’s digital economy is booming—make sure your brand stands out with these proven strategies from Maindo Digital Agency.</p><h3>1. Go Mobile-First</h3><p>Most Africans access the web on mobile. Your website <b>must</b> be fast, modern, and responsive for all devices. Not sure if your site is mobile-ready? <a href='mailto:support@maindodigital.com'>Request a free audit</a>.</p><h3>2. Social Media for Business</h3><p>Engage your audience where they spend their time: Facebook, Instagram, WhatsApp, TikTok. Share valuable content, answer questions, and show your expertise to build trust and loyalty.</p><h3>3. Master Local SEO</h3><p>Get found by people searching for your services! Claim your Google My Business listing, use local keywords, and ask happy customers for reviews.</p><h3>4. E-commerce: Sell Beyond Borders</h3><p>Launch a simple, secure online store and offer easy payments. We help African businesses get online—<a href='https://www.maindodigital.com/contact'>let’s chat!</a></p><h3>5. Reviews Build Trust</h3><p>Showcase reviews and testimonials everywhere. Positive reviews boost sales—ask every customer to share their feedback.</p><h3>6. Influencer Partnerships</h3><p>Work with local micro-influencers to reach new audiences. Even small campaigns can bring big results when done right.</p><h3>7. Track, Test, Improve</h3><p>Use analytics to see what works. Improve your website, ads, and posts based on data—not guesswork. Need help? <a href='mailto:support@maindodigital.com'>Book a free strategy call</a>.</p><hr><h3>Let’s Grow Your Business!</h3><p>Maindo Digital Agency specializes in building high-conversion websites, powerful marketing, and creative content. <b>Contact us today for a free consultation and take the first step to online success:</b><br>Email: <a href='mailto:support@maindodigital.com'>support@maindodigital.com</a> | WhatsApp: <a href='https://wa.me/27659031894'>+27 65 903 1894</a></p>",
-      "markdown": "# How African Businesses Can Dominate Online: 7 Digital Strategies for 2025\n\n**Transform Your Digital Presence in 2025**\n\nReady to attract more customers and grow your business online? Africa’s digital economy is booming—make sure your brand stands out with these proven strategies from Maindo Digital Agency.\n\n## 1. Go Mobile-First\nMost Africans access the web on mobile. Your website **must** be fast, modern, and responsive for all devices. Not sure if your site is mobile-ready? [Request a free audit](mailto:support@maindodigital.com).\n\n## 2. Social Media for Business\nEngage your audience where they spend their time: Facebook, Instagram, WhatsApp, TikTok. Share valuable content, answer questions, and show your expertise to build trust and loyalty.\n\n## 3. Master Local SEO\nGet found by people searching for your services! Claim your Google My Business listing, use local keywords, and ask happy customers for reviews.\n\n## 4. E-commerce: Sell Beyond Borders\nLaunch a simple, secure online store and offer easy payments. We help African businesses get online—[let’s chat!](https://www.maindodigital.com/contact)\n\n## 5. Reviews Build Trust\nShowcase reviews and testimonials everywhere. Positive reviews boost sales—ask every customer to share their feedback.\n\n## 6. Influencer Partnerships\nWork with local micro-influencers to reach new audiences. Even small campaigns can bring big results when done right.\n\n## 7. Track, Test, Improve\nUse analytics to see what works. Improve your website, ads, and posts based on data—not guesswork. Need help? [Book a free strategy call](mailto:support@maindodigital.com).\n\n---\n\n### Let’s Grow Your Business!\nMaindo Digital Agency specializes in building high-conversion websites, powerful marketing, and creative content. **Contact us today for a free consultation and take the first step to online success:**\n\nEmail: [support@maindodigital.com](mailto:support@maindodigital.com) | WhatsApp: [+27 65 903 1894](https://wa.me/27659031894)\n",
+      "title": "10 Ways to Get More Customers Online in South Africa",
+      "content": "<h2>Unlock Your Digital Potential</h2><p>Are you struggling to attract new clients? Discover the top 10 strategies to boost your online presence and dominate the South African market in 2025.</p><ul><li>Local SEO</li><li>Paid Ads</li><li>Content Marketing</li><li>And more…</li></ul><hr><p><b>Need a free website audit?</b> <a href='mailto:support@maindodigital.com'>Contact us today</a> or <a href='https://wa.me/27659031894'>WhatsApp us</a>!</p>",
+      "markdown": "# 10 Ways to Get More Customers Online in South Africa\n\n**Unlock Your Digital Potential**\n\nAre you struggling to attract new clients? Discover the top 10 strategies to boost your online presence and dominate the South African market in 2025.\n\n- Local SEO\n- Paid Ads\n- Content Marketing\n- And more…\n\n---\n\n**Need a free website audit?** [Contact us today](mailto:support@maindodigital.com) or [WhatsApp us](https://wa.me/27659031894)!\n",
       "image": "",
-      "published_date": "2024-07-12T13:00:00Z",
+      "published_date": "2024-07-01T09:00:00Z",
       "status": "published",
       "category": 1,
       "featured": true,
       "views": 0,
       "newsletter_sent": false,
-      "updated_at": "2024-07-12T13:00:00Z",
-      "created_at": "2024-07-12T12:30:00Z",
+      "updated_at": "2024-07-01T09:00:00Z",
+      "created_at": "2024-07-01T08:30:00Z",
       "tags": [1, 2, 3]
     }
   },
@@ -74,18 +24,18 @@
     "pk": 2,
     "fields": {
       "author": 1,
-      "title": "The Power of Branding: How to Make Your Business Unforgettable",
-      "content": "<h2>Stand Out in a Crowded Marketplace</h2><p>Your brand is more than just a logo—it's your story, your voice, and your promise. In Africa’s fast-moving digital economy, a strong brand can make the difference between blending in and leading the pack.</p><h3>1. Define Your Unique Value</h3><p>What sets you apart? Focus on what makes your business special and communicate that in every touchpoint.</p><h3>2. Consistent Visual Identity</h3><p>Use the same colors, fonts, and style everywhere—from your website to social media. Consistency builds trust and recognition.</p><h3>3. Authentic Messaging</h3><p>Speak to your audience in a way that resonates. Show your passion, your vision, and how you solve their problems.</p><h3>4. Engage Your Community</h3><p>Host webinars, run contests, or share customer stories. The more you involve your audience, the more loyal they become.</p><hr><h3>Get a Free Brand Audit!</h3><p>Maindo Digital Agency offers free brand audits to help you understand your strengths and opportunities. <b>Contact us for a personalized review and see how we can elevate your brand:</b><br>Email: <a href='mailto:support@maindodigital.com'>support@maindodigital.com</a> | WhatsApp: <a href='https://wa.me/27659031894'>+27 65 903 1894</a></p>",
-      "markdown": "# The Power of Branding: How to Make Your Business Unforgettable\n\n## Stand Out in a Crowded Marketplace\nYour brand is more than just a logo—it's your story, your voice, and your promise. In Africa’s fast-moving digital economy, a strong brand can make the difference between blending in and leading the pack.\n\n## 1. Define Your Unique Value\nWhat sets you apart? Focus on what makes your business special and communicate that in every touchpoint.\n\n## 2. Consistent Visual Identity\nUse the same colors, fonts, and style everywhere—from your website to social media. Consistency builds trust and recognition.\n\n## 3. Authentic Messaging\nSpeak to your audience in a way that resonates. Show your passion, your vision, and how you solve their problems.\n\n## 4. Engage Your Community\nHost webinars, run contests, or share customer stories. The more you involve your audience, the more loyal they become.\n\n---\n\n### Get a Free Brand Audit!\nMaindo Digital Agency offers free brand audits to help you understand your strengths and opportunities. **Contact us for a personalized review and see how we can elevate your brand:**\n\nEmail: [support@maindodigital.com](mailto:support@maindodigital.com) | WhatsApp: [+27 65 903 1894](https://wa.me/27659031894)\n",
+      "title": "Why Your Business Needs a Mobile-First Website in 2025",
+      "content": "<h2>Go Mobile, Grow Faster</h2><p>80% of web traffic in Africa is now mobile. If your website isn’t mobile-first, you’re losing leads and customers. Learn how a responsive design can drive sales, increase brand trust, and future-proof your business.</p><hr><p><b>Ready to upgrade?</b> <a href='mailto:support@maindodigital.com'>Book a free consult</a> with Maindo Digital Agency today.</p>",
+      "markdown": "# Why Your Business Needs a Mobile-First Website in 2025\n\n**Go Mobile, Grow Faster**\n\n80% of web traffic in Africa is now mobile. If your website isn’t mobile-first, you’re losing leads and customers. Learn how a responsive design can drive sales, increase brand trust, and future-proof your business.\n\n---\n\n**Ready to upgrade?** [Book a free consult](mailto:support@maindodigital.com) with Maindo Digital Agency today.\n",
       "image": "",
-      "published_date": "2024-07-13T09:00:00Z",
+      "published_date": "2024-07-02T09:00:00Z",
       "status": "published",
-      "category": 2,
+      "category": 1,
       "featured": true,
       "views": 0,
       "newsletter_sent": false,
-      "updated_at": "2024-07-13T09:00:00Z",
-      "created_at": "2024-07-13T08:30:00Z",
+      "updated_at": "2024-07-02T09:00:00Z",
+      "created_at": "2024-07-02T08:30:00Z",
       "tags": [1, 3]
     }
   },
@@ -94,18 +44,158 @@
     "pk": 3,
     "fields": {
       "author": 1,
-      "title": "Unlock More Leads: Proven Digital Marketing Tactics for 2025",
-      "content": "<h2>Leads Are the Lifeblood of Your Business</h2><p>Every successful business needs a steady stream of high-quality leads. Here’s how you can use digital marketing to attract, nurture, and convert more prospects in 2025.</p><h3>1. Create Targeted Content</h3><p>Blog posts, guides, and videos that answer your audience’s questions will attract the right visitors to your site.</p><h3>2. Use Landing Pages with Strong CTAs</h3><p>Every campaign needs a landing page with a single, clear call to action. Offer value—like a free eBook or consultation—to capture emails.</p><h3>3. Automate Your Follow-Up</h3><p>Email automation lets you nurture leads without lifting a finger. Send helpful tips, exclusive offers, and updates to keep your brand top-of-mind.</p><h3>4. Invest in Paid Ads</h3><p>Smart spending on Google Ads or Facebook campaigns can put your business in front of thousands of new leads—fast.</p><hr><h3>Need More Leads?</h3><p>Maindo Digital Agency specializes in building marketing systems that generate real results. <b>Contact us for a free lead generation consultation:</b><br>Email: <a href='mailto:support@maindodigital.com'>support@maindodigital.com</a> | WhatsApp: <a href='https://wa.me/27659031894'>+27 65 903 1894</a></p>",
-      "markdown": "# Unlock More Leads: Proven Digital Marketing Tactics for 2025\n\n## Leads Are the Lifeblood of Your Business\nEvery successful business needs a steady stream of high-quality leads. Here’s how you can use digital marketing to attract, nurture, and convert more prospects in 2025.\n\n## 1. Create Targeted Content\nBlog posts, guides, and videos that answer your audience’s questions will attract the right visitors to your site.\n\n## 2. Use Landing Pages with Strong CTAs\nEvery campaign needs a landing page with a single, clear call to action. Offer value—like a free eBook or consultation—to capture emails.\n\n## 3. Automate Your Follow-Up\nEmail automation lets you nurture leads without lifting a finger. Send helpful tips, exclusive offers, and updates to keep your brand top-of-mind.\n\n## 4. Invest in Paid Ads\nSmart spending on Google Ads or Facebook campaigns can put your business in front of thousands of new leads—fast.\n\n---\n\n### Need More Leads?\nMaindo Digital Agency specializes in building marketing systems that generate real results. **Contact us for a free lead generation consultation:**\n\nEmail: [support@maindodigital.com](mailto:support@maindodigital.com) | WhatsApp: [+27 65 903 1894](https://wa.me/27659031894)\n",
+      "title": "How to Build a Powerful Brand in Africa",
+      "content": "<h2>Branding That Wins</h2><p>Great brands build trust, loyalty, and recognition. Discover proven branding secrets that top African businesses use to win in today’s digital world.</p><ul><li>Define Your Story</li><li>Consistent Messaging</li><li>Customer Engagement</li></ul><hr><p><b>Want a free brand review?</b> <a href='mailto:support@maindodigital.com'>Let’s talk!</a></p>",
+      "markdown": "# How to Build a Powerful Brand in Africa\n\n**Branding That Wins**\n\nGreat brands build trust, loyalty, and recognition. Discover proven branding secrets that top African businesses use to win in today’s digital world.\n\n- Define Your Story\n- Consistent Messaging\n- Customer Engagement\n\n---\n\n**Want a free brand review?** [Let’s talk!](mailto:support@maindodigital.com)\n",
       "image": "",
-      "published_date": "2024-07-14T15:00:00Z",
+      "published_date": "2024-07-03T09:00:00Z",
+      "status": "published",
+      "category": 2,
+      "featured": true,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-03T09:00:00Z",
+      "created_at": "2024-07-03T08:30:00Z",
+      "tags": [1, 3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 4,
+    "fields": {
+      "author": 1,
+      "title": "The Ultimate SEO Checklist for African Businesses",
+      "content": "<h2>Rank Higher in Google</h2><p>SEO is not a luxury, it’s a necessity. Follow this step-by-step checklist to drive more organic traffic and grow your business in Africa.</p><ul><li>Keyword Research</li><li>On-Page SEO</li><li>Local Listings</li></ul><hr><p><b>Need expert help?</b> <a href='mailto:support@maindodigital.com'>Get your SEO audit</a> for free.</p>",
+      "markdown": "# The Ultimate SEO Checklist for African Businesses\n\n**Rank Higher in Google**\n\nSEO is not a luxury, it’s a necessity. Follow this step-by-step checklist to drive more organic traffic and grow your business in Africa.\n\n- Keyword Research\n- On-Page SEO\n- Local Listings\n\n---\n\n**Need expert help?** [Get your SEO audit](mailto:support@maindodigital.com) for free.\n",
+      "image": "",
+      "published_date": "2024-07-04T09:00:00Z",
       "status": "published",
       "category": 1,
       "featured": false,
       "views": 0,
       "newsletter_sent": false,
-      "updated_at": "2024-07-14T15:00:00Z",
-      "created_at": "2024-07-14T14:30:00Z",
+      "updated_at": "2024-07-04T09:00:00Z",
+      "created_at": "2024-07-04T08:30:00Z",
+      "tags": [3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 5,
+    "fields": {
+      "author": 1,
+      "title": "7 Social Media Campaign Ideas to Skyrocket Engagement",
+      "content": "<h2>Social Success Starts Here</h2><p>Boost your followers and engagement rates with these proven campaign ideas for Facebook, Instagram, WhatsApp, and TikTok. Build community, run contests, and drive real results.</p><hr><p><b>Need creative social media management?</b> <a href='mailto:support@maindodigital.com'>Let’s grow together!</a></p>",
+      "markdown": "# 7 Social Media Campaign Ideas to Skyrocket Engagement\n\n**Social Success Starts Here**\n\nBoost your followers and engagement rates with these proven campaign ideas for Facebook, Instagram, WhatsApp, and TikTok. Build community, run contests, and drive real results.\n\n---\n\n**Need creative social media management?** [Let’s grow together!](mailto:support@maindodigital.com)\n",
+      "image": "",
+      "published_date": "2024-07-05T09:00:00Z",
+      "status": "published",
+      "category": 1,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-05T09:00:00Z",
+      "created_at": "2024-07-05T08:30:00Z",
+      "tags": [1, 3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 6,
+    "fields": {
+      "author": 1,
+      "title": "How to Turn Your Website into a Lead Generation Machine",
+      "content": "<h2>Websites that Sell</h2><p>Your website is your best salesperson. Learn how to design landing pages, add strong CTAs, and use lead magnets to grow your email list and generate more clients.</p><hr><p><b>Book a free web audit</b> with Maindo Digital Agency: <a href='mailto:support@maindodigital.com'>Click here</a>.</p>",
+      "markdown": "# How to Turn Your Website into a Lead Generation Machine\n\n**Websites that Sell**\n\nYour website is your best salesperson. Learn how to design landing pages, add strong CTAs, and use lead magnets to grow your email list and generate more clients.\n\n---\n\n**Book a free web audit** with Maindo Digital Agency: [Click here](mailto:support@maindodigital.com).\n",
+      "image": "",
+      "published_date": "2024-07-06T09:00:00Z",
+      "status": "published",
+      "category": 1,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-06T09:00:00Z",
+      "created_at": "2024-07-06T08:30:00Z",
+      "tags": [2, 3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 7,
+    "fields": {
+      "author": 1,
+      "title": "Email Marketing in Africa: What Works in 2025?",
+      "content": "<h2>Emails That Get Opened</h2><p>Email marketing is not dead—it's evolving! Learn the best tactics to boost open rates, segment your audience, and automate your sales funnel.</p><hr><p><b>Get a free campaign review</b>—email <a href='mailto:support@maindodigital.com'>support@maindodigital.com</a> today.</p>",
+      "markdown": "# Email Marketing in Africa: What Works in 2025?\n\n**Emails That Get Opened**\n\nEmail marketing is not dead—it's evolving! Learn the best tactics to boost open rates, segment your audience, and automate your sales funnel.\n\n---\n\n**Get a free campaign review**—email [support@maindodigital.com](mailto:support@maindodigital.com) today.\n",
+      "image": "",
+      "published_date": "2024-07-07T09:00:00Z",
+      "status": "published",
+      "category": 1,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-07T09:00:00Z",
+      "created_at": "2024-07-07T08:30:00Z",
+      "tags": [1, 2]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 8,
+    "fields": {
+      "author": 1,
+      "title": "The Future of E-Commerce in Africa: Trends to Watch",
+      "content": "<h2>Shop the Future</h2><p>E-commerce is booming on the continent! Find out what’s changing in 2025, the best payment options, and how to build trust online.</p><ul><li>Mobile Payments</li><li>Social Commerce</li><li>Local Logistics</li></ul><hr><p><b>Start your e-commerce journey with Maindo Digital Agency</b>—<a href='mailto:support@maindodigital.com'>let's chat</a> today.</p>",
+      "markdown": "# The Future of E-Commerce in Africa: Trends to Watch\n\n**Shop the Future**\n\nE-commerce is booming on the continent! Find out what’s changing in 2025, the best payment options, and how to build trust online.\n\n- Mobile Payments\n- Social Commerce\n- Local Logistics\n\n---\n\n**Start your e-commerce journey with Maindo Digital Agency**—[let's chat](mailto:support@maindodigital.com) today.\n",
+      "image": "",
+      "published_date": "2024-07-08T09:00:00Z",
+      "status": "published",
+      "category": 1,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-08T09:00:00Z",
+      "created_at": "2024-07-08T08:30:00Z",
+      "tags": [2, 3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 9,
+    "fields": {
+      "author": 1,
+      "title": "How to Use Google Ads for Local Business Growth",
+      "content": "<h2>Smart Ads, Real Results</h2><p>Learn how Google Ads can drive targeted traffic to your business, increase sales, and improve your ROI—no matter your budget.</p><hr><p><b>Want a Google Ads strategy session?</b> <a href='mailto:support@maindodigital.com'>Book now</a> for free advice from our team.</p>",
+      "markdown": "# How to Use Google Ads for Local Business Growth\n\n**Smart Ads, Real Results**\n\nLearn how Google Ads can drive targeted traffic to your business, increase sales, and improve your ROI—no matter your budget.\n\n---\n\n**Want a Google Ads strategy session?** [Book now](mailto:support@maindodigital.com) for free advice from our team.\n",
+      "image": "",
+      "published_date": "2024-07-09T09:00:00Z",
+      "status": "published",
+      "category": 1,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-09T09:00:00Z",
+      "created_at": "2024-07-09T08:30:00Z",
+      "tags": [1, 2, 3]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 10,
+    "fields": {
+      "author": 1,
+      "title": "How to Design a High-Converting Landing Page",
+      "content": "<h2>Convert Visitors Into Customers</h2><p>A landing page is the most important part of your funnel. Get our best practices for headlines, CTAs, trust signals, and visual design for conversions.</p><hr><p><b>Want us to review your landing page?</b> <a href='mailto:support@maindodigital.com'>Send us your link</a> for a free assessment!</p>",
+      "markdown": "# How to Design a High-Converting Landing Page\n\n**Convert Visitors Into Customers**\n\nA landing page is the most important part of your funnel. Get our best practices for headlines, CTAs, trust signals, and visual design for conversions.\n\n---\n\n**Want us to review your landing page?** [Send us your link](mailto:support@maindodigital.com) for a free assessment!\n",
+      "image": "",
+      "published_date": "2024-07-10T09:00:00Z",
+      "status": "published",
+      "category": 2,
+      "featured": false,
+      "views": 0,
+      "newsletter_sent": false,
+      "updated_at": "2024-07-10T09:00:00Z",
+      "created_at": "2024-07-10T08:30:00Z",
       "tags": [2, 3]
     }
   }
