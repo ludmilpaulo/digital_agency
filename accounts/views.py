@@ -47,6 +47,8 @@ def custom_signup(request, format=None):
 
             print("Creating token...")
             token, _ = Token.objects.get_or_create(user=user)
+            
+            groups = list(user.groups.values_list('name', flat=True))
 
             print("Sending email...")
             send_mail(
@@ -62,7 +64,8 @@ def custom_signup(request, format=None):
                 "message": "Signup successful",
                 "token": token.key,
                 "user_id": user.pk,
-                "username": user.username
+                "username": user.username,
+                "groups": groups,
             }, status=201)
         except Exception as e:
             print("Unexpected error:", str(e))
@@ -124,7 +127,10 @@ def custom_login(request, format=None):
             "username": user.username,
             "email": user.email,
             "groups": groups,
+            "is_superuser": user.is_superuser,
+            "is_staff": user.is_staff,
         }, status=200)
+
     else:
         print("Login failed: Invalid credentials.")
         return JsonResponse({"error": "Invalid credentials"}, status=400)

@@ -7,23 +7,50 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework import filters
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
+from django.db.models import Q 
+from rest_framework import status
 
 User = get_user_model()
 
 class BoardViewSet(viewsets.ModelViewSet):
-    queryset = Board.objects.all()
+    queryset = Board.objects.all().prefetch_related("managers", "users")
     serializer_class = BoardSerializer
-    permission_classes = [AllowAny]  # Change to IsAuthenticated in production!
+    permission_classes = [AllowAny]
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        user_id = self.request.query_params.get("user_id")
+        manager_id = self.request.query_params.get("manager_id")
+        search = self.request.query_params.get("search")
+
+        if user_id:
+            qs = qs.filter(Q(users__id=user_id) | Q(managers__id=user_id)).distinct()
+
+        if manager_id:
+            qs = qs.filter(managers__id=manager_id).distinct()
+
+        if search:
+            qs = qs.filter(Q(name__icontains=search) | Q(description__icontains=search))
+
+        return qs
 
     def perform_create(self, serializer):
         board = serializer.save()
-        managers = list(serializer.validated_data.get('managers', []))
-        # Always add the requesting user as manager (if authenticated)
-        if self.request.user.is_authenticated and self.request.user not in managers:
+        managers = self.request.data.get('managers_ids', [])
+        users = self.request.data.get('users_ids', [])
+        if self.request.user.is_authenticated:
             board.managers.add(self.request.user)
-        for user in managers:
-            board.managers.add(user)
+            board.users.add(self.request.user)
+        board.managers.add(*managers)
+        board.users.add(*users)
         board.save()
+
+    def destroy(self, request, *args, **kwargs):
+        board = self.get_object()
+        board.delete()
+        return Response({"detail": "Board deleted successfully."}, status=status.HTTP_204_NO_CONTENT)
+
+
 
 
 class ListViewSet(viewsets.ModelViewSet):
@@ -62,9 +89,10 @@ class CardViewSet(viewsets.ModelViewSet):
         if instance.status == 'Completed':
             return Response(
                 {"detail": "Cannot delete a completed card."},
-                status=400,
+                status=status.HTTP_400_BAD_REQUEST
             )
-        return super().destroy(request, *args, **kwargs)
+        instance.delete()
+        return Response({"detail": "Card deleted successfully."}, status=status.HTTP_204_NO_CONTENT)
 
 
 # Optionally, user list for assignment dropdowns
