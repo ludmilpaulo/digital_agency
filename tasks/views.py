@@ -9,6 +9,9 @@ from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from django.db.models import Q 
 from rest_framework import status
+from django.core.mail import send_mail
+from django.conf import settings
+from django.template.loader import render_to_string
 
 User = get_user_model()
 
@@ -44,6 +47,25 @@ class BoardViewSet(viewsets.ModelViewSet):
         board.managers.add(*managers)
         board.users.add(*users)
         board.save()
+
+        # --- Send Email Notification ---
+        all_users = set(list(board.managers.all()) + list(board.users.all()))
+        to_emails = [u.email for u in all_users if u.email]
+
+        if to_emails:
+            html_content = render_to_string("email/board_created.html", {
+                "board": board,
+                "site_name": "Maindo Digital Agency",
+                "dashboard_url": "https://www.maindodigital.com/admin",
+            })
+            send_mail(
+                subject=f"[Task Assigned] New Board: {board.name}",
+                message=f"You have been assigned to a new board: {board.name}. Please see your dashboard.",
+                from_email=getattr(settings, "DEFAULT_FROM_EMAIL", "noreply@maindodigital.com"),
+                recipient_list=to_emails,
+                html_message=html_content,
+                fail_silently=True,
+            )
 
     def destroy(self, request, *args, **kwargs):
         board = self.get_object()

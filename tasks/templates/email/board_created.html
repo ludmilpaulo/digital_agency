@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>New Board Assigned</title>
+    <style>
+      body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8fafd; color: #222; }
+      .container { background: #fff; max-width: 600px; margin: 30px auto; padding: 32px 28px 28px 28px; border-radius: 16px; box-shadow: 0 6px 30px #e9e9fa; }
+      .title { color: #2065d1; font-size: 1.35rem; margin-bottom: 12px; }
+      .label { color: #555; font-size: 1rem; font-weight: bold; }
+      .value { color: #222; margin-bottom: 14px; }
+      .cta { display: inline-block; background: #2065d1; color: #fff; font-weight: bold; border-radius: 8px; padding: 12px 28px; text-decoration: none; margin-top: 26px; }
+      .footer { color: #888; font-size: 0.92rem; margin-top: 36px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">🚀 You have been assigned to a new Board</div>
+      <div>
+        <span class="label">Board Name:</span>
+        <span class="value">{{ board.name }}</span>
+      </div>
+      <div>
+        <span class="label">Description:</span>
+        <span class="value">{{ board.description|striptags|truncatechars:200 }}</span>
+      </div>
+      <div>
+        <span class="label">Managers:</span>
+        <span class="value">
+          {% for m in board.managers.all %}{{ m.get_full_name|default:m.username }}{% if not forloop.last %}, {% endif %}{% endfor %}
+        </span>
+      </div>
+      <div>
+        <span class="label">Users:</span>
+        <span class="value">
+          {% for u in board.users.all %}{{ u.get_full_name|default:u.username }}{% if not forloop.last %}, {% endif %}{% endfor %}
+        </span>
+      </div>
+      {% if board.start_date or board.deadline or board.status %}
+      <div style="margin-bottom: 12px;">
+        {% if board.start_date %}
+        <span class="label">Start:</span> <span class="value">{{ board.start_date }}</span>
+        {% endif %}
+        {% if board.deadline %}
+        <span class="label" style="margin-left:18px;">Deadline:</span> <span class="value">{{ board.deadline }}</span>
+        {% endif %}
+        {% if board.status %}
+        <span class="label" style="margin-left:18px;">Status:</span> <span class="value">{{ board.status }}</span>
+        {% endif %}
+      </div>
+      {% endif %}
+      <a href="{{ dashboard_url }}" class="cta">View on Dashboard</a>
+      <div class="footer">
+        — This is an automated message from {{ site_name }}. <br>
+        If you have questions, reply to this email.
+      </div>
+    </div>
+  </body>
+</html>
