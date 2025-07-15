@@ -9,6 +9,8 @@ __pycache__/
 
 # SQLite database
 db.sqlite3
+**.sqlite3
+**.sqlite3
 
 # Environment files and folders
 .env
@@ -34,7 +36,7 @@ media/
 .DS_Store
 Thumbs.db
 
-# Django settings for extra protection (don't usually ignore your main settings.py, only local/dev/secret ones)
+# Django settings for extra protection
 settings.py
 *settings.py
 *settings
@@ -44,4 +46,4 @@ settings.py
 **/settings.py
 
 # Or, if you only want to ignore your main one:
-digital_agency/settings.py
+# digital_agency/settings.py
